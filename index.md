@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Robot Kinematics - Controlling your robot using mathematics!
+title: Motors for Robots - How to move your robot!
 ---
 
 <!--Comment: Above here is the header, we need this to generate the web page-->
@@ -28,9 +28,11 @@ This session is designed to be fun! The idea is that we can follow it together o
 <h2>Contents</h2>
 <ul class="list-group">
   <li class="list-group-item"><a href="#resourcesPanel">Resources</a></li>
-  <li class="list-group-item"><a href="#Activity1">Getting familiar with the robot arm simulator</a></li>
-  <li class="list-group-item"><a href="#Activity2">Controlling your robot in Joint Space</a></li>
-  <li class="list-group-item"><a href="#Activity3">Controlling your robot in Cartesian Space</a></li>
+  <li class="list-group-item"><a href="Explanation">How a Motor works</a></li>
+  <li class="list-group-item"><a href="#Activity1">Assembling the servomotor</a></li>
+  <li class="list-group-item"><a href="#Activity2">Programming the servomotor</a></li>
+  <li class="list-group-item"><a href="#Activity3">Assembling the stepper motor</a></li>
+  <li class="list-group-item"><a href="#Activity4">Programming the stepper motor</a></li>
 </ul>
 </div>
 
@@ -51,58 +53,102 @@ This session is designed to be fun! The idea is that we can follow it together o
 <br>
 <br>
 
-# What is Kinematics?
+
+# How do you move a robot arm?
+<div id="Explanation" class="container p-3 my-3 bg-primary text-primary">
+
+</div>
 <br>
 
-You might be wondering, what in the world is 'kinematics'? 
 
-Well, it's just a fancy name we give to the **study of movement**. 
+Say you'd like to build a robot. And of course, robots have to move, otherwise they can't do much! 
 
-Cars move, cats move, humans move, and of course, robots move. We use kinematics to not only figure out where we will end up once we're done moving, but also to figure out how we need to move to get somewhere. Scientists have been using kinematics for a long time to figure out how things roll, bounce, fly, walk, anything you can think of that involves moving!
-
-
-<br>
-
-## But what does it have to do with robots?
-
-<br>
-
-When you want to make a robot move, you want to make sure it will get to where you want it to go. It's a little bit like Google Maps, but just for your robot.
-
-Let me give you an example:
-
-I'm going out for a walk. I go out of my house, walk down the road, take the second left, and keep walking for two blocks.
-
-**But where am I going??!?**
-
-I'm controlling where I turn and how far I walk, but I don't actually know where I will end up. **Forward Kinematics** will help me figure out where I will end up if I take these turns and where I will be from where I started.
-
-As you can see, I end up at the park.
+What can you use to move your robot?
+Do you have any ideas?
+Think about things that move, what makes them move?
 
 <br>
 
+**Motors** are an easy way to get moving! They can be quite affordable and electrical motors can be powered by batteries, which are a convenient power source. In fact, I've just packed some for you in the box!
+
+Have a look at the box, and pull out the bags labelled "Servomotor" and "Stepper Motor".
+
+They look like this:
+
+<br>
+<!--Insert photo-->
 ![MapExample](images/Map.png)
 *Cartoons Copyright of [Irasutoya](https://www.irasutoya.com)*
-
 <br>
 
-What if I want to get to the supermarket, but I don't know how? (You can see how this sounds a lot like Google Maps.)
-
-I know where the supermarket is from where I am now, but I don't know which turns to take to get there, or how far to walk. **Inverse Kinematics** helps me figure out what turns I need to take to get where I want to go.
-
-
-<br>
-
-Okay, let's get to the fun bit!
-
+These are two different types of motors, and we're going to learn all about them today.
 <br>
 <br>
 
+## How do you make battery power turn into movement?
+<br>
 
-<!--Comment: This section is markdown again-->
+Using magnets!
 
-# Let's build the first part of our robot arm!
+What do you remember about magnets and how they behave? Let's pause a moment to have a think about it.
+
+<br>
+
+Have an idea? Cool. Let's crack on!
+
+Have you tried making an **electromagnet** using a coil of wire and a battery? Here's a helpful link if you want to try it at home!
+
+[How to make an electromagnet](https://sciencebob.com/make-an-electromagnet/)
+
+If you run an electrical current through a wire (for example, with a battery!), it will generate an **electromagnetic field** around the wire. Making lots of coils magnifies this effect, so we usually make electromagnets using coils. These are magnets that you can turn on and off, or even switch polarities! This is compared to permanent magnets, which you might have seen around.
+
+<!--Insert figure-->
+
+<br>
+
+Inside every motor there is a permanent magnet and there is an electromagnet. 
+
+What happens when you point the North end of a magnet to the South end of a magnet?
+
+They try to get away from each other of course! Their electromagnetic fields interact with each other, generating a force. This force is what we use to make the motor turn! We can observe this phenomenon in the animation in this link: [DC Motor animation](https://nationalmaglab.org/education/magnet-academy/watch-play/interactive/dc-motor)
+
+Open it and let the applet load. It should look like this:
+
+<img src="images/Explanation/DC_Motor_animation.jpg" alt="DC Motor Explanation screenshot"
+	title="DC Motor Demonstration" height="250" />
+
+In this animation, the outer magnet is the permanent magnet, and the coil in the middle connected to the battery is the electromagnet. The part that moves is connected to the **shaft** of the motor, which you can attach things to that need to be moved. All electric motors use this principle.
+
+Now let's take a look at the motors we have right now and learn more about them!
+
+<br>
+<br>
+
+
+# Let's play with some motors!
 ---
+
+## The Servomotor
+
+The servomotor you have with you is a very common hobby servomotor, sometimes shortened to 'servo'. It has a permanent magnet and an electromagnet inside, and a gearbox. The gearbox helps to increase the torque (the turning force) of the motor, while slowing down its speed. It also has a sensor that can measure its rotation!
+
+Being able to measure how much it has rotated helps it to decide how much to continue moving, which is nice because it means you don't have to add extra things to control the motor and make it go to the position you want, which is useful for robotic applications. It is also very light and compact.
+
+Take it out of the bag and let's have a look at the motor.
+<br>
+
+<!--Insert image of servomotor parts
+<img src="images/Explanation/DC_Motor_animation.jpg" alt="DC Motor Explanation screenshot"
+	title="DC Motor Demonstration" height="250" />-->
+
+<br>
+You can see the shaft of the motor on the outside, and through the plastic body you can see the plastic gears inside. At the bottom of the motor, you can see a controller board and there are three wires coming out of the body of the motor.
+
+The <span style="color:Brown">brown wire</span> is connected to the ground of the power supply, the <span style="color:Red">red wire</span> is connected to the positive end of the power supply, and the <span style="color:DarkOrange">yellow wire</span> will be used to give the control signal to the servomotor. The control signal is what we will give to the motor controller board to tell it what position we want the servomotor to go to.
+
+You can easily get motor driver boards to control a servomotor, or control them using a microcontroller board like an Arduino or a microbit. All you need is to be able to provide electrical power to the electromagnetic coil, and a control signal. Today we will be using the microbit and a robotics board!
+
+
 
 <!--Comment: End of markdown-->
 
@@ -118,9 +164,9 @@ Okay, let's get to the fun bit!
 
 <!--Comment: Back to markdown -->
 
-### Robot Arm Assembly - A little journey through mechanical design
+### Assembling the servomotor demonstrator
 
-First, we need to start to build our robot arm. Expand the headings below (click on them) to see each step of the instructions.
+First, we need to assemble our set up. Expand the headings below (click on them) to see each step of the instructions.
 
 <!--Comment: End of markdown-->
 
@@ -136,15 +182,16 @@ First, we need to start to build our robot arm. Expand the headings below (click
     </div>
     <div id="collapseOne" class="collapse show" data-parent="#accordion">
       <div class="card-body">
-      Have a look inside you box, you should find lots of stuff in there! The box contains: 
+      Have a look inside your box, you should find lots of stuff in there! The box contains: 
         <br>
         - 1 microbit <br>
-        - 1 kitronik robotics board <br>
+        - 1 Kitronik robotics board <br>
         - 2 Stepper motors <br>
+        - 1 Servomotor <br>
         - 1 Bag labelled 'Assembly parts' <br>
         - 2 3D printed robot arm links (labelled 1 and 2) <br>
         - 1 base board (white in color in 4 pieces) <br>
-        - 1 x AA 4 battery holder <br>
+        - 1 x AA 4 battery holder (connected to the Kitronik Robotics board)<br>
         - 1 whiteboard marker <br>
         - 1 screwdriver (looks like a pen) <br>
         - 2 jumper leads (4 wires each) <br>
@@ -156,6 +203,17 @@ First, we need to start to build our robot arm. Expand the headings below (click
         <br>
         <img src="./images/assembly1/img1_compressed.jpg" class="img-fluid" alt="assemblyImage" loading="lazy">
 
+      For this activity, you only need:
+      - the motors that we took out earlier
+      - the part of the base board with the green attachment on it
+      - the 4 AA battery holder and Kitronik Robotics Board
+      - the microbit
+      - the USB cable
+      - the screwdriver
+      - and Robot Arm 2. 
+      
+      Carefully keep the other pieces aside for the next workshop.
+
 
       </div>
     </div>
@@ -164,18 +222,14 @@ First, we need to start to build our robot arm. Expand the headings below (click
   <div class="card">
     <div class="card-header">
       <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
-        Check contents of assembly bag
+        Assemble the servomotor
       </a>
     </div>
     <div id="collapseTwo" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        Next have a look in the bag marked 'assembly parts'. You should find the following stuff in there <br>
+        Slot the servomotor into the robot arm base on the base board as shown in the photo. It is a snap joint, so all you need to do is put one end of the motor attachment tab into one slot on the motor base, and then gently press in the other end of the motor attachment into the other slot on the motor base until it 'snaps' in.
 
-        Bag contains: <br>
-        - 2 x 3D printed parts (bearing holder and caster holder) <br>
-        - 2 x bearings (or 1 bearing if 1 is already in one of the robot arm links) <br>
-        - 5 x screws (M3 x 6mm countersunk screws) [Includes 1 spare] <br>
-        - 3 x nuts (M3) [Includes 1 spare] <br>
+        Make sure that the shaft of the servomotor is in the middle of the two ends, and is facing up towards the ceiling.
 
         <a href="./images/assembly1/img4_compressed_annotated.jpg"><img src="./images/assembly1/img4_compressed_annotated.jpg" class="img-fluid" alt="assemblyImage">
         </a>
@@ -187,14 +241,16 @@ First, we need to start to build our robot arm. Expand the headings below (click
   <div class="card">
     <div class="card-header">
       <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
-        Let's have a look at the bearings!
+        Connect the motor
       </a>
     </div>
     <div id="collapseThree" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        Let's have a look at the bearings, pick up one of the bearings. Give it a spin in your fingers. Why do you think we need it in our robot arm?
+        Let's take a look at the Kitronik Robotics Board. If you look at the area circled in the photo below, you will see a set of pins. Over each set of pins, you will see the letters "GND  V   SIG".
 
-        Sometimes one of the bearings is already placed inside the robot arm #1. If it's not, then why don't you put it in there now! It's a tight fit so you may need to apply a bit of pressure.
+        <img src="images/assembly1/img5_compressed.jpg" class="img-fluid" alt="assemblyImage">
+
+        Take the connector of the servomotor and attach it to the first 3 pins (SV1), so that the brown wire goes to GND, the red wire goes to V, and the yellow wire goes to SIG. Just press them on straight downwards until the end. Double check your wiring with the photo!
 
         <img src="images/assembly1/img5_compressed.jpg" class="img-fluid" alt="assemblyImage">
 
@@ -205,7 +261,7 @@ First, we need to start to build our robot arm. Expand the headings below (click
   <div class="card">
     <div class="card-header">
       <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
-        Put the second bearing into its position
+        Slot in the microbit
       </a>
     </div>
     <div id="collapseFour" class="collapse" data-parent="#accordion">
