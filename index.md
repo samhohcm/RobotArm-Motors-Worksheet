@@ -209,23 +209,26 @@ First, we need to assemble our set up. Expand the headings below (click on them)
         - 1 usb cable <br>
 
         
-        <a href="./images/assembly1/img3_compressed_annotated.jpg"><img src="./images/assembly1/img3_compressed_annotated.jpg" class="img-fluid" alt="assemblyImage" loading="lazy">
-        </a>
-        <br>
-        <img src="./images/assembly1/img1_compressed.jpg" class="img-fluid" alt="assemblyImage" loading="lazy">
+        <img src="./images/assembly1/img3_compressed_annotated.jpg" class="img-fluid" alt="assemblyImage" loading="lazy"/>
 
-      For this activity, you only need:
-        - the motors that we took out earlier
-        - the part of the base board with the green attachment on it
-        - the 4 AA battery holder and Kitronik Robotics Board
-        - the microbit
-        - the USB cable
-        - the screwdriver
-        - the 3D printed part in the bag labelled 'Motors Workshop'
+        <br>
+        
+        <img src="./images/assembly1/img1_compressed.jpg" class="img-fluid" alt="assemblyImage" loading="lazy"/>
+
+      For this activity, you only need: <br>
+        - the motors that we took out earlier <br>
+        - the part of the base board with the green attachment on it <br>
+        - the 4 AA battery holder and Kitronik Robotics Board <br>
+        - the microbit <br>
+        - the USB cable <br>
+        - the screwdriver <br>
+        - the 3D printed part in the bag labelled 'Motors Workshop' <br>
         - and Robot Arm 2. 
 
+      <br>
+
       Insert Image
-      
+      <br>
       Carefully keep the other pieces back in the box for the next workshop.
 
 
@@ -363,8 +366,9 @@ First, we need to assemble our set up. Expand the headings below (click on them)
 
 <!--Comment: This section is markdown again-->
 
+
 # Programming the Servomotor
----
+
 
 <!--Comment: End of markdown-->
 
