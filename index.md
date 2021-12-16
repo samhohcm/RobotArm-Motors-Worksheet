@@ -28,7 +28,7 @@ This session is designed to be fun! The idea is that we can follow it together o
 <h2>Contents</h2>
 <ul class="list-group">
   <li class="list-group-item"><a href="#resourcesPanel">Resources</a></li>
-  <li class="list-group-item"><a href="Explanation">How a Motor works</a></li>
+  <li class="list-group-item"><a href="#Explanation">How a Motor works</a></li>
   <li class="list-group-item"><a href="#Activity1">Assembling the servomotor</a></li>
   <li class="list-group-item"><a href="#Activity2">Programming the servomotor</a></li>
   <li class="list-group-item"><a href="#Activity3">Assembling the stepper motor</a></li>
@@ -55,8 +55,7 @@ This session is designed to be fun! The idea is that we can follow it together o
 
 
 # How do you move a robot arm?
-<div id="Explanation" class="container p-3 my-3 bg-primary text-primary">
-
+<div id="Explanation">
 </div>
 <br>
 
@@ -115,9 +114,9 @@ They try to get away from each other of course! Their electromagnetic fields int
 Open it and let the applet load. It should look like this:
 
 <img src="images/Explanation/DC_Motor_animation.jpg" alt="DC Motor Explanation screenshot"
-	title="DC Motor Demonstration" height="250" />
+	title="DC Motor Demonstration" height="280" class="center"/>
 
-In this animation, the outer magnet is the permanent magnet, and the coil in the middle connected to the battery is the electromagnet. The part that moves is connected to the **shaft** of the motor, which you can attach things to that need to be moved. All electric motors use this principle.
+Have a play with the speed and pay attention to the little green arrows. They show the direction in which the electromagnetic force pushes the coil. In this animation, the outer magnet is the permanent magnet, and the coil in the middle connected to the battery is the electromagnet. The part that moves is connected to the **shaft** of the motor, which you can attach things to that need to be moved. All electric motors use this principle.
 
 Now let's take a look at the motors we have right now and learn more about them!
 
@@ -129,6 +128,7 @@ Now let's take a look at the motors we have right now and learn more about them!
 ---
 
 ## The Servomotor
+<br>
 
 The servomotor you have with you is a very common hobby servomotor, sometimes shortened to 'servo'. It has a permanent magnet and an electromagnet inside, and a gearbox. The gearbox helps to increase the torque (the turning force) of the motor, while slowing down its speed. It also has a sensor that can measure its rotation!
 
@@ -148,7 +148,8 @@ The <span style="color:Brown">brown wire</span> is connected to the ground of th
 
 You can easily get motor driver boards to control a servomotor, or control them using a microcontroller board like an Arduino or a microbit. All you need is to be able to provide electrical power to the electromagnetic coil, and a control signal. Today we will be using the microbit and a robotics board!
 
-
+<br>
+<br>
 
 <!--Comment: End of markdown-->
 
@@ -212,7 +213,7 @@ First, we need to assemble our set up. Expand the headings below (click on them)
       - the screwdriver
       - and Robot Arm 2. 
       
-      Carefully keep the other pieces aside for the next workshop.
+      Carefully keep the other pieces back in the box for the next workshop.
 
 
       </div>
@@ -246,7 +247,12 @@ First, we need to assemble our set up. Expand the headings below (click on them)
     </div>
     <div id="collapseThree" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        Let's take a look at the Kitronik Robotics Board. If you look at the area circled in the photo below, you will see a set of pins. Over each set of pins, you will see the letters "GND  V   SIG".
+        Let's take a look at the Kitronik Robotics Board. Check if you have a 'All-In-One' board or a 'Compact' board, it is labelled at the back of the board as shown in the photos:
+        
+        <img src="images/assembly1/img5_compressed.jpg" class="img-fluid" alt="assemblyImage">
+
+
+        If you look at the area circled in the photo below, you will see a set of pins. Over each set of pins, you will see the letters "GND  V   SIG".
 
         <img src="images/assembly1/img5_compressed.jpg" class="img-fluid" alt="assemblyImage">
 

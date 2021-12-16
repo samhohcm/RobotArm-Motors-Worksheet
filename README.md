@@ -2,9 +2,9 @@
 
 [![logoPicture](images/girlsIntoCodingLogo.jpg)](https://www.girlsintocoding.com/)
 
-A project activity with the subject robotic 2D kinematics, for [Girls Into Coding](https://www.girlsintocoding.com/).
+A project activity with the subject motors for robot arms, for [Girls Into Coding](https://www.girlsintocoding.com/).
 
-This activity is generated as a webpage at [https://samhohcm.github.io/Robot-Kinematics-Remote-Worksheet-1/](https://samhohcm.github.io/Robot-Kinematics-Remote-Worksheet-1/)
+This activity is generated as a webpage at [https://samhohcm.github.io/RobotArm-Motors-Worksheet/](https://samhohcm.github.io/RobotArm-Motors-Worksheet/)
 
 ## Contents
 
@@ -22,7 +22,7 @@ This activity uses the robotic kinematics kit developed by [Sam Hoh](https://git
 
 ## Accessing the activity webpage
 
-Simply point your browser to [https://samhohcm.github.io/Robot-Kinematics-Remote-Worksheet-1/](https://samhohcm.github.io/Robot-Kinematics-Remote-Worksheet-1/)
+Simply point your browser to [https://samhohcm.github.io/RobotArm-Motors-Worksheet/](https://samhohcm.github.io/RobotArm-Motors-Worksheet/)
 
 ## Contributing
 
