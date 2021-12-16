@@ -212,7 +212,7 @@ First, we need to assemble our set up. Expand the headings below (click on them)
         <img src="./images/assembly1/img3_compressed_annotated.jpg" class="img-fluid" alt="assemblyImage" loading="lazy"/>
 
         <br>
-        
+
         <img src="./images/assembly1/img1_compressed.jpg" class="img-fluid" alt="assemblyImage" loading="lazy"/>
 
       For this activity, you only need: <br>
@@ -226,10 +226,12 @@ First, we need to assemble our set up. Expand the headings below (click on them)
         - and Robot Arm 2. 
 
       <br>
+      <br>
 
       Insert Image
-      <br>
-      Carefully keep the other pieces back in the box for the next workshop.
+      
+      <p>
+      Carefully keep the other pieces back in the box for the next workshop.</p>
 
 
       </div>
@@ -248,7 +250,8 @@ First, we need to assemble our set up. Expand the headings below (click on them)
 
         Make sure that the shaft of the servomotor is in the middle of the two ends, and is facing up towards the ceiling.
 
-        <a href="./images/assembly1/img4_compressed_annotated.jpg"><img src="./images/assembly1/img4_compressed_annotated.jpg" class="img-fluid" alt="assemblyImage">
+        <a href="./images/assembly1/img4_compressed_annotated.jpg">
+        <img src="./images/assembly1/img4_compressed_annotated.jpg" class="img-fluid" alt="assemblyImage">
         </a>
 
       </div>
@@ -264,15 +267,17 @@ First, we need to assemble our set up. Expand the headings below (click on them)
     <div id="collapseThree" class="collapse" data-parent="#accordion">
       <div class="card-body">
         Let's take a look at the Kitronik Robotics Board. Check if you have a 'All-In-One' board or a 'Compact' board, it is labelled at the back of the board as shown in the photos:
-        
+        <br>
         <img src="images/AssemblyServo/Identifying_Board.jpg" class="img-fluid" alt="Identifying_Board">
+        <br>
+        <p>
+        Depending on your board, the servo pins might look different. If you look at the area circled in the photo below, you will see a set of pins. </p>
+        <br>
 
-
-        Depending on your board, the servo pins might look different. If you look at the area circled in the photo below, you will see a set of pins. 
-
-        <img src="images/AssemblyServo/Board_Servopins.png" class="img-fluid" alt="Board Servopins">
-
-        Take the connector of the servomotor and attach it to the first 3 pins (SV1), so that the brown wire goes to GND, the red wire goes to V (or VDD), and the yellow wire goes to SIG. Just press them on straight downwards until the end. Double check your wiring with the photo!
+        <img src="images/AssemblyServo/Board_Servopins.png" class="img-fluid" alt="Board Servopins"/>
+        <br>
+        <p>
+        Take the connector of the servomotor and attach it to the first 3 pins (SV1), so that the brown wire goes to GND, the red wire goes to V (or VDD), and the yellow wire goes to SIG. Just press them on straight downwards until the end. Double check your wiring with the photo!</p>
 
         <img src="images/AssemblyServo/Connect_ServoPins.png" class="img-fluid" alt="Connector to Servopins">
 
@@ -286,7 +291,7 @@ First, we need to assemble our set up. Expand the headings below (click on them)
         Install microbit into the Robotics Board
       </a>
     </div>
-    <div id="collapseThirteen" class="collapse" data-parent="#accordion">
+    <div id="collapseFour" class="collapse" data-parent="#accordion">
       <div class="card-body">
         Take the microbit and install it into the Robotics Board. You will need to push down on it fimly to install it into the connector. Make sure it is the right way around. 
 
