@@ -68,6 +68,12 @@ Think about things that move, what makes them move?
 
 <br>
 
+<img src="images/Explanation/Things_that_move.png" alt="Things that move" height="300" class="center"/>
+
+*Cartoons Copyright of [Irasutoya](https://www.irasutoya.com)*
+
+<br>
+
 **Motors** are an easy way to get moving! They can be quite affordable and electrical motors can be powered by batteries, which are a convenient power source. In fact, I've just packed some for you in the box!
 
 Have a look at the box, and pull out the bags labelled "Servomotor" and "Stepper Motor".
@@ -101,9 +107,14 @@ Have you tried making an **electromagnet** using a coil of wire and a battery? H
 
 If you run an electrical current through a wire (for example, with a battery!), it will generate an **electromagnetic field** around the wire. Making lots of coils magnifies this effect, so we usually make electromagnets using coils. These are magnets that you can turn on and off, or even switch polarities! This is compared to permanent magnets, which you might have seen around.
 
-<!--Insert figure-->
-
 <br>
+<img src="images/Explanation/magnet-set_1308-15311.jpg" alt="Magnets" class="center" height="300"/>
+
+*Image Copyright [brgfx](https://www.freepik.com/free-vector/magnet-set_2480989.htm)*
+
+<p style="text-align: center;">Permanent magnets look like these!</p>
+<br>
+
 
 Inside every motor there is a permanent magnet and there is an electromagnet. 
 
@@ -137,9 +148,8 @@ Being able to measure how much it has rotated helps it to decide how much to con
 Take it out of the bag and let's have a look at the motor.
 <br>
 
-<!--Insert image of servomotor parts
-<img src="images/Explanation/DC_Motor_animation.jpg" alt="DC Motor Explanation screenshot"
-	title="DC Motor Demonstration" height="250" />-->
+<!-- image of servomotor parts-->
+<img src="images/AssemblyServo/Servomotor_Parts.png" alt="Servomotor Parts" class="center"/> 
 
 <br>
 You can see the shaft of the motor on the outside, and through the plastic body you can see the plastic gears inside. At the bottom of the motor, you can see a controller board and there are three wires coming out of the body of the motor.
@@ -205,13 +215,16 @@ First, we need to assemble our set up. Expand the headings below (click on them)
         <img src="./images/assembly1/img1_compressed.jpg" class="img-fluid" alt="assemblyImage" loading="lazy">
 
       For this activity, you only need:
-      - the motors that we took out earlier
-      - the part of the base board with the green attachment on it
-      - the 4 AA battery holder and Kitronik Robotics Board
-      - the microbit
-      - the USB cable
-      - the screwdriver
-      - and Robot Arm 2. 
+        - the motors that we took out earlier
+        - the part of the base board with the green attachment on it
+        - the 4 AA battery holder and Kitronik Robotics Board
+        - the microbit
+        - the USB cable
+        - the screwdriver
+        - the 3D printed part in the bag labelled 'Motors Workshop'
+        - and Robot Arm 2. 
+
+      Insert Image
       
       Carefully keep the other pieces back in the box for the next workshop.
 
@@ -249,16 +262,16 @@ First, we need to assemble our set up. Expand the headings below (click on them)
       <div class="card-body">
         Let's take a look at the Kitronik Robotics Board. Check if you have a 'All-In-One' board or a 'Compact' board, it is labelled at the back of the board as shown in the photos:
         
-        <img src="images/assembly1/img5_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <img src="images/AssemblyServo/Identifying_Board.jpg" class="img-fluid" alt="Identifying_Board">
 
 
-        If you look at the area circled in the photo below, you will see a set of pins. Over each set of pins, you will see the letters "GND  V   SIG".
+        Depending on your board, the servo pins might look different. If you look at the area circled in the photo below, you will see a set of pins. 
 
-        <img src="images/assembly1/img5_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <img src="images/AssemblyServo/Board_Servopins.png" class="img-fluid" alt="Board Servopins">
 
-        Take the connector of the servomotor and attach it to the first 3 pins (SV1), so that the brown wire goes to GND, the red wire goes to V, and the yellow wire goes to SIG. Just press them on straight downwards until the end. Double check your wiring with the photo!
+        Take the connector of the servomotor and attach it to the first 3 pins (SV1), so that the brown wire goes to GND, the red wire goes to V (or VDD), and the yellow wire goes to SIG. Just press them on straight downwards until the end. Double check your wiring with the photo!
 
-        <img src="images/assembly1/img5_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <img src="images/AssemblyServo/Connect_ServoPins.png" class="img-fluid" alt="Connector to Servopins">
 
       </div>
     </div>
@@ -267,14 +280,16 @@ First, we need to assemble our set up. Expand the headings below (click on them)
   <div class="card">
     <div class="card-header">
       <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
-        Slot in the microbit
+        Install microbit into the Robotics Board
       </a>
     </div>
-    <div id="collapseFour" class="collapse" data-parent="#accordion">
+    <div id="collapseThirteen" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        Take the second bearing and put it into the green 'bearing holder' just like in the picture, it should fit in snugly!
+        Take the microbit and install it into the Robotics Board. You will need to push down on it fimly to install it into the connector. Make sure it is the right way around. 
 
-        <img src="images/assembly1/img6_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <img src="images/assembly1/img21_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <br>
+        <img src="images/assembly1/img22_compressed.jpg" class="img-fluid" alt="assemblyImage">
 
       </div>
     </div>
@@ -301,12 +316,17 @@ First, we need to assemble our set up. Expand the headings below (click on them)
   <div class="card">
     <div class="card-header">
       <a class="collapsed card-link" data-toggle="collapse" href="#collapseSix">
-        Let's look at a motor
+        Change the attachment on the robot arm
       </a>
     </div>
     <div id="collapseSix" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        Take one of the motors out of its bag and place it next to the bearing holder.  Have a look at it in your hand. You should be able to identify some electrical wires and a connector, as well as the shaft. The shaft is the part which turns and makes things move. How many wires does it have coming out of it?
+        Take the robot arm labelled number '2', and have a look at the attachment on its end. Use your screwdriver to unscrew the screws and take off the attachment. Be careful not to lose the screws!
+
+
+        Take the bag labelled 'Motors Workshop' and take out the motor attachment inside. Attach it to Robot Arm 2 using the same screws. Remember, righty tighty, lefty loosey!
+
+
 
         <img src="images/assembly1/img7_compressed.jpg" class="img-fluid" alt="assemblyImage">
 
@@ -317,12 +337,20 @@ First, we need to assemble our set up. Expand the headings below (click on them)
   <div class="card">
     <div class="card-header">
       <a class="collapsed card-link" data-toggle="collapse" href="#collapseSeven">
-        Begin to attach the first motor!
+        Attach the robot arm
       </a>
     </div>
     <div id="collapseSeven" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        Take the motor. We're going to attach it to the green bearing holder we just put the bearing inside of. Take a single M3 nut out of the 'assembly parts' bag and place it in one of the hexaganol shaped holes in the bearing holder. 
+        Make sure the battery holder is switched off.
+
+        Take the robot arm and push it onto the shaft of the servomotor firmly, as shown in the photo.
+
+        We then need to make sure that the position of the arm is correct. Gently use the arm to turn it all the way to the right, until it won't move anymore. Don't use too much force! We don't want to break the motor, we just want to move the shaft into position.
+
+        Once the robot arm doesn't move anymore, pull it off, and put the robot arm so that it faces the right. This way, when your arm is at zero position, it should be pointing to the left, as shown in the photo.
+
+        Once you're done with that, we're ready to start programming!
 
         <img src="images/assembly1/img8_compressed_annotated.jpg" class="img-fluid" alt="assemblyImage">
 
@@ -330,154 +358,12 @@ First, we need to assemble our set up. Expand the headings below (click on them)
     </div>
   </div>
 
-  <div class="card">
-    <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseEight">
-        Continue to attach the first motor!
-      </a>
-    </div>
-    <div id="collapseEight" class="collapse" data-parent="#accordion">
-      <div class="card-body">
-        Next take a single M3 screw out of the 'assembly bag'. Line the holes up between the green bearing holder and the motor. Insert the screw into the same hole that your nut is resting in, then use the right sized screwdriver attachment to tighten the screw. You may need to hold the nut in place with your finger. You need to turn it clockwise to tighten it! A good way to remember this is the phrase "righty tighty, lefty loosy".
 
-        <img src="images/assembly1/img14_compressed.jpg" class="img-fluid" alt="assemblyImage">
 
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseNine">
-        Finish attaching the first motor
-      </a>
-    </div>
-    <div id="collapseNine" class="collapse" data-parent="#accordion">
-      <div class="card-body">
-        Repeat this for the second hole between the green bearing holder and the motor. Take another nut, insert it into the hexaganol shaped hole, and then use a screw to tighten the two parts together.
-
-        <img src="images/assembly1/img15_compressed.jpg" class="img-fluid" alt="assemblyImage">
-
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTen">
-        Assemble the jigsaw base
-      </a>
-    </div>
-    <div id="collapseTen" class="collapse" data-parent="#accordion">
-      <div class="card-body">
-        The mat for the robot arm is cut into 4 plastic jigsaw pieces. Take the 4 pieces of the jigsaw and assemble them. There is a Green (robot arm base) attached to one of the pieces, this is the lower left hand corner.  Look carefully at the pieces to line up the Y and X axis correctly. The Y axis should be pointing upwards and the X axis should be horizontal. If the lines are a bit hard to see then just take the whiteboard marker and draw over them, then wipe them with a paper tissue or a piece of kitchen towel.
-
-        <img src="images/assembly1/img16_compressed.jpg" class="img-fluid" alt="assemblyImage">
-
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseEleven">
-        Finish the robot arm base
-      </a>
-    </div>
-    <div id="collapseEleven" class="collapse" data-parent="#accordion">
-      <div class="card-body">
-        Clip the motor into the robot arm base. Make sure the wires of the motor are pointing towards you. You will have to gently bend the side of the base so that it snaps in! Well done! You have finished the installation of our base motor! :)
-
-        <img src="images/assembly1/img17_compressed.jpg" class="img-fluid" alt="assemblyImage">
-        <br>
-        <img src="images/assembly1/img19_compressed.jpg" class="img-fluid" alt="assemblyImage">
-
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwelve">
-        Attach wires to the robot arm base motor
-      </a>
-    </div>
-    <div id="collapseTwelve" class="collapse" data-parent="#accordion">
-      <div class="card-body">
-        Take one set of the jumper wires. Take the small screwdriver and gently screw these into the motor connector. Make sure that the wires aren't crossed over! The don't need to be screwed hard, just gently so that if you give them a little tug they can't pull out. Remember righty tighty, lefty loosy!
-
-        <img src="images/assembly1/img20_compressed.jpg" class="img-fluid" alt="assemblyImage">
-
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseThirteen">
-        Install microbit into the Robotics Board
-      </a>
-    </div>
-    <div id="collapseThirteen" class="collapse" data-parent="#accordion">
-      <div class="card-body">
-        Take the microbit and install it into the Robotics Board. You will need to push down on it fimly to install it into the connector. Make sure it is the right way around. 
-
-        <img src="images/assembly1/img21_compressed.jpg" class="img-fluid" alt="assemblyImage">
-        <br>
-        <img src="images/assembly1/img22_compressed.jpg" class="img-fluid" alt="assemblyImage">
-
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFourteen">
-        Connect the wires from the motor to the Robotics Board.
-      </a>
-    </div>
-    <div id="collapseFourteen" class="collapse" data-parent="#accordion">
-      <div class="card-body">
-        The wires connect into the Robotics board in the same order they came from the motor. Attach them gently with the big screwdriver attachment. 
-        
-
-        <img src="images/assembly1/img23_compressed.jpg" class="img-fluid" alt="assemblyImage">
-        <br>
-
-        The motor connector ports should line up with the Robotics board ports as shown in the figure. Make sure there aren't any crossovers in the wires! That means the same colour wire in port 1 on the motor connector on the left should be the same colour wire on port a on the Robotics board on the right.
-        <img src="images/assembly1/img23a.jpg" class="img-fluid" alt="assemblyImage">
-
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFifteen">
-        Connect the battery
-      </a>
-    </div>
-    <div id="collapseFifteen" class="collapse" data-parent="#accordion">
-      <div class="card-body">
-        Take the large AA battery and connect its two wires to the Robotics Board. This is an important step! Make sure not to get the wires the wrong way around. The red wire goes to the screw terminal labelled 'RED +' and the black wire goes to the screw terminal labelled 'Black -' . Check the small switch on the the battery pack, it should be in the 'off position'. 
-        <br>
-        <img src="images/assembly1/img25_compressed.jpg" class="img-fluid" alt="assemblyImage">
-        <br>
-        <img src="images/assembly1/img24_compressed.jpg" class="img-fluid" alt="assemblyImage">
-        <br>
-        <img src="images/assembly1/img26_compressed.jpg" class="img-fluid" alt="assemblyImage">
-
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<br><br>
 
 <!--Comment: This section is markdown again-->
 
-# Testing the first motor
+# Programming the Servomotor
 ---
 
 <!--Comment: End of markdown-->
@@ -797,17 +683,19 @@ Let's build the second part of the robot arm!
     </div>
   </div>
 
+ 
+
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwoC">
-        Remove the first robot arm link
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSeven">
+        Begin to attach the first motor!
       </a>
     </div>
-    <div id="collapseTwoC" class="collapse" data-parent="#accordion">
+    <div id="collapseSeven" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        We need to remove the robot arm link #1 in order to attach things to it! Do this now by pulling it gently upwards away from the motor, you can do this with your hand.
-        <br><br>
-        <img src="images/assembly2/IMG_20210329_181849_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        Take the motor. We're going to attach it to the green bearing holder we just put the bearing inside of. Take a single M3 nut out of the 'assembly parts' bag and place it in one of the hexaganol shaped holes in the bearing holder. 
+
+        <img src="images/assembly1/img8_compressed_annotated.jpg" class="img-fluid" alt="assemblyImage">
 
       </div>
     </div>
@@ -815,24 +703,15 @@ Let's build the second part of the robot arm!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseThreeC">
-        Attach the second motor
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseEight">
+        Continue to attach the first motor!
       </a>
     </div>
-    <div id="collapseThreeC" class="collapse" data-parent="#accordion">
+    <div id="collapseEight" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        We will attach the second motor to the robot arm link #1. Take the motor. We're going to attach it to the two holes either side of the bearing in the robot arm link #1. Make sure you get it the right way up!
+        Next take a single M3 screw out of the 'assembly bag'. Line the holes up between the green bearing holder and the motor. Insert the screw into the same hole that your nut is resting in, then use the right sized screwdriver attachment to tighten the screw. You may need to hold the nut in place with your finger. You need to turn it clockwise to tighten it! A good way to remember this is the phrase "righty tighty, lefty loosy".
 
-        <br><br>
-
-        Take two M3 screws out of the 'assembly bag'. Line the holes up between the green motor mount and the gray robot arm link. Insert each screw one at a time, then use the right sized screwdriver attachment to tighten the screw. You need to turn it clockwise to tighten it! A good way to remember this is the phrase "righty tighty, lefty loosy".
-
-        <br><br>
-        <img src="images/assembly2/IMG_20210329_182654_compressed.jpg" class="img-fluid" alt="assemblyImage">
-        <br><br>
-        <img src="images/assembly2/IMG_20210329_182813_compressed.jpg" class="img-fluid" alt="assemblyImage">
-        <br><br>
-        <img src="images/assembly2/IMG_20210329_182842_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <img src="images/assembly1/img14_compressed.jpg" class="img-fluid" alt="assemblyImage">
 
       </div>
     </div>
@@ -840,41 +719,15 @@ Let's build the second part of the robot arm!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFourC">
-        Attach the ball caster to the robot arm link #1
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseNine">
+        Finish attaching the first motor
       </a>
     </div>
-    <div id="collapseFourC" class="collapse" data-parent="#accordion">
+    <div id="collapseNine" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        Take the green ball caster part out of the assembly parts bag, it's easy to identify because it has a ball on the bottom!
+        Repeat this for the second hole between the green bearing holder and the motor. Take another nut, insert it into the hexaganol shaped hole, and then use a screw to tighten the two parts together.
 
-        <br><br> 
-
-        This is a clip on part. It clips onto the robot arm link #1. Look at the pictures and clip it on now.
-
-        <br><br>
-        <img src="images/assembly2/IMG_20210329_183151_compressed.jpg" class="img-fluid" alt="assemblyImage">
-        <br><br>
-        <img src="images/assembly2/IMG_20210329_183205_compressed.jpg" class="img-fluid" alt="assemblyImage">
-
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSixC">
-        Attach the robot arm link #1 onto motor #1
-      </a>
-    </div>
-    <div id="collapseSixC" class="collapse" data-parent="#accordion">
-      <div class="card-body">
-        Now we're going to place the motor arm link #1 so that is attached back onto motor #1. Remember to carefully line up the 'D' shape that fits onto the motor shaft. Look at the photos for how this should look. 
-
-        <br><br>
-        <img src="images/assembly2/IMG_20210329_183328_compressed.jpg" class="img-fluid" alt="assemblyImage">
-        <br><br>
-        <img src="images/assembly2/IMG_20210329_183340_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <img src="images/assembly1/img15_compressed.jpg" class="img-fluid" alt="assemblyImage">
 
       </div>
     </div>
@@ -883,18 +736,17 @@ Let's build the second part of the robot arm!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseEightC">
-        Fit the whiteboard marker into robot arm link #2
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseEleven">
+        Finish the robot arm base
       </a>
     </div>
-    <div id="collapseEightC" class="collapse" data-parent="#accordion">
+    <div id="collapseEleven" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        Take the whiteboard marker and remove the cap, you can place it on the end of the marker to keep it safe. Thread the marker through the hole in the end of robot arm link #2. It should be pointing towards the same side the motor wires are on. Tighten the screw gently so that there is approximately 4cm of the whiteboard marker (nib end) poking out of the hole. Don't worry it doesn't need to be accurate!
+        Clip the motor into the robot arm base. Make sure the wires of the motor are pointing towards you. You will have to gently bend the side of the base so that it snaps in! Well done! You have finished the installation of our base motor! :)
 
-        <br><br>
-        <img src="images/assembly2/IMG_20210329_233024_compressed.jpg" class="img-fluid" alt="assemblyImage">
-        <br><br>
-        <img src="images/assembly2/IMG_20210329_233504_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <img src="images/assembly1/img17_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <br>
+        <img src="images/assembly1/img19_compressed.jpg" class="img-fluid" alt="assemblyImage">
 
       </div>
     </div>
@@ -902,18 +754,15 @@ Let's build the second part of the robot arm!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseNineC">
-        Attach robot arm link #2 to motor #2
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwelve">
+        Attach wires to the robot arm base motor
       </a>
     </div>
-    <div id="collapseNineC" class="collapse" data-parent="#accordion">
+    <div id="collapseTwelve" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        Take the robot arm link labelled #2. Carefully line up the 'D' shape on the end of the arm link with the motor shaft. Gently push the two pieces together. It should look like the photos below!
-        <br><br>
-        Move the arms so that the whiteboard marker is positioned at the position X = 9 and Y = 0. This is the 'home' position for the robot arm, we will talk about what this means shortly. This is the same position as in the photo below
+        Take one set of the jumper wires. Take the small screwdriver and gently screw these into the motor connector. Make sure that the wires aren't crossed over! The don't need to be screwed hard, just gently so that if you give them a little tug they can't pull out. Remember righty tighty, lefty loosy!
 
-        <br><br>
-        <img src="images/assembly2/IMG_20210329_233818_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <img src="images/assembly1/img20_compressed.jpg" class="img-fluid" alt="assemblyImage">
 
       </div>
     </div>
@@ -921,16 +770,17 @@ Let's build the second part of the robot arm!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTenC">
-        Attach wires to the robot arm link 2 motor (#2)
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseThirteen">
+        Install microbit into the Robotics Board
       </a>
     </div>
-    <div id="collapseTenC" class="collapse" data-parent="#accordion">
+    <div id="collapseThirteen" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        Take another set of jumper wires. Take the small screwdriver and gently screw these into the motor connector. They don't need to be screwed hard, just gently so that if you give them a little tug they can't pull out. Remember righty tighty, lefty loosy!
+        Take the microbit and install it into the Robotics Board. You will need to push down on it fimly to install it into the connector. Make sure it is the right way around. 
 
-        <br><br>
-        <img src="images/assembly2/IMG_20210330_000801_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <img src="images/assembly1/img21_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <br>
+        <img src="images/assembly1/img22_compressed.jpg" class="img-fluid" alt="assemblyImage">
 
       </div>
     </div>
@@ -938,16 +788,40 @@ Let's build the second part of the robot arm!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseElevenC">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFourteen">
         Connect the wires from the motor to the Robotics Board.
       </a>
     </div>
-    <div id="collapseElevenC" class="collapse" data-parent="#accordion">
+    <div id="collapseFourteen" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        The wires connect into the Robotics board in the same order they came from the motor, as before with the first motor. Attach them gently with the big screwdriver attachment. make sure there are no crossovers!
+        The wires connect into the Robotics board in the same order they came from the motor. Attach them gently with the big screwdriver attachment. 
+        
 
-        <br><br>
-        <img src="images/assembly3/IMG_20210411_124810_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <img src="images/assembly1/img23_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <br>
+
+        The motor connector ports should line up with the Robotics board ports as shown in the figure. Make sure there aren't any crossovers in the wires! That means the same colour wire in port 1 on the motor connector on the left should be the same colour wire on port a on the Robotics board on the right.
+        <img src="images/assembly1/img23a.jpg" class="img-fluid" alt="assemblyImage">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFifteen">
+        Connect the battery
+      </a>
+    </div>
+    <div id="collapseFifteen" class="collapse" data-parent="#accordion">
+      <div class="card-body">
+        Take the large AA battery and connect its two wires to the Robotics Board. This is an important step! Make sure not to get the wires the wrong way around. The red wire goes to the screw terminal labelled 'RED +' and the black wire goes to the screw terminal labelled 'Black -' . Check the small switch on the the battery pack, it should be in the 'off position'. 
+        <br>
+        <img src="images/assembly1/img25_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <br>
+        <img src="images/assembly1/img24_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <br>
+        <img src="images/assembly1/img26_compressed.jpg" class="img-fluid" alt="assemblyImage">
 
       </div>
     </div>
@@ -955,10 +829,8 @@ Let's build the second part of the robot arm!
 
 </div>
 
-
-<br><br>
-
-<!--Comment: This section is markdown again-->
+<br>
+<br>
 
 # Testing the second part of our robot arm!
 ---

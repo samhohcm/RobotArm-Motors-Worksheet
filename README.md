@@ -26,7 +26,7 @@ Simply point your browser to [https://samhohcm.github.io/RobotArm-Motors-Workshe
 
 ## Contributing
 
-Coding, testing, and worksheet draft by [Sam Hoh](https://github.com/samhohcm) based on meisben's first Robot Simulator workshop.
+Coding, testing, and worksheet draft by [Sam Hoh](https://github.com/samhohcm).
 
 Feel free to contribute if you find any errors in this activity, by initiating a pull request.
 
