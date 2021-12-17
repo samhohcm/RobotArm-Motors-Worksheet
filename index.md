@@ -275,7 +275,9 @@ First, we need to assemble our set up. Expand the headings below (click on them)
         <br>
 
         <img src="images/AssemblyServo/Board_Servopins.png" class="img-fluid" alt="Board Servopins"/>
+
         <br>
+
         <p>
         Take the connector of the servomotor and attach it to the first 3 pins (SV1), so that the brown wire goes to GND, the red wire goes to V (or VDD), and the yellow wire goes to SIG. Just press them on straight downwards until the end. Double check your wiring with the photo!</p>
 
@@ -311,7 +313,7 @@ First, we need to assemble our set up. Expand the headings below (click on them)
     </div>
     <div id="collapseFive" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        Let's take a look at the screwdriver. Take the caps off both ends, you should find different sizes of screwdriver tip. If you give each end a pull you will see that you have four possible sizes of tip. Make sure to select the correct size in this activity. You'll know you've got the right size if it fits snugly into the screw!
+        <p>Let's take a look at the screwdriver. Take the caps off both ends, you should find different sizes of screwdriver tip. If you give each end a pull you will see that you have four possible sizes of tip. Make sure to select the correct size in this activity. You'll know you've got the right size if it fits snugly into the screw!</p>
 
         <img src="images/assembly1/img10_compressed.jpg" class="img-fluid" alt="assemblyImage" loading="lazy">
         <br>
@@ -329,10 +331,13 @@ First, we need to assemble our set up. Expand the headings below (click on them)
     </div>
     <div id="collapseSix" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        Take the robot arm labelled number '2', and have a look at the attachment on its end. Use your screwdriver to unscrew the screws and take off the attachment. Be careful not to lose the screws!
+        <p>Take the robot arm labelled number '2', and have a look at the attachment on its end. Use your screwdriver to unscrew the screws and take off the attachment. Be careful not to lose the screws!</p>
 
+        Insert image
 
-        Take the bag labelled 'Motors Workshop' and take out the motor attachment inside. Attach it to Robot Arm 2 using the same screws. Remember, righty tighty, lefty loosey!
+        <p>Take the bag labelled 'Motors Workshop' and take out the shaft attachment inside. Attach it to Robot Arm 2 using the same screws. Remember, righty tighty, lefty loosey!</p>
+
+        <p>Have a closer look at the attachment on the robot arm. Then take a look at the shaft on the motor. Why do you think the attachment has been designed that way?</p>
 
 
 
@@ -350,15 +355,11 @@ First, we need to assemble our set up. Expand the headings below (click on them)
     </div>
     <div id="collapseSeven" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        Make sure the battery holder is switched off.
+        <p>Make sure the battery holder is switched off. If it is on, the servomotor will try to stay in place and you might break something if you try to force it! The motor also moves very quickly, and you might hurt yourself if it is moving. So keep the battery holder off if you're going to use your hands.</p>
 
-        Take the robot arm and push it onto the shaft of the servomotor firmly, as shown in the photo.
+        <p>It can be very hard to see what the motor shaft is doing if we don't attach something to it. This is where the robot arm comes in handy. Take the robot arm and push it onto the shaft of the servomotor firmly, as shown in the photo.</p>
 
-        We then need to make sure that the position of the arm is correct. Gently use the arm to turn it all the way to the right, until it won't move anymore. Don't use too much force! We don't want to break the motor, we just want to move the shaft into position.
-
-        Once the robot arm doesn't move anymore, pull it off, and put the robot arm so that it faces the right. This way, when your arm is at zero position, it should be pointing to the left, as shown in the photo.
-
-        Once you're done with that, we're ready to start programming!
+        <p>Once you're done with that, we're ready to start programming!</p>
 
         <img src="images/assembly1/img8_compressed_annotated.jpg" class="img-fluid" alt="assemblyImage">
 
@@ -389,7 +390,7 @@ First, we need to assemble our set up. Expand the headings below (click on them)
 
 <!--Comment: Back to markdown -->
 
-Whenever we're building a robot (or anything) it's really important to test it works in stages! We've just put our first motor together, so now lets test that it works :)! Follow these instructions to check your motor is moving correctly!
+Now we've got our servomotor set up, we can start figuring out how to move it!
 
 <!--Comment: End of markdown-->
 
