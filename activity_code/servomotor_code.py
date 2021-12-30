@@ -24,7 +24,7 @@ class KitronikRoboticsBoard:
     #SERVO_MULTIPLIER = 226
     SERVO_MULTIPLIER = 190
     #SERVO_ZERO_OFFSET = 0x66
-    SERVO_ZERO_OFFSET = 0
+    SERVO_ZERO_OFFSET = 0X66
     ANGLE_ZERO_OFFSET = 0
 
     chipAddress = 0x6C
@@ -60,7 +60,7 @@ class KitronikRoboticsBoard:
         # = 8 + ((servo number - 1) * 4)
         HighByte = False
         degrees+=self.ANGLE_ZERO_OFFSET
-        PWMVal = (degrees * 100 * self.SERVO_MULTIPLIER) / 10000 + self.SERVO_ZERO_OFFSET
+        PWMVal = ((degrees * 100 * self.SERVO_MULTIPLIER) / 10000) + self.SERVO_ZERO_OFFSET
         # (degree input * 100 * 266)/( 10000 + 102)
 
         if (PWMVal > 0xFF): #if PWMval more than 255
@@ -103,38 +103,47 @@ sleep(2000)
 # Create a class instance
 theBoard = KitronikRoboticsBoard
 #Initial position
-theBoard.servoWrite(theBoard, motor_pin, 0)
+#theBoard.servoWrite(theBoard, motor_pin, 0)
       
 # Create an infinite loop
 while True:
 
-    if button_a.is_pressed():
-        
-        # make sure we don't go above the motor limit!
-        if motor_angle < 180:
-            motor_angle+=step_angle
-
-        # show the motor angle
-        display.scroll("%d" %
-            (motor_angle), delay=100, wait=True, loop=False)
-        sleep(100)
-
+    if pin_logo.is_touched():
+        music.pitch(200, duration=150, wait=True)
         theBoard.servoWrite(theBoard, motor_pin, motor_angle)
 
-    if button_b.is_pressed():
+    else:
 
-        # make sure we don't go above the motor limit!
-        if motor_angle > 0:
-            motor_angle-=step_angle
+        if button_a.is_pressed():
 
-        # show the motor angle
-        display.scroll("%d" %
-            (motor_angle), delay=100, wait=True, loop=False)
-        sleep(100)
+            music.pitch(200, duration=150, wait=True)
 
-        theBoard.servoWrite(theBoard, motor_pin, motor_angle)
+            # make sure we don't go above the motor limit!
+            if motor_angle < 180:
+                motor_angle+=step_angle
+
+            # show the motor angle
+            display.scroll("%d" %
+                (motor_angle), delay=100, wait=True, loop=False)
+            sleep(100)
+    
+
+        if button_b.is_pressed():
+
+            music.pitch(200, duration=150, wait=True)
+
+            # make sure we don't go above the motor limit!
+            if motor_angle > 0:
+                motor_angle-=step_angle
+
+            # show the motor angle
+            display.scroll("%d" %
+                (motor_angle), delay=100, wait=True, loop=False)
+            sleep(100)
 
     
+
+
 
 
     

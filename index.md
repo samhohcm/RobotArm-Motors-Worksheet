@@ -156,6 +156,10 @@ You can see the shaft of the motor on the outside, and through the plastic body 
 
 The <span style="color:Brown">brown wire</span> is connected to the ground of the power supply, the <span style="color:Red">red wire</span> is connected to the positive end of the power supply, and the <span style="color:DarkOrange">yellow wire</span> will be used to give the control signal to the servomotor. The control signal is what we will give to the motor controller board to tell it what position we want the servomotor to go to.
 
+For servomotors, the control signal is just how long you turn on the current in one second. This is called *Pulse Width Modulation*. The signal would look like this:
+
+The servomotor we have can go from 0 degrees to 180 degrees. You can get servomotors that can move in bigger angles, or even continuously, like normal motors! For our motor, if the current is turned on for a shorter amount of time, the angular position will be smaller. To get a larger angular position, the current should be turned on for a longer amount of time.
+
 You can easily get motor driver boards to control a servomotor, or control them using a microcontroller board like an Arduino or a microbit. All you need is to be able to provide electrical power to the electromagnetic coil, and a control signal. Today we will be using the microbit and a robotics board!
 
 <br>
@@ -295,7 +299,7 @@ First, we need to assemble our set up. Expand the headings below (click on them)
     </div>
     <div id="collapseFour" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        Take the microbit and install it into the Robotics Board. You will need to push down on it fimly to install it into the connector. Make sure it is the right way around. 
+        Take the microbit and install it into the Robotics Board. You will need to push down on it fimly to install it into the connector. Make sure it is the right way around. The 'GND' marked on the microbit should be on the same side as the 'GND' on the robotics board. 
 
         <img src="images/assembly1/img21_compressed.jpg" class="img-fluid" alt="assemblyImage">
         <br>
@@ -357,7 +361,9 @@ First, we need to assemble our set up. Expand the headings below (click on them)
       <div class="card-body">
         <p>Make sure the battery holder is switched off. If it is on, the servomotor will try to stay in place and you might break something if you try to force it! The motor also moves very quickly, and you might hurt yourself if it is moving. So keep the battery holder off if you're going to use your hands.</p>
 
-        <p>It can be very hard to see what the motor shaft is doing if we don't attach something to it. This is where the robot arm comes in handy. Take the robot arm and push it onto the shaft of the servomotor firmly, as shown in the photo.</p>
+        <p>Take the robot arm and push it onto the shaft of the servomotor firmly, as shown in the photo. Try and move it, gently. It should be able to move, up to a certain point. Don't force it, or you might break the gears!</p>
+
+        <p>Push the arm so that it points straight ahead.</p>
 
         <p>Once you're done with that, we're ready to start programming!</p>
 
@@ -398,33 +404,16 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
 
 <div id="accordion">
 
+  
   <div class="card">
     <div class="card-header">
       <a class="collapsed card-link" data-toggle="collapse" href="#collapseOneB">
-        Attach the 1st robot arm onto the motor
+        Connect the microbit usb cable to your computer
       </a>
     </div>
     <div id="collapseOneB" class="collapse" data-parent="#accordion">
       <div class="card-body">
-      It can be really hard to see whether a motor shaft is moving unless we attach something to it. So let's do that now. <br> <br> Take the robot arm #1 and place it so that the small 'D' shape in the green part of the robot arm lines up with the motor shaft. You should be able to push the two together gently. Now give the robot arm a gentle turn to check it rotates. <br>
-      <img src="images/assembly1/img30_compressed.jpg" class="img-fluid" alt="assemblyImage">
-      <br> <br>
-      <img src="images/assembly1/img31_compressed.jpg" class="img-fluid" alt="assemblyImage">
-
-
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwoB">
-        Connect the microbit usb cable to your computer
-      </a>
-    </div>
-    <div id="collapseTwoB" class="collapse" data-parent="#accordion">
-      <div class="card-body">
-        Connect the micro-usb cable between your computer and the microbit. It plug into the top of the microbit and into the usb port on your computer. When it's connected a red light should come on the microbit, and a yellow light will start flashing.
+        Connect the micro-usb cable between your computer and the microbit. It plugs into the top of the microbit and into the usb port on your computer. When it's connected a red light should come on the microbit, and a yellow light will start flashing.
         <br><br>
         <img src="images/assembly1/img27_compressed.jpg" class="img-fluid" alt="assemblyImage">
         <br> <br>
@@ -436,11 +425,12 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseThreeB">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwoB">
         Check your microbit is working! - write some code
       </a>
-    </div>
-    <div id="collapseThreeB" class="collapse" data-parent="#accordion">
+    </div> 
+    <!--!!!!!!!!!!!!change the link-->
+    <div id="collapseTwoB" class="collapse" data-parent="#accordion">
       <div class="card-body">
         In your browser open a new tab and navigate to the online python editor for microbit: <a href="https://python.microbit.org/" target="_blank">Link here</a>
 
@@ -448,7 +438,7 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
 
         First of all let's test the microbit is working. Enter the following code into the python <br> 
 
-        <script src="https://gist.github.com/meisben/ac85b4e31963a878a4bfe12f53970e72.js"></script>
+        <script src="https://gist.github.com/meisben/ac85b4e31963a878a4bfe12f53970e72.js"></script> 
 
         <br>
         You can transfer this code into your python either by typing it in, or by copying and pasting. Please be careful to make sure you enter it exactly the same! Where you put spaces, tabs, brackets, full stops and other punctuation is really important in python because these characters tell the computer how to understand your code!
@@ -460,11 +450,11 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFourB">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseThreeB">
         Download the test code to your microbit
       </a>
     </div>
-    <div id="collapseFourB" class="collapse" data-parent="#accordion">
+    <div id="collapseThreeB" class="collapse" data-parent="#accordion">
       <div class="card-body">
         Download the code and transfer it to your microbit by clicking on 'Connect', selecting your microbit device, and then clicking 'Flash'.
         <br><br>
@@ -489,11 +479,11 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFiveB">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFourB">
         Reset the microbit
       </a>
     </div>
-    <div id="collapseFiveB" class="collapse" data-parent="#accordion">
+    <div id="collapseFourB" class="collapse" data-parent="#accordion">
       <div class="card-body">
         Now try pressing the reset button on the back of the microbit. This restarts the microbit and the program will restart from the beginning. Remember you can always press this if your microbit stops working or becomes unresponsive!
 
@@ -507,13 +497,15 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSixB">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFiveB">
         Turn the power to the motor on
       </a>
     </div>
-    <div id="collapseSixB" class="collapse" data-parent="#accordion">
+    <div id="collapseFiveB" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        Turn the small switch on the battery pack to the 'on position'. 
+        
+        
+        Turn the small switch on the battery pack to the 'on position'. This will power the motor.
 
         <br> <br>
 
@@ -525,15 +517,15 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSevenB">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSixB">
         Load our motor code
       </a>
     </div>
-    <div id="collapseSevenB" class="collapse" data-parent="#accordion">
+    <div id="collapseSixB" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        Next we will load our code to make our motors move!<br><br>
+        Next we will load our code to make our motor move!<br><br>
 
-        You can download the code we will use from this <a href="./activity_code/main_rotation.py" download="main_rotation.py" target="_blank"> link</a>.
+        You can download the code we will use from this <a href="./activity_code/servomotor_code.py" download="servomotor_code.py" target="_blank"> link</a>.
         
         <br><br>
 
@@ -541,7 +533,7 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
 
         <br><br>
         
-        Next, in your python editor click on 'Load' and then select the python file you just downloaded (it's called: main_rotation.py). The code will load and you will see it on your screen.
+        Next, in your python editor click on 'Load' and then select the python file you just downloaded (it's called: servomotor_code.py). The code will load and you will see it on your screen.
 
         <br> <br>
 
@@ -552,12 +544,15 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseEightB">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSevenB">
         Download the motor code to your microbit
       </a>
     </div>
-    <div id="collapseEightB" class="collapse" data-parent="#accordion">
+    <div id="collapseSevenB" class="collapse" data-parent="#accordion">
       <div class="card-body">
+
+               
+        
         Download the code and transfer it to your microbit by clicking on 'Connect', selecting your microbit device, and then clicking 'Flash'. If you've got any problems with this you can follow this guide to resolve them: <a href="https://python-editor-2-1-2.microbit.org/help.html?snippets=true" target="_blank">Link here</a>
 
         <br> <br>
@@ -569,22 +564,27 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseNineB">
-        Test the motor is working
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseEightB">
+        Zero the arm
       </a>
     </div>
-    <div id="collapseNineB" class="collapse" data-parent="#accordion">
+    <div id="collapseEightB" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        You should see the microbit start up with a picture of a snake! That's how you know you've got the right code. It will then display the motor number which is currently being controlled (number 1). To test the motor press either the A or B button. This will move the motor anticlockwise (A) or clockwise (B) by 15 degrees.
+        You should see the microbit start up with a picture of a ghost! That's how you know you've got the right code. 
+
+        <br><br>
+
+        <p>Take off the motor arm from the motor. Press the microbit symbol on the microbit to move the arm to the zero position.</p>
+
+        <p>Were you able to tell whether the motor moved? It might have made a sound, but it is hard to tell how far the motor moved. This is where the motor arm comes in handy. Push the motor arm back on so it points to the right. So now we know that both the motor and the arm is pointing to zero degrees.</p>
+
+        <p><img src="images/assembly1/img8_compressed_annotated.jpg" class="img-fluid" alt="assemblyImage"></p>
 
         <br><br>
         <ul>
-        <li>If you didn't see the picture of the snake, something is wrong with the software! -> Check your code!</li>
+        <li>If you didn't see the picture of the ghost, something is wrong with the software! -> Check your code!</li>
         <br><br>
-        <li>If your robot arm isn't moving then there maybe something wrong with your connections! -> Check your battery is switched on and check all your wires are securely in their connections (give them a gentle tug).</li>
-        <br><br>
-        <li>If you accidentally press the microbit symbol the code will switch to control motor #2, we don't want this at the moment, so if you do see the number 2 being displayed then just press the microbit symbol on the microbit once to reselect motor #1!</li>
-        </ul>
+        <li>If your robot arm isn't moving then there maybe something wrong with your connections! -> Check your battery is switched on and check all your wires are in the right order and securely in their connections (give them a gentle tug).</li>
         <br> <br>
 
       </div>
@@ -594,19 +594,37 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTenB">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseNineB">
         Try and move the robot arm (gently)
       </a>
     </div>
     <div id="collapseTenB" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        When the robot arm is stationary, try and turn the robot arm (gently) with your hand. You should find that it no longer moves! This is a feature of stepper motors (the type we are using), they keep their position!
-
+        <p>When the robot arm is stationary, try and turn the robot arm (gently) with your hand. You should find that if you do that, it will not want to move, and will keep trying to go back to where it should be! You will hear it complaining a bit. This is a feature of servomotors. As we mentioned earlier, they use a sensor to try and go to a position according to the signal that you give it.</p> 
+        <p>If you push too hard, things might break so be careful!</p>
         <br> <br>
 
       </div>
     </div>
   </div>
+
+  <div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTenB">
+        Let's move the motor!
+      </a>
+    </div>
+    <div id="collapseTenB" class="collapse" data-parent="#accordion">
+      <div class="card-body">
+        <p>Try pressing the buttons.</p>
+        <p>  <b>!!! Make sure your hands are far away from the motor arm! !!!</b> </p>
+        <p>Button A will increase the angle, and button B will decrease the angle. You can see it scrolling across the LEDs. When you reach an angle you're happy with, press the microbit symbol. The motor arm will move very quickly!</p> <!--Might change this bit honestly, have to check what code might be better and safer-->
+        <br>
+      </div>
+    </div>
+  </div>
+
+
 
   <div class="card">
     <div class="card-header">
@@ -621,23 +639,8 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
         <ul>
         <li>How can you get the motor to move further when you push the A or B button?</li>
         <li>How do you get the microbit to display a different picture when it starts up?</li>
+        <li>What do you think this bit of code is for:<br><img src="/images" class="img-fluid" alt="assemblyImage"><br>
         </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseThirteenB">
-        Our motor is working!
-      </a>
-    </div>
-    <div id="collapseThirteenB" class="collapse" data-parent="#accordion">
-      <div class="card-body">
-        Great! Our motor is working, now we can assemble the rest of the robot arm!
-        <br>
-        If you have any problems with any of the previous tasks make sure to tell a mentor so that we can solve them together! :) 
-
       </div>
     </div>
   </div>
