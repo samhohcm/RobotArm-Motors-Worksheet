@@ -385,7 +385,7 @@ First, we need to assemble our set up. Expand the headings below (click on them)
 <!--Comment: This section is markdown again-->
 
 
-# Programming the Servomotor
+### Programming the Servomotor
 
 
 <!--Comment: End of markdown-->
@@ -559,7 +559,9 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
 
                
         
-        Download the code and transfer it to your microbit by clicking on 'Connect', selecting your microbit device, and then clicking 'Flash'. If you've got any problems with this you can follow this guide to resolve them: <a href="https://python-editor-2-1-2.microbit.org/help.html?snippets=true" target="_blank">Link here</a>
+        <p>Download the code and transfer it to your microbit by clicking on 'Connect', selecting your microbit device, and then clicking 'Flash'. If you've got any problems with this you can follow this guide to resolve them: <a href="https://python-editor-2-1-2.microbit.org/help.html?snippets=true" target="_blank">Link here</a></p>
+
+        <p>You should see the microbit start up with a picture of a ghost! That's how you know you've got the right code. </p>
 
         <br> <br>
 
@@ -576,10 +578,7 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
     </div>
     <div id="collapseEightB" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        You should see the microbit start up with a picture of a ghost! That's how you know you've got the right code. 
-
-        <br><br>
-
+       
         <p>Take off the motor arm from the motor. Press the microbit symbol on the microbit to move the arm to the zero position.</p>
 
         <p>Were you able to tell whether the motor moved? It might have made a sound, but it is hard to tell how far the motor moved. This is where the motor arm comes in handy. Push the motor arm back on so it points to the right. So now we know that both the motor and the arm is pointing to zero degrees.</p>
@@ -605,7 +604,7 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
         Try and move the robot arm (gently)
       </a>
     </div>
-    <div id="collapseTenB" class="collapse" data-parent="#accordion">
+    <div id="collapseNineB" class="collapse" data-parent="#accordion">
       <div class="card-body">
         <p>When the robot arm is stationary, try and turn the robot arm (gently) with your hand. You should find that if you do that, it will not want to move, and will keep trying to go back to where it should be! You will hear it complaining a bit. This is a feature of servomotors. As we mentioned earlier, they use a sensor to try and go to a position according to the signal that you give it.</p> 
         <p>If you push too hard, things might break so be careful!</p>
@@ -646,12 +645,12 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
         <ul>
         <li>How can you get the motor to move further when you push the A or B button?</li>
         <li>How do you get the microbit to display a different picture when it starts up?</li>
-        <li>What do you think this bit of code is for:<br><img src="/images" class="img-fluid" alt="assemblyImage"><br>
+        <li>What do you think this bit of code is for:<br><img src="/images" class="img-fluid" alt="assemblyImage"><br></li>
+        <li>What types of robots do you think this motor would be good for? What sort of actions?</li>
         </ul>
       </div>
     </div>
   </div>
-
 
 </div>
 
@@ -659,8 +658,12 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
 
 <!--Comment: This section is markdown again-->
 
-# Building the second part of our robot arm!
----
+## The Stepper Motor
+
+Now that we've looked at a servomotor, what it looks like, how you connect it and 
+
+
+
 
 <!--Comment: End of markdown-->
 
