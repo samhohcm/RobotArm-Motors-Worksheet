@@ -158,6 +158,12 @@ The <span style="color:Brown">brown wire</span> is connected to the ground of th
 
 For servomotors, the control signal is just how long you turn on the current in one second. This is called *Pulse Width Modulation*. The signal would look like this:
 
+<br>
+<img src="images/Explanation/servo-rotation.gif" alt="PWM-Angularposition" class="center"/>
+
+*Image copyright [Apoorve](https://circuitdigest.com/article/servo-motor-working-and-basics#:~:text=Servo%20motor%20works%20on%20PWM,(potentiometer)%20and%20some%20gears.)*
+<br>
+
 The servomotor we have can go from 0 degrees to 180 degrees. You can get servomotors that can move in bigger angles, or even continuously, like normal motors! For our motor, if the current is turned on for a shorter amount of time, the angular position will be smaller. To get a larger angular position, the current should be turned on for a longer amount of time.
 
 You can easily get motor driver boards to control a servomotor, or control them using a microcontroller board like an Arduino or a microbit. All you need is to be able to provide electrical power to the electromagnetic coil, and a control signal. Today we will be using the microbit and a robotics board!
@@ -210,7 +216,7 @@ First, we need to assemble our set up. Expand the headings below (click on them)
         - 1 whiteboard marker <br>
         - 1 screwdriver (looks like a pen) <br>
         - 2 jumper leads (4 wires each) <br>
-        - 1 usb cable <br>
+        - 1 usb cable <br><br>
 
         
         <img src="./images/assembly1/img3_compressed_annotated.jpg" class="img-fluid" alt="assemblyImage" loading="lazy"/>
@@ -373,7 +379,7 @@ First, we need to assemble our set up. Expand the headings below (click on them)
     </div>
   </div>
 
-
+</div>
 
 
 <!--Comment: This section is markdown again-->
@@ -586,6 +592,7 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
         <br><br>
         <li>If your robot arm isn't moving then there maybe something wrong with your connections! -> Check your battery is switched on and check all your wires are in the right order and securely in their connections (give them a gentle tug).</li>
         <br> <br>
+        </ul>
 
       </div>
     </div>
@@ -738,10 +745,8 @@ Let's build the second part of the robot arm!
     </div>
     <div id="collapseNine" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        Repeat this for the second hole between the green bearing holder and the motor. Take another nut, insert it into the hexaganol shaped hole, and then use a screw to tighten the two parts together.
-
+        <p>Repeat this for the second hole between the green bearing holder and the motor. Take another nut, insert it into the hexaganol shaped hole, and then use a screw to tighten the two parts together.</p>
         <img src="images/assembly1/img15_compressed.jpg" class="img-fluid" alt="assemblyImage">
-
       </div>
     </div>
   </div>

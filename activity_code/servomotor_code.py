@@ -103,7 +103,7 @@ sleep(2000)
 # Create a class instance
 theBoard = KitronikRoboticsBoard
 #Initial position
-#theBoard.servoWrite(theBoard, motor_pin, 0)
+theBoard.servoWrite(theBoard, motor_pin, 0)
       
 # Create an infinite loop
 while True:
