@@ -108,7 +108,7 @@ Have you tried making an **electromagnet** using a coil of wire and a battery? H
 If you run an electrical current through a wire (for example, with a battery!), it will generate an **electromagnetic field** around the wire. Making lots of coils magnifies this effect, so we usually make electromagnets using coils. These are magnets that you can turn on and off, or even switch polarities! This is compared to permanent magnets, which you might have seen around.
 
 <br>
-<img src="images/Explanation/magnet-set_1308-15311.jpg" alt="Magnets" height="300" class="center">
+<p style="text-align: center;"><img src="images/Explanation/magnet-set_1308-15311.jpg" alt="Magnets" height="300" class="center"></p>
 
 *Image Copyright [brgfx](https://www.freepik.com/free-vector/magnet-set_2480989.htm)*
 
