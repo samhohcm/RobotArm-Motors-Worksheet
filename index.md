@@ -68,7 +68,7 @@ Think about things that move, what makes them move?
 
 <br>
 
-<img src="images/Explanation/Things_that_move.png" alt="Things that move" height="300" class="center"/>
+<img src="images/Explanation/Things_that_move.png" alt="Things that move" height="300" class="center">
 
 *Cartoons Copyright of [Irasutoya](https://www.irasutoya.com)*
 
@@ -108,7 +108,7 @@ Have you tried making an **electromagnet** using a coil of wire and a battery? H
 If you run an electrical current through a wire (for example, with a battery!), it will generate an **electromagnetic field** around the wire. Making lots of coils magnifies this effect, so we usually make electromagnets using coils. These are magnets that you can turn on and off, or even switch polarities! This is compared to permanent magnets, which you might have seen around.
 
 <br>
-<img src="images/Explanation/magnet-set_1308-15311.jpg" alt="Magnets" class="center" height="300"/>
+<img src="images/Explanation/magnet-set_1308-15311.jpg" alt="Magnets" height="300" class="center">
 
 *Image Copyright [brgfx](https://www.freepik.com/free-vector/magnet-set_2480989.htm)*
 
@@ -125,7 +125,7 @@ They try to get away from each other of course! Their electromagnetic fields int
 Open it and let the applet load. It should look like this:
 
 <img src="images/Explanation/DC_Motor_animation.jpg" alt="DC Motor Explanation screenshot"
-	title="DC Motor Demonstration" height="280" class="center"/>
+	title="DC Motor Demonstration" height="280" class="center">
 
 Have a play with the speed and pay attention to the little green arrows. They show the direction in which the electromagnetic force pushes the coil. In this animation, the outer magnet is the permanent magnet, and the coil in the middle connected to the battery is the electromagnet. The part that moves is connected to the **shaft** of the motor, which you can attach things to that need to be moved. All electric motors use this principle.
 
@@ -623,7 +623,7 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
     <div id="collapseTenB" class="collapse" data-parent="#accordion">
       <div class="card-body">
         <p>Try pressing the buttons.</p>
-        <p>  <b>!!! Make sure your hands are far away from the motor arm! !!!</b> </p>
+        <p>  <span style="color:Red"><b>!!! Make sure your hands are far away from the motor arm! !!!</b></span> </p>
         <p>Button A will increase the angle, and button B will decrease the angle. You can see it scrolling across the LEDs. When you reach an angle you're happy with, press the microbit symbol. The motor arm will move very quickly!</p> <!--Might change this bit honestly, have to check what code might be better and safer-->
         <br>
       </div>
@@ -658,9 +658,24 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
 
 <!--Comment: This section is markdown again-->
 
-## The Stepper Motor
+## The Stepper Motor 
+<br>
 
-Now that we've looked at a servomotor, what it looks like, how you connect it and 
+Now that we've looked at a servomotor, what it looks like, how you connect it and how you make it move, let's do the same for the stepper motor. The stepper motor we've given you in the kit is a miniature unipolar stepper motor. Just like the servomotor, it has a permanent magnet, electromagnets and a gearbox inside. The gearbox for the stepper motor also helps to increase the torque of the motor while reducing how fast it moves. However, the difference is that instead of the electromagnet rotating, the permanent magnet rotates instead! That means the permanent magnet is connected to the shaft.
+
+<br>
+
+Electromagnet coils are placed around the permanent magnet in the middle, as shown in the figure below. By activating each coil in sequence, the 
+
+<br>
+<img src="images/Explanation/Working-Principle02.webp" alt="Stepper Motor Working Principle" class="center">
+
+*Image copyright [How To Mechatronics](https://howtomechatronics.com/how-it-works/electrical-engineering/stepper-motor/)*
+
+<br>
+
+
+
 
 
 
