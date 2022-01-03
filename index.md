@@ -141,9 +141,9 @@ Now let's take a look at the motors we have right now and learn more about them!
 ## The Servomotor
 <br>
 
-The servomotor you have with you is a very common hobby servomotor, sometimes shortened to 'servo'. It has a permanent magnet and an electromagnet inside, and a gearbox. The gearbox helps to increase the torque (the turning force) of the motor, while slowing down its speed. It also has a sensor that can measure its rotation!
+The servomotor you have with you is a very common hobby servomotor, sometimes shortened to 'servo'. It has a permanent magnet and an electromagnet inside arranged like the animation we looked at before, and a gearbox. The gearbox helps to increase the torque (the turning force) of the motor, while slowing down its speed. It also has a sensor that can measure its rotation!
 
-Being able to measure how much it has rotated helps it to decide how much to continue moving, which is nice because it means you don't have to add extra things to control the motor and make it go to the position you want, which is useful for robotic applications. It is also very light and compact.
+Being able to measure how much it has rotated helps it to decide how much to continue moving, which is nice because it means you don't have to add extra things to control the motor and make it go to the position you want. This can be useful for robotic applications. It is also very light and compact.
 
 Take it out of the bag and let's have a look at the motor.
 <br>
@@ -384,8 +384,9 @@ First, we need to assemble our set up. Expand the headings below (click on them)
 
 <!--Comment: This section is markdown again-->
 
+<br><br>
 
-### Programming the Servomotor
+
 
 
 <!--Comment: End of markdown-->
@@ -395,6 +396,9 @@ First, we need to assemble our set up. Expand the headings below (click on them)
 <div id="Activity2" class="container p-3 my-3 bg-primary text-primary">
 <h2>Activity #2</h2>
 </div>
+
+
+### Programming the Servomotor
 
 <br>
 
@@ -626,6 +630,8 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
         <p>  <span style="color:Red"><b>!!! Make sure your hands are far away from the motor arm! !!!</b></span> </p>
         <p>Button A will increase the angle, and button B will decrease the angle. You can see it scrolling across the LEDs. When you reach an angle you're happy with, press the microbit symbol. The motor arm will move very quickly!</p> <!--Might change this bit honestly, have to check what code might be better and safer-->
         <br>
+        <p>Turn off the battery pack. Move the arm a bit, you should be able to move the arm. **Keep your hands away**, and then turn on the battery pack again. What happens?</p>
+        <br>
       </div>
     </div>
   </div>
@@ -665,7 +671,7 @@ Now that we've looked at a servomotor, what it looks like, how you connect it an
 
 <br>
 
-Electromagnet coils are placed around the permanent magnet in the middle, as shown in the figure below. By activating each coil in sequence, the 
+Electromagnet coils are placed around the permanent magnet in the middle, as shown in the figure below. By activating each coil in sequence, the the permanent magnet in the middle will rotate.
 
 <br>
 <img src="images/Explanation/Working-Principle02.webp" alt="Stepper Motor Working Principle" class="center">
@@ -674,7 +680,18 @@ Electromagnet coils are placed around the permanent magnet in the middle, as sho
 
 <br>
 
+As you can see from the animation, the permanent magnet moves in **steps**, which is why it's called a stepper motor! These types of motors have very good positional control, and are very good at holding their position. You don't really need a sensor in order to make it turn a certain amount, since you can just count the number of steps. But if you control it by moving a certain amount of steps, it won't actually know where you started! So you need to move it to its starting position before you turn on the motor and control program.
 
+This is in comparison to the servomotor, which knows what position it is at even if you turn off the motor, but is slightly worse at holding that position.
+
+Let's take the stepper motor out of its bag and have a look at it.
+
+<br>
+<p style="text-align:center;"><img src="images/Explanation/Working-Principle02.webp"></p>
+
+You can see the body of the motor, where the coils and magnet are. The shaft of the motor sticks out from the 3D printed attachment, and the attachment is covering the gearbox. This is so that dirt won't get in, which can mess with how it moves! There are four wires coming out from the body of the motor. These connect to the electromagnet coils.
+
+Now that we know a bit about our stepper motor, let's try and make it move!
 
 
 
@@ -694,7 +711,7 @@ Electromagnet coils are placed around the permanent magnet in the middle, as sho
 
 <!--Comment: Back to markdown -->
 
-Let's build the second part of the robot arm!
+### Let's assemble the stepper motor demonstrator!
 
 <!--Comment: End of markdown-->
 
@@ -705,14 +722,13 @@ Let's build the second part of the robot arm!
   <div class="card">
     <div class="card-header">
       <a class="collapsed card-link" data-toggle="collapse" href="#collapseOneC">
-        Your current progress
+        Taking off the servomotor
       </a>
     </div>
     <div id="collapseOneC" class="collapse" data-parent="#accordion">
       <div class="card-body">
-      For the next stage of building the battery should be turned off so do that now.
-      <br><br>
-      Your current progress on building the arm should look something like the picture - if not have a check of the previous steps or let a mentor know. <br>
+      <p>Turn off the battery before you disassemble the robot.</p>
+      <p>Take off the robot arm from the motor. Unplug the servomotor from the robotics board, and gently pry it out of the motor base. You can then put it back into its plastic bag.
       <br> <br>
       <img src="images/assembly1/img31_compressed.jpg" class="img-fluid" alt="assemblyImage">
 
@@ -721,17 +737,31 @@ Let's build the second part of the robot arm!
     </div>
   </div>
 
- 
+ <div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwoC">
+        Take out the parts needed
+      </a>
+    </div>
+    <div id="collapseTwoC" class="collapse" data-parent="#accordion">
+      <div class="card-body">
+        <p>Take out the bag labelled "Assembly Parts". Take out the green bearing holder, a bearing, and two screws and two nuts.</p> 
+        <br>
+        <img src="images/assembly1/img8_compressed_annotated.jpg" class="img-fluid" alt="assemblyImage">
+        <br>
+      </div>
+    </div>
+  </div>
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSeven">
-        Begin to attach the first motor!
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseThreeC">
+        Begin to attach the stepper motor!
       </a>
     </div>
-    <div id="collapseSeven" class="collapse" data-parent="#accordion">
+    <div id="collapseThreeC" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        Take the motor. We're going to attach it to the green bearing holder we just put the bearing inside of. Take a single M3 nut out of the 'assembly parts' bag and place it in one of the hexaganol shaped holes in the bearing holder. 
+        Take the motor. We're going to attach it to the green bearing holder. Take an M3 nut and place it in one of the hexagonal shaped holes in the bearing holder. 
 
         <img src="images/assembly1/img8_compressed_annotated.jpg" class="img-fluid" alt="assemblyImage">
 
@@ -741,13 +771,13 @@ Let's build the second part of the robot arm!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseEight">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFourC">
         Continue to attach the first motor!
       </a>
     </div>
-    <div id="collapseEight" class="collapse" data-parent="#accordion">
+    <div id="collapseFourC" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        Next take a single M3 screw out of the 'assembly bag'. Line the holes up between the green bearing holder and the motor. Insert the screw into the same hole that your nut is resting in, then use the right sized screwdriver attachment to tighten the screw. You may need to hold the nut in place with your finger. You need to turn it clockwise to tighten it! A good way to remember this is the phrase "righty tighty, lefty loosy".
+        Next take an M3 screw. Line the holes up between the green bearing holder and the motor. Insert the screw into the same hole that your nut is resting in, then use the right sized screwdriver attachment to tighten the screw. You may need to hold the nut in place with your finger. You need to turn it clockwise to tighten it! A good way to remember this is the phrase "righty tighty, lefty loosy".
 
         <img src="images/assembly1/img14_compressed.jpg" class="img-fluid" alt="assemblyImage">
 
@@ -757,13 +787,13 @@ Let's build the second part of the robot arm!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseNine">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFiveC">
         Finish attaching the first motor
       </a>
     </div>
-    <div id="collapseNine" class="collapse" data-parent="#accordion">
+    <div id="collapseFiveC" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        <p>Repeat this for the second hole between the green bearing holder and the motor. Take another nut, insert it into the hexaganol shaped hole, and then use a screw to tighten the two parts together.</p>
+        <p>Repeat this for the second hole between the green bearing holder and the motor. Take another nut, insert it into the hexagonal shaped hole, and then use a screw to tighten the two parts together.</p>
         <img src="images/assembly1/img15_compressed.jpg" class="img-fluid" alt="assemblyImage">
       </div>
     </div>
@@ -772,11 +802,11 @@ Let's build the second part of the robot arm!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseEleven">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSixC">
         Finish the robot arm base
       </a>
     </div>
-    <div id="collapseEleven" class="collapse" data-parent="#accordion">
+    <div id="collapseSixC" class="collapse" data-parent="#accordion">
       <div class="card-body">
         Clip the motor into the robot arm base. Make sure the wires of the motor are pointing towards you. You will have to gently bend the side of the base so that it snaps in! Well done! You have finished the installation of our base motor! :)
 
@@ -790,13 +820,13 @@ Let's build the second part of the robot arm!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwelve">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSevenC">
         Attach wires to the robot arm base motor
       </a>
     </div>
-    <div id="collapseTwelve" class="collapse" data-parent="#accordion">
+    <div id="collapseSevenC" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        Take one set of the jumper wires. Take the small screwdriver and gently screw these into the motor connector. Make sure that the wires aren't crossed over! The don't need to be screwed hard, just gently so that if you give them a little tug they can't pull out. Remember righty tighty, lefty loosy!
+        Take one set of the jumper wires. Take the small screwdriver and gently screw these into the motor connector. Make sure that the wires aren't crossed over! They don't need to be screwed hard, just gently so that if you give them a little tug they can't pull out. Remember righty tighty, lefty loosy!
 
         <img src="images/assembly1/img20_compressed.jpg" class="img-fluid" alt="assemblyImage">
 
@@ -806,59 +836,20 @@ Let's build the second part of the robot arm!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseThirteen">
-        Install microbit into the Robotics Board
-      </a>
-    </div>
-    <div id="collapseThirteen" class="collapse" data-parent="#accordion">
-      <div class="card-body">
-        Take the microbit and install it into the Robotics Board. You will need to push down on it fimly to install it into the connector. Make sure it is the right way around. 
-
-        <img src="images/assembly1/img21_compressed.jpg" class="img-fluid" alt="assemblyImage">
-        <br>
-        <img src="images/assembly1/img22_compressed.jpg" class="img-fluid" alt="assemblyImage">
-
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFourteen">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseEightC">
         Connect the wires from the motor to the Robotics Board.
       </a>
     </div>
-    <div id="collapseFourteen" class="collapse" data-parent="#accordion">
+    <div id="collapseEightC" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        The wires connect into the Robotics board in the same order they came from the motor. Attach them gently with the big screwdriver attachment. 
-        
-
+        <p>The wires connect into the Robotics board in the same order they came from the motor. Attach them gently with the big screwdriver attachment.</p>
+        <br>
         <img src="images/assembly1/img23_compressed.jpg" class="img-fluid" alt="assemblyImage">
         <br>
-
-        The motor connector ports should line up with the Robotics board ports as shown in the figure. Make sure there aren't any crossovers in the wires! That means the same colour wire in port 1 on the motor connector on the left should be the same colour wire on port a on the Robotics board on the right.
+        <p>The motor connector ports should line up with the Robotics board ports as shown in the figure. Make sure there aren't any crossovers in the wires! That means the same colour wire in port 1 on the motor connector on the left should be the same colour wire on port a on the Robotics board on the right.</p>
+        <br>
         <img src="images/assembly1/img23a.jpg" class="img-fluid" alt="assemblyImage">
-
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFifteen">
-        Connect the battery
-      </a>
-    </div>
-    <div id="collapseFifteen" class="collapse" data-parent="#accordion">
-      <div class="card-body">
-        Take the large AA battery and connect its two wires to the Robotics Board. This is an important step! Make sure not to get the wires the wrong way around. The red wire goes to the screw terminal labelled 'RED +' and the black wire goes to the screw terminal labelled 'Black -' . Check the small switch on the the battery pack, it should be in the 'off position'. 
         <br>
-        <img src="images/assembly1/img25_compressed.jpg" class="img-fluid" alt="assemblyImage">
-        <br>
-        <img src="images/assembly1/img24_compressed.jpg" class="img-fluid" alt="assemblyImage">
-        <br>
-        <img src="images/assembly1/img26_compressed.jpg" class="img-fluid" alt="assemblyImage">
-
       </div>
     </div>
   </div>
@@ -868,8 +859,7 @@ Let's build the second part of the robot arm!
 <br>
 <br>
 
-# Testing the second part of our robot arm!
----
+
 
 <!--Comment: End of markdown-->
 
@@ -879,14 +869,15 @@ Let's build the second part of the robot arm!
 <h2>Activity #4</h2>
 </div>
 
-<br>
 
 <!--Comment: End of html bootstrap -->
 
 <!--Comment: Back to markdown -->
 
+<br>
 
-Whenever we're building a robot (or anything) it's really important to test it works in stages! We've just put our second motor together, so now lets test that it works :)! Follow these instructions to test the second motor and link of the robot arm!
+### Programming our Stepper Motor
+<br>
 
 
 <!--Comment: End of markdown-->
@@ -1001,275 +992,6 @@ Whenever we're building a robot (or anything) it's really important to test it w
 
 <!--Comment: Back to html bootstrap -->
 
-<div id="Activity5" class="container p-3 my-3 bg-primary text-primary">
-<h2>Activity #5</h2>
-</div>
-
-<br>
-
-
-<!--Comment: End of html bootstrap -->
-
-<!--Comment: Back to markdown -->
-
-## Joints and Grids
-
-I'm going to introduce some new terms!
-
-When we work with certain robots, we like to talk about the **Joint Space** and the **Cartesian Space**. They're just two ways of describing where our robot is, or its **state**. I'll show you in a bit what these terms mean, but first I'll show you where Forward and Inverse Kinematics fits into all this. I'll come back to this diagram later and you'll understand it better.
-
-<br>
-
-![JointtoCartesian](images/JointCartesianChart.png)
-
-<br>
-<br>
-
-# Let's try moving in the Joint Space!
-
-<br>
-
-When we talk about **Joint Space**, we are describing what each joint of the robot is doing. Joints are places where the robot can move, and usually connect two rigid bodies. We use **joints** and **links** to try and simplify the mathematics we need to do.
-
-A good example of this is our own human arm! If I were to make a very simple drawing of how my arm moves, I'd have a shoulder joint, an elbow joint, and a wrist joint. The bones in between are links.
-
-<br>
-
-![ArmJoint](images/ArmJoints.png)
-
-<br>
-
-If you observe our robot arm, it uses **revolute joints**. These are joints that only rotate, a bit like like the hinges in your room door! 
-
-
-<br>
-
-We've made a little animation that you can use to try and understand what it means to control the robot in joint space. 
-
-<br>
-
-<p class="codepen" data-height="734" data-theme-id="light" data-default-tab="result" data-user="benisme" data-slug-hash="BapYoKB" style="height: 734px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Robot arm (Joint Angles v1)">
-  <span>See the Pen <a href="https://codepen.io/benisme/pen/BapYoKB">
-  Robot arm (Joint Angles v1)</a> by Ben (<a href="https://codepen.io/benisme">@benisme</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-
-<br> 
-
-Have a play around with it, and see if you can understand what values you can give the joint, and what it will make the joint do!
-
-The picture below might help you understand what the values mean for a more complex robot. The black lines indicate where 'zero' is for that joint, and I've put down the direction that are positive values.
-
-<br>
-
-![JointsInfo](images/Joints_info.png) <!-- Have to replace this -->
-
-<br>
-
-# What about Cartesian Space?
-
-<div id="Activity6" class="container p-3 my-3 bg-primary text-primary">
-<h2>Activity #6</h2>
-</div>
-
-<br>
-
-After playing about with the **Joint Space**, maybe you're getting the hang of it. Now just imagine if you had a robot with *lots more joints*! Like *twenty*. What about robots like these?
-
-![Complexrobots](images/complexrobots.png)
-*Images Copyright [Acrome Robotics](https://acrome.net/)*
-
-<br>
-
-That's a lot of joints you'd have to control! It wouldn't be easy using joint space alone.
-
-Now I'm going to introduce you to **Cartesian Space**. You might have heard of things like **coordinates**. Coordinates are a way of talking about the position of things, and Cartesian is a system of coordinates. If you know maps, you'll have heard of longitude and latitude, it's a bit like that.
-
-The **Cartesian coordinate system** in 2-dimensions (a flat surface!) uses 2 axes: x and y to describe where a point is on that plane. For example, in the image below the cat is at x = 2 and y = 3. Or we can write it as (2, 3) with brackets. So if I told you to put the cat at (2, -3), where would I put it?
-
-<br>
-
-![CoordinateCat](images/Coordinates.png)
-*Cat Image Copyright of [Irasutoya](https://www.irasutoya.com)*
-
-<br>
-
-Okay, so now you have the idea. Here is an image of the robot and a grid over it, with **x** and **y** axis measurements. Any point within the pink area (also called the workspace) is a place the end of the robot can reach.
-
-<br>
-
-![YoubotCoords-nobox](images/YoubotCoordinates-nobox.png)
-
-<br>
-
-This is exactly the same as for our simple robot arm!
-
-<br>
-
-# Let's move in Cartesian Space!
-
-<div id="Activity7" class="container p-3 my-3 bg-primary text-primary">
-<h2>Activity #7</h2>
-</div>
-
-<br>
-
-In this activity, we're going to try and make the pen touch a flower!
-
-<br>
-
-<!--Comment: Back to html bootstrap -->
-
-<div id="accordion">
-
-  <div class="card">
-    <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseOneE">
-        Your current progress
-      </a>
-    </div>
-    <div id="collapseOneE" class="collapse" data-parent="#accordion">
-      <div class="card-body">
-      For the next stage of the activity the battery should be turned on so do that now.
-      <br><br>
-      The arm should look something like the picture - if not have a check of the previous steps or let a mentor know. <br>
-      <br> <br>
-      <img src="images/assembly2/IMG_20210329_233818_compressed.jpg" class="img-fluid" alt="assemblyImage">
-      <br>
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwoE">
-        Load our cartesian control code
-      </a>
-    </div>
-    <div id="collapseTwoE" class="collapse" data-parent="#accordion">
-      <div class="card-body">
-        Next we will load our code to make our robot arm move with cartesian control!
-        <br>
-        You can download the code we will use from this <a href="./activity_code/main_cartesian.py" download="main_cartesian.py" target="_blank"> link</a>.
-        <br>
-        It will download a python file to your computer. In your python editor click on 'Load' and then select the python file you just downloaded (it's called: main_cartesian.py). The code will load and you will see it on your screen.
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseThreeE">
-        Download the motor code to your microbit
-      </a>
-    </div>
-    <div id="collapseThreeE" class="collapse" data-parent="#accordion">
-      <div class="card-body">
-        Download the code and transfer it to your microbit by clicking on 'Connect', selecting your microbit device, and then clicking 'Flash'. If you've got any problems with this you can follow this guide to resolve them: https://python-editor-2-1-2.microbit.org/help.html?snippets=true
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFourE">
-        Test the cartesian code is working
-      </a>
-    </div>
-    <div id="collapseFourE" class="collapse" data-parent="#accordion">
-      <div class="card-body">
-        You should see the microbit start up with a picture of a ghost! That's how you know you've got the right code. It will then display the letters XY.
-        <br> <br>
-        <img src="images/assembly3/IMG_20210411_130635_compressed.jpg" class="img-fluid" alt="assemblyImage">
-        <br><br>
-        <img src="images/assembly3/IMG_20210411_124825_compressed.jpg" class="img-fluid" alt="assemblyImage">
-        <br><br>
-        Next touch the microbit logo button, the robot arm should move to the approximate position x = 5, y = 5.
-        <br>
-        <ul>
-        <li>If you didn't see the picture of the ghost, something is wrong with the software! -> Check your code!</li>
-        <li>If your robot arm isn't moving then there maybe something wrong with your connections! -> Check your battery is switched on and check all your wires are securely in their connections (give them a gentle tug).</li>
-        <li>If you accidently press the a or b button, the code will move the arm to a different position, we don't want this at the moment. So if you do do that just press the resest button on the microbit and try again! :) </li>
-        <li>If your microbit seems unresponsive, then just try to give the reset button a push and see if that helps!</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFiveE">
-        Draw a flower on your actvity board
-      </a>
-    </div>
-    <div id="collapseFiveE" class="collapse" data-parent="#accordion">
-      <div class="card-body">
-        Draw a flower on you board at the position x = 7, y = 5
-        <br><br>
-        <img src="images/assembly3/IMG_20210411_125049_compressed.jpg" class="img-fluid" alt="assemblyImage">
-        <br><br>
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSixE">
-        Program the microbit to move the robot arm to the flower
-      </a>
-    </div>
-    <div id="collapseSixE" class="collapse" data-parent="#accordion">
-      <div class="card-body">
-        We need to program the microbit to move the robot arm to touch the flower
-        <br>
-        If you touch either the a or b button you will notice that you can input the desired position of the robot arm. The a button increases the y value by 1, and the b button increases the x button by 1.
-        <br>
-        When you want the robot arm to move to the desired position then you press the microbit logo!
-        <br>
-        Try and program the robot arm by pressing the buttons (Tip: you need to press the b button), to move to the position x = 7 and y = 5 so that it touches the flower that we've just drawn.
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSevenE">
-        Experimenting with the robot arm
-      </a>
-    </div>
-    <div id="collapseSevenE" class="collapse" data-parent="#accordion">
-      <div class="card-body">
-        Try and pick another position near to the flower and get your arm to move there by programming in the grid co-ordinates. Note that our arm is a low cost version and it's performance isn't brilliant! But hopefully you can see it move to the approximate position!! :) .
-        <br>
-        Sometimes you might get the message on the microbit that the arm can't reach a position. This will happen if you input co-ordinates that are impossible for the arm to reach!! (Because of it's geometry)
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<br><br>
-
-<!--Comment: This section is markdown again-->
-
-# (Summary) So that chart we had before...
-
-<div id="Activity8" class="container p-3 my-3 bg-primary text-primary">
-<h2>Activity #8</h2>
-</div>
-
-<br>
-
-![JointtoCartesian](images/JointCartesianChart.png)
-
-<br>
-
-This is why we use kinematics. It can be hard to imagine in our heads what the end of the robot might do if we changed the position of a joint. **Forward Kinematics** can help us change our joint positions to **Cartesian space**, which can be a lot easier to visualise. If we know a point in **Cartesian space** we want to get to, we can use **Inverse Kinematics** to find the joint positions we need to give our robot.
-
-This is a really simplified problem with a robot arm, but we use the same principles when we're trying to figure out where a car is, or even flying robots. We used **trigonometry** and **geometry** to do this. 
-
-What else do you think this might be useful for?
 
 
 <br>
