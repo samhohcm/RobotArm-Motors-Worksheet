@@ -632,11 +632,13 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
         <p>All this stuff at the beginning, that's code for setting up the robotics board so our microbit can communicate with it and then use it to send signals to the motors.</p>
         <p>This bit over here, these are <b>functions</b> that can be used for common commands to the motors. It's a bit complicated, but you can think of it as a set of instructions that you would use very often, so you write a function so you won't have to type up the whole thing over and over again!</p> 
         <p>This first bit of code you've been given just sets the motor to zero, which is what we used to zero the arm. I've given you a headstart! Look carefully at the function call that sets the motor to zero, and see if you can make the motor do something else when you press the A button or the B button.</p>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-        <code class="python">
-          a = 0.1
-        </code>
+        <div style ="width:0.8;overflow">
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+          <script>hljs.initHighlightingOnLoad();</script>
+          <code class="python">
+            a = 0.1
+          </code>
+        </div>
         
         <br>
       </div>
@@ -655,7 +657,7 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
         <p>  <span style="color:Red"><b>!!! Make sure your hands are far away from the motor arm! !!!</b></span> </p>
         <p>Button A will increase the angle, and button B will decrease the angle. You can see it scrolling across the LEDs. When you reach an angle you're happy with, press the microbit symbol. The motor arm will move very quickly!</p> <!--Might change this bit honestly, have to check what code might be better and safer-->
         <br>
-        <p>Turn off the battery pack. Move the arm a bit, you should be able to move the arm. **Keep your hands away**, and then turn on the battery pack again. What happens?</p>
+        <p>Turn off the battery pack. Move the arm a bit, you should be able to move the arm. <b>Keep your hands away</b>, and then turn on the battery pack again. What happens?</p>
         <br>
       </div>
     </div>
