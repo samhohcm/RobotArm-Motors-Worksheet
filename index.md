@@ -347,7 +347,7 @@ First, we need to assemble our set up. Expand the headings below (click on them)
 
         <p>Take the bag labelled 'Motors Workshop' and take out the shaft attachment inside. Attach it to Robot Arm 2 using the same screws. Remember, righty tighty, lefty loosey!</p>
 
-        <p>Have a closer look at the attachment on the robot arm. Then take a look at the shaft on the motor. Why do you think the attachment has been designed that way?</p>
+        <p>Have a closer look at the attachment on the robot arm. Then take a look at the shaft on the motor. Why do you think the attachment has been designed that way? Can you think of other shapes you can use for a shaft that looks like this?</p>
 
 
 
@@ -539,7 +539,7 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
         
         <br><br>
 
-        This link will download a python file to your computer. 
+        This link will download a python file to your computer. <!--Probs gonna just make it have just the functions-->
 
         <br><br>
         
@@ -597,6 +597,8 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
         <br> <br>
         </ul>
 
+        <p>Turn off the battery pack. Move the arm a bit, you should be able to move the arm. **Keep your hands away**, and then turn on the battery pack again. What happens?</p>
+
       </div>
     </div>
   </div>
@@ -621,10 +623,33 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
   <div class="card">
     <div class="card-header">
       <a class="collapsed card-link" data-toggle="collapse" href="#collapseTenB">
-        Let's move the motor!
+        Let's write some code!
       </a>
     </div>
     <div id="collapseTenB" class="collapse" data-parent="#accordion">
+      <div class="card-body">
+        <p>Let's have a look at the code.</p>
+        <p>All this stuff at the beginning, that's code for setting up the robotics board so our microbit can communicate with it and then use it to send signals to the motors.</p>
+        <p>This bit over here, these are <b>functions</b> that can be used for common commands to the motors. It's a bit complicated, but you can think of it as a set of instructions that you would use very often, so you write a function so you won't have to type up the whole thing over and over again!</p> 
+        <p>This first bit of code you've been given just sets the motor to zero, which is what we used to zero the arm. I've given you a headstart! Look carefully at the function call that sets the motor to zero, and see if you can make the motor do something else when you press the A button or the B button.</p>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <code class="python">
+          a = 0.1
+        </code>
+        
+        <br>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseElevenB">
+        Let's move the motor!
+      </a>
+    </div>
+    <div id="collapseElevenB" class="collapse" data-parent="#accordion">
       <div class="card-body">
         <p>Try pressing the buttons.</p>
         <p>  <span style="color:Red"><b>!!! Make sure your hands are far away from the motor arm! !!!</b></span> </p>
@@ -635,8 +660,6 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
       </div>
     </div>
   </div>
-
-
 
   <div class="card">
     <div class="card-header">
@@ -728,7 +751,7 @@ Now that we know a bit about our stepper motor, let's try and make it move!
     <div id="collapseOneC" class="collapse" data-parent="#accordion">
       <div class="card-body">
       <p>Turn off the battery before you disassemble the robot.</p>
-      <p>Take off the robot arm from the motor. Unplug the servomotor from the robotics board, and gently pry it out of the motor base. You can then put it back into its plastic bag.
+      <p>Take off the robot arm from the motor. Unplug the servomotor from the robotics board, and gently pry it out of the motor base. You can then put it back into its plastic bag.</p>
       <br> <br>
       <img src="images/assembly1/img31_compressed.jpg" class="img-fluid" alt="assemblyImage">
 
