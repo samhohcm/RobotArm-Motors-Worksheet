@@ -632,59 +632,51 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
         <p>All this stuff at the beginning, that's code for setting up the robotics board so our microbit can communicate with it and then use it to send signals to the motors.</p>
         <p>This bit over here, these are <b>functions</b> that can be used for common commands to the motors. It's a bit complicated, but you can think of it as a set of instructions that you would use very often, so you write a function so you won't have to type up the whole thing over and over again!</p> 
         <p>This first bit of code you've been given just sets the motor to zero, which is what we used to zero the arm. I've given you a headstart! Look carefully at the function call that sets the motor to zero, and see if you can make the motor do something else when you press the A button or the B button.</p>
-        <div style ="width:0.8;height:300px;overflow:scroll">
-        <head>
-          <link rel="stylesheet"
-                href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
-          <script>hljs.initHighlightingOnLoad();</script>
-        </head>
-        <body>
+        <div style ="width:0.9;height:300px;overflow:scroll">
           <pre><code class="python">
-          class KitronikRoboticsBoard:
-            PRESCALE_REG = 0xFE
-            MODE_1_REG = 0x00
-            SRV_REG_BASE = 0x08
-            MOT_REG_BASE = 0x28
-            REG_OFFSET = 4
-            #SERVO_MULTIPLIER = 226
-            SERVO_MULTIPLIER = 190
-            #SERVO_ZERO_OFFSET = 0x66
-            SERVO_ZERO_OFFSET = 0X66
-            ANGLE_ZERO_OFFSET = 0
+            class KitronikRoboticsBoard:
+              PRESCALE_REG = 0xFE
+              MODE_1_REG = 0x00
+              SRV_REG_BASE = 0x08
+              MOT_REG_BASE = 0x28
+              REG_OFFSET = 4
+              #SERVO_MULTIPLIER = 226
+              SERVO_MULTIPLIER = 190
+              #SERVO_ZERO_OFFSET = 0x66
+              SERVO_ZERO_OFFSET = 0X66
+              ANGLE_ZERO_OFFSET = 0
 
-            chipAddress = 0x6C
-            initialised = False
-            stepInit = False
-            stepStage = 0
-            stepper1Steps = 200
-            stepper2Steps = 200
+              chipAddress = 0x6C
+              initialised = False
+              stepInit = False
+              stepStage = 0
+              stepper1Steps = 200
+              stepper2Steps = 200
 
-            def __init(self):
-                    
-                buf = bytearray(2)
+              def __init(self):
+                      
+                  buf = bytearray(2)
 
-                buf[0] = self.PRESCALE_REG
-                buf[1] = 0x85 #50Hz
-                i2c.write(self.chipAddress, buf, False)
-                
-                for blockReg in range(0xFA, 0xFE, 1):
-                    buf[0] = blockReg
-                    buf[1] = 0x00
-                    i2c.write(self.chipAddress, buf, False)
+                  buf[0] = self.PRESCALE_REG
+                  buf[1] = 0x85 #50Hz
+                  i2c.write(self.chipAddress, buf, False)
+                  
+                  for blockReg in range(0xFA, 0xFE, 1):
+                      buf[0] = blockReg
+                      buf[1] = 0x00
+                      i2c.write(self.chipAddress, buf, False)
 
-                buf[0] = self.MODE_1_REG
-                buf[1] = 0x01
-                i2c.write(self.chipAddress, buf, False)
-                self.initialised = True
+                  buf[0] = self.MODE_1_REG
+                  buf[1] = 0x01
+                  i2c.write(self.chipAddress, buf, False)
+                  self.initialised = True
 
-            def servoWrite(self, servo, degrees):
-                if self.initialised is False:
-                    self.__init(self)
-                buf = bytearray(2)
-                calcServo = self.SRV_REG_BASE + ((servo - 1) * self.REG_OFFSET) #find the servo number
+              def servoWrite(self, servo, degrees):
+                  if self.initialised is False:
+                      self.__init(self)
+                  buf = bytearray(2)
+                  calcServo = self.SRV_REG_BASE + ((servo - 1) * self.REG_OFFSET) #find the servo number
             </code></pre>
-        </body>
         </div>
         
         <br>
