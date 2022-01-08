@@ -561,7 +561,7 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
     <div id="collapseSevenB" class="collapse" data-parent="#accordion">
       <div class="card-body">
 
-        <p> Make sure your battery is turned <b>off</b>!!
+        <p> Make sure your battery is turned <b>off</b>!!</p>
 
         <p>Download the code and transfer it to your microbit by clicking on 'Connect', selecting your microbit device, and then clicking 'Flash'. If you've got any problems with this you can follow this guide to resolve them: <a href="https://python-editor-2-1-2.microbit.org/help.html?snippets=true" target="_blank">Link here</a></p>
 
