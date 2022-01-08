@@ -640,20 +640,8 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
           <script>hljs.initHighlightingOnLoad();</script>
         </head>
         <body>
-          <pre><code class="python">def fib(n):
-          a, b = 0, 1
-            while a < n:
-              print(a, end=' ')
-              a, b = b, a+b
-              print()
-          fib(1000)</code></pre>
-        </body>
-          <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
-          <script>hljs.initHighlightingOnLoad();</script>
-          <code class="python">
-            class KitronikRoboticsBoard:
+          <pre><code class="python">
+          class KitronikRoboticsBoard:
             PRESCALE_REG = 0xFE
             MODE_1_REG = 0x00
             SRV_REG_BASE = 0x08
@@ -695,7 +683,8 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
                     self.__init(self)
                 buf = bytearray(2)
                 calcServo = self.SRV_REG_BASE + ((servo - 1) * self.REG_OFFSET) #find the servo number
-          </code>
+            </code></pre>
+        </body>
         </div>
         
         <br>
