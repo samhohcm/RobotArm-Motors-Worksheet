@@ -117,43 +117,12 @@ while True:
 
     else:
 
-        # Do something if button A is pressed
+        # Do something if button A is pressed. What do you do if you want button A to increase the angle?
         if button_a.is_pressed():
-
-            music.pitch(200, duration=150, wait=True)
-
-            # make sure we don't go above the motor limit!
-            if motor_angle < 180:
-                motor_angle = motor_angle + step_angle # Increase the motor_angle by step_angle
-
-            # show the motor angle
-            display.scroll("%d" %
-                (motor_angle), delay=100, wait=True, loop=False)
-            sleep(100)
-
-            # Tell the board to move the servomotor to motor_angle
-            theBoard.servoWrite(theBoard, motor_pin, motor_angle)
+            #insert code here
+            
     
-
+        # Do something if button B is pressed. What do you do if you want button B to decrease the angle?
         if button_b.is_pressed():
+            #insert code here
 
-            music.pitch(200, duration=150, wait=True)
-
-            # make sure we don't go above the motor limit!
-            if motor_angle > 0:
-                motor_angle = motor_angle - step_angle # Decrease the motor_angle by step_angle
-
-            # show the motor angle
-            display.scroll("%d" %
-                (motor_angle), delay=100, wait=True, loop=False)
-            sleep(100)
-
-            # Tell the board to move the servomotor to motor_angle
-            theBoard.servoWrite(theBoard, motor_pin, motor_angle)
-
-    
-
-
-
-
-    

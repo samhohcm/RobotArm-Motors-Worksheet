@@ -535,15 +535,15 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
       <div class="card-body">
         Next we will load our code to make our motor move!<br><br>
 
-        You can download the code we will use from this <a href="./activity_code/servomotor_code.py" download="servomotor_code.py" target="_blank"> link</a>.
+        You can download the code we will use from this <a href="./activity_code/servomotor_code_zero.py" download="servomotor_code_zero.py" target="_blank"> link</a>.
         
         <br><br>
 
-        This link will download a python file to your computer. <!--Probs gonna just make it have just the functions-->
+        This link will download a python file to your computer. 
 
         <br><br>
         
-        Next, in your python editor click on 'Load' and then select the python file you just downloaded (it's called: servomotor_code.py). The code will load and you will see it on your screen.
+        Next, in your python editor click on 'Load' and then select the python file you just downloaded (it's called: servomotor_code_zero.py). The code will load and you will see it on your screen.
 
         <br> <br>
 
@@ -561,8 +561,8 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
     <div id="collapseSevenB" class="collapse" data-parent="#accordion">
       <div class="card-body">
 
-               
-        
+        <p> Make sure your battery is turned <b>off</b>!!
+
         <p>Download the code and transfer it to your microbit by clicking on 'Connect', selecting your microbit device, and then clicking 'Flash'. If you've got any problems with this you can follow this guide to resolve them: <a href="https://python-editor-2-1-2.microbit.org/help.html?snippets=true" target="_blank">Link here</a></p>
 
         <p>You should see the microbit start up with a picture of a ghost! That's how you know you've got the right code. </p>
@@ -583,19 +583,11 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
     <div id="collapseEightB" class="collapse" data-parent="#accordion">
       <div class="card-body">
        
-        <p>Take off the motor arm from the motor. Press the microbit symbol on the microbit to move the arm to the zero position.</p>
+        <p>Take off the motor arm from the motor. Turn on the battery pack.</p>
 
         <p>Were you able to tell whether the motor moved? It might have made a sound, but it is hard to tell how far the motor moved. This is where the motor arm comes in handy. Push the motor arm back on so it points to the right. So now we know that both the motor and the arm is pointing to zero degrees.</p>
 
         <p><img src="images/assembly1/img8_compressed_annotated.jpg" class="img-fluid" alt="assemblyImage"></p>
-
-        <br><br>
-        <ul>
-        <li>If you didn't see the picture of the ghost, something is wrong with the software! -> Check your code!</li>
-        <br><br>
-        <li>If your robot arm isn't moving then there maybe something wrong with your connections! -> Check your battery is switched on and check all your wires are in the right order and securely in their connections (give them a gentle tug).</li>
-        <br> <br>
-        </ul>
 
         <p>Turn off the battery pack. Move the arm a bit, you should be able to move the arm. **Keep your hands away**, and then turn on the battery pack again. What happens?</p>
 
@@ -623,62 +615,113 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
   <div class="card">
     <div class="card-header">
       <a class="collapsed card-link" data-toggle="collapse" href="#collapseTenB">
-        Let's write some code!
+        Understanding the code
       </a>
     </div>
     <div id="collapseTenB" class="collapse" data-parent="#accordion">
       <div class="card-body">
         <p>Let's have a look at the code.</p>
         <p>All this stuff at the beginning, that's code for setting up the robotics board so our microbit can communicate with it and then use it to send signals to the motors.</p>
-        <p>This bit over here, these are <b>functions</b> that can be used for common commands to the motors. It's a bit complicated, but you can think of it as a set of instructions that you would use very often, so you write a function so you won't have to type up the whole thing over and over again!</p> 
-        <p>This first bit of code you've been given just sets the motor to zero, which is what we used to zero the arm. I've given you a headstart! Look carefully at the function call that sets the motor to zero, and see if you can make the motor do something else when you press the A button or the B button.</p>
-        <div style ="height:300px;overflow:scroll">
+        <div style ="height:300px;overflow-y:scroll">
           <pre class="prettyprint">
+            # ------------------------------------------#
+            # Imports                                   #
+            # ------------------------------------------#
+
+            from microbit import *
+            import math
+            import music
+
+            # ------------------------------------------#
+            # Create a class for the robotics board     #
+            # ------------------------------------------#
+
             class KitronikRoboticsBoard:
-              PRESCALE_REG = 0xFE
-              MODE_1_REG = 0x00
-              SRV_REG_BASE = 0x08
-              MOT_REG_BASE = 0x28
-              REG_OFFSET = 4
-              #SERVO_MULTIPLIER = 226
-              SERVO_MULTIPLIER = 190
-              #SERVO_ZERO_OFFSET = 0x66
-              SERVO_ZERO_OFFSET = 0X66
-              ANGLE_ZERO_OFFSET = 0
+                PRESCALE_REG = 0xFE
+                MODE_1_REG = 0x00
+                SRV_REG_BASE = 0x08
+                MOT_REG_BASE = 0x28
+                REG_OFFSET = 4
+                #SERVO_MULTIPLIER = 226
+                SERVO_MULTIPLIER = 190
+                SERVO_ZERO_OFFSET = 0X66
+                ANGLE_ZERO_OFFSET = 0
 
-              chipAddress = 0x6C
-              initialised = False
-              stepInit = False
-              stepStage = 0
-              stepper1Steps = 200
-              stepper2Steps = 200
+                chipAddress = 0x6C
+                initialised = False
+                stepInit = False
+                stepStage = 0
+                stepper1Steps = 200
+                stepper2Steps = 200
 
-              def __init(self):
-                      
-                  buf = bytearray(2)
+                def __init(self):
+                        
+                    buf = bytearray(2)
 
-                  buf[0] = self.PRESCALE_REG
-                  buf[1] = 0x85 #50Hz
-                  i2c.write(self.chipAddress, buf, False)
-                  
-                  for blockReg in range(0xFA, 0xFE, 1):
-                      buf[0] = blockReg
-                      buf[1] = 0x00
-                      i2c.write(self.chipAddress, buf, False)
+                    buf[0] = self.PRESCALE_REG
+                    buf[1] = 0x85 #50Hz
+                    i2c.write(self.chipAddress, buf, False)
+                    
+                    for blockReg in range(0xFA, 0xFE, 1):
+                        buf[0] = blockReg
+                        buf[1] = 0x00
+                        i2c.write(self.chipAddress, buf, False)
 
-                  buf[0] = self.MODE_1_REG
-                  buf[1] = 0x01
-                  i2c.write(self.chipAddress, buf, False)
-                  self.initialised = True
-
-              def servoWrite(self, servo, degrees):
-                  if self.initialised is False:
-                      self.__init(self)
-                  buf = bytearray(2)
-                  calcServo = self.SRV_REG_BASE + ((servo - 1) * self.REG_OFFSET) #find the servo number
+                    buf[0] = self.MODE_1_REG
+                    buf[1] = 0x01
+                    i2c.write(self.chipAddress, buf, False)
+                    self.initialised = True
             </pre>
         </div>
-        
+        <br>
+        <p>This bit over here, these are <b>functions</b> that can be used for common commands to the motors. It's a bit complicated, but you can think of it as a set of instructions that you would use very often, so you write a function so you won't have to type up the whole thing over and over again!</p> 
+        <div style ="height:300px;overflow-y:scroll">
+          <pre class="prettyprint">
+            def servoWrite(self, servo, degrees):
+              if self.initialised is False:
+                  self.__init(self)
+              buf = bytearray(2)
+              calcServo = self.SRV_REG_BASE + ((servo - 1) * self.REG_OFFSET) #find the servo number
+              # = 8 + ((servo number - 1) * 4)
+              HighByte = False
+              degrees+=self.ANGLE_ZERO_OFFSET
+              PWMVal = ((degrees * 100 * self.SERVO_MULTIPLIER) / 10000) + self.SERVO_ZERO_OFFSET
+              # (degree input * 100 * 266)/( 10000 + 102)
+
+              if (PWMVal > 0xFF): #if PWMval more than 255
+                  HighByte = True
+              buf[0] = calcServo
+              buf[1] = int(PWMVal)
+              i2c.write(self.chipAddress, buf, False)
+              buf[0] = calcServo + 1
+              if (HighByte):
+                  buf[1] = 0x01
+              else:
+                  buf[1] = 0x00
+              i2c.write(self.chipAddress, buf, False)
+          </pre>
+        </div>
+        <br>
+        <p>This first bit of code you've been given just sets the motor to zero, which is what we used to zero the arm. Can you recognise what I'm doing? Can you figure out what variables there are? What will happen if I change them?</p>
+        <div style ="height:300px;overflow-y:scroll">
+          <pre class="prettyprint">
+            # This will reset it to zero!
+            if pin_logo.is_touched():
+
+                music.pitch(200, duration=150, wait=True)
+
+                # Set motor angle to zero
+                motor_angle = 0
+
+                # show the motor angle
+                display.scroll("%d" %
+                    (motor_angle), delay=100, wait=True, loop=False)
+                sleep(100)
+
+                # Tell the board to move the servomotor to motor_angle
+                theBoard.servoWrite(theBoard, motor_pin, motor_angle)
+          </pre>
+        </div>
         <br>
       </div>
     </div>
@@ -687,14 +730,48 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
   <div class="card">
     <div class="card-header">
       <a class="collapsed card-link" data-toggle="collapse" href="#collapseElevenB">
-        Let's move the motor!
+        Let's write some code!
       </a>
     </div>
     <div id="collapseElevenB" class="collapse" data-parent="#accordion">
       <div class="card-body">
+        <p>Now that you have a feel for how the code works, let's try writing some of our own! I've given you a headstart on the A button and B button. If you're not sure what to do, don't worry, we'll go through it together!</p>
+        <div style ="height:300px;overflow-y:scroll">
+          <pre class="prettyprint">
+            # Do something if button A is pressed. What do you do if you want button A to increase the angle?
+            if button_a.is_pressed():
+                #insert code here
+                
+        
+            # Do something if button B is pressed. What do you do if you want button B to decrease the angle?
+            if button_b.is_pressed():
+                #insert code here
+          </pre>
+        </div>
+        <br>
+        <p>If you're stuck, you can get the complete script here: <a href="./activity_code/servomotor_code.py" download="servomotor_code.py" target="_blank"> link</a></p>
+        <p>You can also have a play around with the code! Have a think about some of the questions below and see if you can figure them out.</p>
+        <ul>
+        <li>How can you get the motor to move further when you push the A or B button?</li>
+        <li>How do you get the microbit to display a different picture when it starts up?</li>
+        <li>What types of robots do you think this motor would be good for? What sort of actions?</li>
+        </ul>
+        <br>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwelveB">
+        Let's move the motor!
+      </a>
+    </div>
+    <div id="collapseTwelveB" class="collapse" data-parent="#accordion">
+      <div class="card-body">
+        <p style="text-align:center"><span style="color:Red"><b>!!! Make sure your hands are far away from the motor arm! !!!</b></span> </p>
         <p>Try pressing the buttons.</p>
-        <p>  <span style="color:Red"><b>!!! Make sure your hands are far away from the motor arm! !!!</b></span> </p>
-        <p>Button A will increase the angle, and button B will decrease the angle. You can see it scrolling across the LEDs. When you reach an angle you're happy with, press the microbit symbol. The motor arm will move very quickly!</p> <!--Might change this bit honestly, have to check what code might be better and safer-->
+        <p>If you did it the same way as the zero code, button A will increase the angle, and button B will decrease the angle. You can see the angle scrolling across the LEDs, before the arm moves.
         <br>
         <p>Turn off the battery pack. Move the arm a bit, you should be able to move the arm. <b>Keep your hands away</b>, and then turn on the battery pack again. What happens?</p>
         <br>
@@ -702,25 +779,7 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
     </div>
   </div>
 
-  <div class="card">
-    <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseElevenB">
-        Understanding the code
-      </a>
-    </div>
-    <div id="collapseElevenB" class="collapse" data-parent="#accordion">
-      <div class="card-body">
-        Let's take a look at the code together. We don't need to understand all of it, but lets get a feel for how it works! 
-        <br>
-        <ul>
-        <li>How can you get the motor to move further when you push the A or B button?</li>
-        <li>How do you get the microbit to display a different picture when it starts up?</li>
-        <li>What do you think this bit of code is for:<br><img src="/images" class="img-fluid" alt="assemblyImage"><br></li>
-        <li>What types of robots do you think this motor would be good for? What sort of actions?</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+  
 
 </div>
 
@@ -1048,9 +1107,6 @@ Now that we know a bit about our stepper motor, let's try and make it move!
 <br><br>
 
 <!--Comment: This section is markdown again-->
-
-# Let's recap kinematics!
----
 
 <!--Comment: End of markdown-->
 
