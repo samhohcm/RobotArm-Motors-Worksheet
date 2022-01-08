@@ -124,8 +124,8 @@ They try to get away from each other of course! Their electromagnetic fields int
 
 Open it and let the applet load. It should look like this:
 
-<img src="images/Explanation/DC_Motor_animation.jpg" alt="DC Motor Explanation screenshot"
-	title="DC Motor Demonstration" height="280" class="center">
+<p style="text-align: center;"><img src="images/Explanation/DC_Motor_animation.jpg" alt="DC Motor Explanation screenshot"
+	title="DC Motor Demonstration" height="350"></p>
 
 Have a play with the speed and pay attention to the little green arrows. They show the direction in which the electromagnetic force pushes the coil. In this animation, the outer magnet is the permanent magnet, and the coil in the middle connected to the battery is the electromagnet. The part that moves is connected to the **shaft** of the motor, which you can attach things to that need to be moved. All electric motors use this principle.
 
@@ -159,7 +159,7 @@ The <span style="color:Brown">brown wire</span> is connected to the ground of th
 For servomotors, the control signal is just how long you turn on the current in one second. This is called *Pulse Width Modulation*. The signal would look like this:
 
 <br>
-<img src="images/Explanation/servo-rotation.gif" alt="PWM-Angularposition" class="center"/>
+<p style="text-align: center;"><img src="images/Explanation/servo-rotation.gif" alt="PWM-Angularposition" class="center"></p>
 
 *Image copyright [Apoorve](https://circuitdigest.com/article/servo-motor-working-and-basics#:~:text=Servo%20motor%20works%20on%20PWM,(potentiometer)%20and%20some%20gears.)*
 <br>
@@ -771,7 +771,7 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
       <div class="card-body">
         <p style="text-align:center"><span style="color:Red"><b>!!! Make sure your hands are far away from the motor arm! !!!</b></span> </p>
         <p>Try pressing the buttons.</p>
-        <p>If you did it the same way as the zero code, button A will increase the angle, and button B will decrease the angle. You can see the angle scrolling across the LEDs, before the arm moves.
+        <p>If you did it the same way as the zero code, button A will increase the angle, and button B will decrease the angle. You can see the angle scrolling across the LEDs, before the arm moves.</p>
         <br>
         <p>Turn off the battery pack. Move the arm a bit, you should be able to move the arm. <b>Keep your hands away</b>, and then turn on the battery pack again. What happens?</p>
         <br>
@@ -797,9 +797,9 @@ Now that we've looked at a servomotor, what it looks like, how you connect it an
 Electromagnet coils are placed around the permanent magnet in the middle, as shown in the figure below. By activating each coil in sequence, the the permanent magnet in the middle will rotate.
 
 <br>
-<img src="images/Explanation/Working-Principle02.webp" alt="Stepper Motor Working Principle" class="center">
+<img src="images/Explanation/stepper_motor_animation.gif" alt="Stepper Motor Working Principle" class="center">
 
-*Image copyright [How To Mechatronics](https://howtomechatronics.com/how-it-works/electrical-engineering/stepper-motor/)*
+*Image copyright Sam Hoh*
 
 <br>
 

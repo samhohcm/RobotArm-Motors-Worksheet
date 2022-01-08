@@ -102,7 +102,7 @@ while True:
     # This will reset it to zero!
     if pin_logo.is_touched():
 
-        music.pitch(200, duration=150, wait=True)
+        music.pitch(200, duration=150, wait=True) #A nice beep
 
         # Set motor angle to zero
         motor_angle = 0
@@ -115,14 +115,15 @@ while True:
         # Tell the board to move the servomotor to motor_angle
         theBoard.servoWrite(theBoard, motor_pin, motor_angle)
 
-    else:
+    #else:
 
-        # Do something if button A is pressed. What do you do if you want button A to increase the angle?
-        if button_a.is_pressed():
+        ## Do something if button A is pressed. What do you do if you want button A to increase the angle?
+        #if button_a.is_pressed():
             #insert code here
             
+            
     
-        # Do something if button B is pressed. What do you do if you want button B to decrease the angle?
-        if button_b.is_pressed():
+        ## Do something if button B is pressed. What do you do if you want button B to decrease the angle?
+        #if button_b.is_pressed():
             #insert code here
 
