@@ -633,6 +633,8 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
         <p>This bit over here, these are <b>functions</b> that can be used for common commands to the motors. It's a bit complicated, but you can think of it as a set of instructions that you would use very often, so you write a function so you won't have to type up the whole thing over and over again!</p> 
         <p>This first bit of code you've been given just sets the motor to zero, which is what we used to zero the arm. I've given you a headstart! Look carefully at the function call that sets the motor to zero, and see if you can make the motor do something else when you press the A button or the B button.</p>
         <div style ="width:0.8;height:300px;overflow">
+          <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
           <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
           <script>hljs.initHighlightingOnLoad();</script>
           <code class="python">
