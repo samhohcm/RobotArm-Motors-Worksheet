@@ -158,7 +158,9 @@ class KitronikRoboticsBoard:
 # Our main program                          #
 # ------------------------------------------#
 # Our variables
-currentRotationMotor = 1
+currentRotationMotor = 0
+currentAngle = 0
+stepAngle = 15
 set_volume(100)
 
 # Display an image on start-up so that we know the program loaded correctly
@@ -170,32 +172,48 @@ while True:
     # Create a class instance
     theBoard = KitronikRoboticsBoard
 
-    # Detect if the microbit logo has been touched!
+    # Detect if the microbit logo has been touched! This will reset it to zero!
     if pin_logo.is_touched():
+        # Play a tune
         music.pitch(200, duration=150, wait=True)
+        # Display a message
+        display.scroll("Reset 0", delay=120, wait=False, loop=False)
+        # Rotate the motor
+        theBoard.stepperMotorTurnAngle(
+            theBoard, currentRotationMotor, angle=-currentAngle)
+        # Update current angle - go to zero
+        currentAngle = 0
 
-        
+
 
     # Detect if the button a has been pressed!
     elif button_a.is_pressed():
         # Play a tune
         music.pitch(200, duration=150, wait=True)
+        # Update current angle
+        currentAngle = currentAngle - stepAngle
+        # Make sure it doesn't turn into a negative number!
+        if currentAngle < 0:
+            currentAngle = 360 + currentAngle
         # Display a message
-        display.scroll("- Rot", delay=120, wait=False, loop=False)
+        display.scroll(currentAngle, delay=120, wait=False, loop=False)
         # Rotate the motor
         theBoard.stepperMotorTurnAngle(
-            theBoard, currentRotationMotor, angle=-15)
-        # Show which motor is being controlled
-        displayCurrentMotorNumber(currentRotationMotor)
+            theBoard, currentRotationMotor, angle=-stepAngle)
+        
 
     # Detect if the button b has been pressed!
     elif button_b.is_pressed():
         # Play a tune
         music.pitch(200, duration=150, wait=True)
+        # Update current angle
+        currentAngle = currentAngle + stepAngle
+        # Make sure it doesn't turn into a negative number!
+        if currentAngle >= 360:
+            currentAngle = currentAngle - 360
         # Display a message
-        display.scroll("+ Rot", delay=120, wait=False, loop=False)
+        display.scroll(currentAngle, delay=120, wait=False, loop=False)
         # Rotate the motor
         theBoard.stepperMotorTurnAngle(
-            theBoard, currentRotationMotor, angle=15)
-        # Show which motor is being controlled
-        displayCurrentMotorNumber(currentRotationMotor)
+            theBoard, currentRotationMotor, angle=stepAngle)
+        

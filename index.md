@@ -108,7 +108,7 @@ Have you tried making an **electromagnet** using a coil of wire and a battery? H
 If you run an electrical current through a wire (for example, with a battery!), it will generate an **electromagnetic field** around the wire. Making lots of coils magnifies this effect, so we usually make electromagnets using coils. These are magnets that you can turn on and off, or even switch polarities! This is compared to permanent magnets, which you might have seen around.
 
 <br>
-<p style="text-align: center;"><img src="images/Explanation/magnet-set_1308-15311.jpg" alt="Magnets" height="300" class="center"></p>
+<p style="text-align: center;"><img src="images/Explanation/magnet-set_1308-15311.jpg" alt="Magnets" height="300px" class="center"></p>
 
 *Image Copyright [brgfx](https://www.freepik.com/free-vector/magnet-set_2480989.htm)*
 
@@ -120,7 +120,7 @@ Inside every motor there is a permanent magnet and there is an electromagnet.
 
 What happens when you point the North end of a magnet to the South end of a magnet?
 
-They try to get away from each other of course! Their electromagnetic fields interact with each other, generating a force. This force is what we use to make the motor turn! We can observe this phenomenon in the animation in this link: [DC Motor animation](https://nationalmaglab.org/education/magnet-academy/watch-play/interactive/dc-motor)
+They try to get closer to each other of course! And if you point the North end of a magnet to the North end of another magnet, they will try to get away from each other. Their electromagnetic fields interact with each other, generating a force. This force is what we use to make the motor turn! We can observe this phenomenon in the animation in this link: [DC Motor animation](https://nationalmaglab.org/education/magnet-academy/watch-play/interactive/dc-motor)
 
 Open it and let the applet load. It should look like this:
 
@@ -224,7 +224,7 @@ First, we need to assemble our set up. Expand the headings below (click on them)
         <br>
 
         <img src="./images/assembly1/img1_compressed.jpg" class="img-fluid" alt="assemblyImage" loading="lazy"/>
-
+      <br>
       For this activity, you only need: <br>
         - the motors that we took out earlier <br>
         - the part of the base board with the green attachment on it <br>
@@ -240,8 +240,7 @@ First, we need to assemble our set up. Expand the headings below (click on them)
 
       Insert Image
       
-      <p>
-      Carefully keep the other pieces back in the box for the next workshop.</p>
+      <p>Carefully keep the other pieces back in the box for the next workshop.</p>
 
 
       </div>
@@ -278,7 +277,7 @@ First, we need to assemble our set up. Expand the headings below (click on them)
       <div class="card-body">
         Let's take a look at the Kitronik Robotics Board. Check if you have a 'All-In-One' board or a 'Compact' board, it is labelled at the back of the board as shown in the photos:
         <br>
-        <img src="images/AssemblyServo/Identifying_Board.jpg" class="img-fluid" alt="Identifying_Board">
+        <img src="images/AssemblyServo/Identifying_Board.png" class="img-fluid" alt="Identifying_Board">
         <br>
         <p>
         Depending on your board, the servo pins might look different. If you look at the area circled in the photo below, you will see a set of pins. </p>
@@ -306,7 +305,7 @@ First, we need to assemble our set up. Expand the headings below (click on them)
     <div id="collapseFour" class="collapse" data-parent="#accordion">
       <div class="card-body">
         Take the microbit and install it into the Robotics Board. You will need to push down on it fimly to install it into the connector. Make sure it is the right way around. The 'GND' marked on the microbit should be on the same side as the 'GND' on the robotics board. 
-
+        <br>
         <img src="images/assembly1/img21_compressed.jpg" class="img-fluid" alt="assemblyImage">
         <br>
         <img src="images/assembly1/img22_compressed.jpg" class="img-fluid" alt="assemblyImage">
@@ -345,7 +344,10 @@ First, we need to assemble our set up. Expand the headings below (click on them)
 
         Insert image
 
-        <p>Take the bag labelled 'Motors Workshop' and take out the shaft attachment inside. Attach it to Robot Arm 2 using the same screws. Remember, righty tighty, lefty loosey!</p>
+        <p>Take the bag labelled 'Motors Workshop' and take out the shaft attachment inside. It should look like the picture below. Put the old attachment into the bag.</p>
+        <img src="images/assembly1/>
+
+        <p>Attach the new attachment from the 'Motors Workshop' bag to Robot Arm 2 using the same screws. Remember, righty tighty, lefty loosey!</p>
 
         <p>Have a closer look at the attachment on the robot arm. Then take a look at the shaft on the motor. Why do you think the attachment has been designed that way? Can you think of other shapes you can use for a shaft that looks like this?</p>
 
@@ -508,30 +510,10 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
   <div class="card">
     <div class="card-header">
       <a class="collapsed card-link" data-toggle="collapse" href="#collapseFiveB">
-        Turn the power to the motor on
-      </a>
-    </div>
-    <div id="collapseFiveB" class="collapse" data-parent="#accordion">
-      <div class="card-body">
-        
-        
-        Turn the small switch on the battery pack to the 'on position'. This will power the motor.
-
-        <br> <br>
-
-        <img src="images/assembly2/IMG_20210329_164621_compressed_annotated.jpg" class="img-fluid" alt="assemblyImage">
-
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSixB">
         Load our motor code
       </a>
     </div>
-    <div id="collapseSixB" class="collapse" data-parent="#accordion">
+    <div id="collapseFiveB" class="collapse" data-parent="#accordion">
       <div class="card-body">
         Next we will load our code to make our motor move!<br><br>
 
@@ -554,11 +536,11 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSevenB">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSixB">
         Download the motor code to your microbit
       </a>
     </div>
-    <div id="collapseSevenB" class="collapse" data-parent="#accordion">
+    <div id="collapseSixB" class="collapse" data-parent="#accordion">
       <div class="card-body">
 
         <p> Make sure your battery is turned <b>off</b>!!</p>
@@ -576,11 +558,11 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseEightB">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSevenB">
         Zero the arm
       </a>
     </div>
-    <div id="collapseEightB" class="collapse" data-parent="#accordion">
+    <div id="collapseSevenB" class="collapse" data-parent="#accordion">
       <div class="card-body">
        
         <p>Take off the motor arm from the motor. Turn on the battery pack.</p>
@@ -589,7 +571,7 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
 
         <p><img src="images/assembly1/img8_compressed_annotated.jpg" class="img-fluid" alt="assemblyImage"></p>
 
-        <p>Turn off the battery pack. Move the arm a bit, you should be able to move the arm. **Keep your hands away**, and then turn on the battery pack again. What happens?</p>
+        <p>Turn off the battery pack. Move the arm a bit, you should be able to move the arm. <b>Keep your hands away</b>, and then turn on the battery pack again. What happens?</p>
 
       </div>
     </div>
@@ -598,11 +580,11 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseNineB">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseEightB">
         Try and move the robot arm (gently)
       </a>
     </div>
-    <div id="collapseNineB" class="collapse" data-parent="#accordion">
+    <div id="collapseEightB" class="collapse" data-parent="#accordion">
       <div class="card-body">
         <p>When the robot arm is stationary, try and turn the robot arm (gently) with your hand. You should find that if you do that, it will not want to move, and will keep trying to go back to where it should be! You will hear it complaining a bit. This is a feature of servomotors. As we mentioned earlier, they use a sensor to try and go to a position according to the signal that you give it.</p> 
         <p>If you push too hard, things might break so be careful!</p>
@@ -614,11 +596,11 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTenB">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseNineB">
         Understanding the code
       </a>
     </div>
-    <div id="collapseTenB" class="collapse" data-parent="#accordion">
+    <div id="collapseNineB" class="collapse" data-parent="#accordion">
       <div class="card-body">
         <p>Let's have a look at the code.</p>
         <p>All this stuff at the beginning, that's code for setting up the robotics board so our microbit can communicate with it and then use it to send signals to the motors.</p>
@@ -729,11 +711,11 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseElevenB">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTenB">
         Let's write some code!
       </a>
     </div>
-    <div id="collapseElevenB" class="collapse" data-parent="#accordion">
+    <div id="collapseTenB" class="collapse" data-parent="#accordion">
       <div class="card-body">
         <p>Now that you have a feel for how the code works, let's try writing some of our own! I've given you a headstart on the A button and B button. If you're not sure what to do, don't worry, we'll go through it together!</p>
         <div style ="height:300px;overflow-y:scroll">
@@ -763,11 +745,11 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwelveB">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseElevenB">
         Let's move the motor!
       </a>
     </div>
-    <div id="collapseTwelveB" class="collapse" data-parent="#accordion">
+    <div id="collapseElevenB" class="collapse" data-parent="#accordion">
       <div class="card-body">
         <p style="text-align:center"><span style="color:Red"><b>!!! Make sure your hands are far away from the motor arm! !!!</b></span> </p>
         <p>Try pressing the buttons.</p>
@@ -797,7 +779,7 @@ Now that we've looked at a servomotor, what it looks like, how you connect it an
 Electromagnet coils are placed around the permanent magnet in the middle, as shown in the figure below. By activating each coil in sequence, the the permanent magnet in the middle will rotate.
 
 <br>
-<img src="images/Explanation/stepper_motor_animation.gif" alt="Stepper Motor Working Principle" class="center">
+<p style="text-align: center;"><img src="images/Explanation/stepper_motor_animation.gif" alt="Stepper Motor Working Principle" width="0.7"></p>
 
 *Image copyright Sam Hoh*
 
@@ -977,6 +959,44 @@ Now that we know a bit about our stepper motor, let's try and make it move!
     </div>
   </div>
 
+  <div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseNineC">
+        Change the motor shaft attachment on the arm.
+      </a>
+    </div>
+    <div id="collapseNineC" class="collapse" data-parent="#accordion">
+      <div class="card-body">
+        <p>Unscrew the screws on the attachment on the robot arm. Keep the screws safe! Then put the attachment back in the plastic bag labelled <b>'Motors Workshop'</b>, and take out the old attachment It should look like this:</p>
+        <br>
+        <img src="images/assembly1/img23_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <br>
+        <p>Line up the holes of the motor shaft attachment to the holes on the robot arm so that the flat side of the 'D' hole shape faces the other end of the arm, and use the screws to attach it. Remember, righty tightey, lefty loosey!</p>
+        <br>
+        <img src="images/assembly1/img23a.jpg" class="img-fluid" alt="assemblyImage">
+        <br>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTenC">
+        Put the motor arm on!
+      </a>
+    </div>
+    <div id="collapseTenC" class="collapse" data-parent="#accordion">
+      <div class="card-body">
+        <p>Take the robot arm #1 and place it so that the small 'D' shape in the green part of the robot arm lines up with the motor shaft. You should be able to push the two together gently. Now give the robot arm a gentle turn to check it rotates. <br>
+      <img src="images/assembly1/img30_compressed.jpg" class="img-fluid" alt="assemblyImage">
+      <br> <br>
+      <img src="images/assembly1/img31_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <br>
+        <p>Now you're ready to code!</p>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <br>
@@ -1009,98 +1029,343 @@ Now that we know a bit about our stepper motor, let's try and make it move!
 
 <div id="accordion">
 
+
   <div class="card">
     <div class="card-header">
       <a class="collapsed card-link" data-toggle="collapse" href="#collapseOneD">
-        Your current progress
+        Load our motor code
       </a>
     </div>
     <div id="collapseOneD" class="collapse" data-parent="#accordion">
       <div class="card-body">
-      For the next stage of building the battery should be turned on so do that now.
-      <br><br>
-      Your current progress on building the arm should look something like the picture - if not have a check of the previous steps or let a mentor know. <br>
-      <br> <br>
-      <img src="images/assembly2/IMG_20210329_233818_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <p>Next we will load our code to make our motor move!</p>
 
+        <p>You will need to download new code for the stepper motor. You can download the code we will use from this <a href="./activity_code/stepper_motor_code_zero.py.py" download="stepper_motor_code_zero.py" target="_blank"> link</a>.</p>
+        
+        <br><br>
+
+        This link will download a python file to your computer. 
+
+        <br><br>
+        
+        Next, in your python editor click on 'Load' and then select the python file you just downloaded (it's called: stepper_motor_code_zero.py). The code will load and you will see it on your screen.
+
+        <br> <br>
 
       </div>
     </div>
   </div>
+
 
   <div class="card">
     <div class="card-header">
       <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwoD">
-        Check motor code
+        Download the motor code to your microbit
       </a>
     </div>
     <div id="collapseTwoD" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        Check that the motor code is still loaded on the microbit. You can do this by pressing the reset button on the microbit. When the board is reset you should see a picture of a snake for 2 seconds! If you can see this then you can skip this step and move to the next one. If you don't see this then follow the instructions below:
 
-        You can download the code we will use from this <a href="./activity_code/main_rotation.py" download="main_rotation.py" target="_blank"> link</a>.
+        <p> Make sure your battery is turned <b>off</b>!!</p>
 
-        It will download a python file to your computer. In your python editor click on 'Load' and then select the python file you just downloaded (it's called: main_rotation.py). The code will load and you will see it on your screen.
+        <p>Download the code and transfer it to your microbit by clicking on 'Connect', selecting your microbit device, and then clicking 'Flash'. If you've got any problems with this you can follow this guide to resolve them: <a href="https://python-editor-2-1-2.microbit.org/help.html?snippets=true" target="_blank">Link here</a></p>
 
-        <br><br>
+        <p>You should see the microbit start up with a picture of a snake! That's how you know you've got the right code. </p>
 
-        <img src="images/assembly2/IMG_20210329_171414_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <br> <br>
 
       </div>
     </div>
   </div>
 
+
   <div class="card">
     <div class="card-header">
       <a class="collapsed card-link" data-toggle="collapse" href="#collapseThreeD">
-        Switch to controlling motor #2
+        Zero the arm
       </a>
     </div>
     <div id="collapseThreeD" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        Press the 'microbit logo' on the microbit to switch between motors. You will get a message 'Motor 2' and the number 2 will appear on the display
-        <br><br>
-        <img src="images/assembly2/IMG_20210330_000036_compressed.jpg" class="img-fluid" alt="assemblyImage">
+       
+        <p>This motor works a little bit differently from the servomotor. First, make sure the battery pack is turned <b>off</b></p>
+
+        <p>Push the motor arm gently so it points to the right. So now we know that the arm is pointing to zero degrees.</p>
+
+        <p>Press the microbit symbol on the board, and the LED should show the text 'Reset 0'.</p>
+
+        <p><img src="images/assembly1/img8_compressed_annotated.jpg" class="img-fluid" alt="assemblyImage"></p>
 
       </div>
     </div>
   </div>
 
+
   <div class="card">
     <div class="card-header">
       <a class="collapsed card-link" data-toggle="collapse" href="#collapseFourD">
-        Test the motor rotation
+        Try and move the robot arm (gently)
       </a>
     </div>
     <div id="collapseFourD" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        Press the A or B button and then wait to see if the motor rotates, this will move the robot arm link #2. The motor #2 moves anticlockwise (button A) or clockwise (button B) by 15 degrees.
-
+        <p>Turn on the battery pack.</p>
+        <p>When the robot arm is stationary, try and turn the robot arm (gently) with your hand. You should find that if you do that, it will not want to move! Compared to the servomotor, it doesn't make any noise or complain. This is a feature of a stepper motor, it's very good at keeping its position.</p> 
+        <p>If you push too hard, you might <b>break the motor shaft attachment so be careful</b>! If the motor shaft attachment is strong enough, the motor might just 'slip'. That means it will skip a step.</p>
+        <p>Try turning off the battery pack. Move the arm, and then turn the battery pack on again. What do you observe? How is it different from a servomotor?</p>
         <br>
-        <ul>
-        <li>If you didn't see the picture of the snake, something is wrong with the software! -> Check your code!</li>
-        <li>If your robot arm isn't moving then there maybe something wrong with your connections! -> Check your battery is switched on and check all your wires are securely in their connections (give them a gentle tug).</li>
-        <li>If you accidently press the microbit symbol the code will switch to control motor #1, we don't want this at the moment, so if you do see the number 1 being displayed then just press the microbit symbol on the microbit once to reselect motor #1!</li>
-        <li>If your microbit seems unresponsive, then just try to give the reset button a push and see if that helps!</li>
-        </ul>
+        <p>You should notice that when you turn the battery pack on, it won't go back to what you set as 'zero degrees' in the previous step. This is because the stepper motor doesn't have a sensor to tell it where zero degrees is! So even though it's very good at being accurate and holding its position, if the power turns off, without a sensor it won't know where it is or needs to go. The servomotor is better for moving fast, and if you want it to be better at positioning, you will need to pay more.</p>
+        <br> <br>
+
       </div>
     </div>
   </div>
-
 
   <div class="card">
     <div class="card-header">
       <a class="collapsed card-link" data-toggle="collapse" href="#collapseFiveD">
-        Our motor is working
+        Understanding the code
       </a>
     </div>
     <div id="collapseFiveD" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        Great! Our motor #2 is working, now we can talk about kinematics! and then see it working for real with the robot arm!
+        <p>Let's have a look at the code.</p>
+        <p>All this stuff at the beginning, that's code for setting up the robotics board so our microbit can communicate with it and then use it to send signals to the motors.</p>
+        <div style ="max-height:300px;overflow-y:scroll">
+          <pre class="prettyprint">
+            # ------------------------------------------#
+            # Imports                                   #
+            # ------------------------------------------#
+
+            from microbit import *
+            import math
+            import music
+
+            # ------------------------------------------#
+            # Create a class for the robotics board     #
+            # ------------------------------------------#
+
+            class KitronikRoboticsBoard:
+                PRESCALE_REG = 0xFE
+                MODE_1_REG = 0x00
+                SRV_REG_BASE = 0x08
+                MOT_REG_BASE = 0x28
+                REG_OFFSET = 4
+                #SERVO_MULTIPLIER = 226
+                SERVO_MULTIPLIER = 190
+                SERVO_ZERO_OFFSET = 0X66
+                ANGLE_ZERO_OFFSET = 0
+
+                chipAddress = 0x6C
+                initialised = False
+                stepInit = False
+                stepStage = 0
+                stepper1Steps = 200
+                stepper2Steps = 200
+
+                def __init(self):
+                        
+                    buf = bytearray(2)
+
+                    buf[0] = self.PRESCALE_REG
+                    buf[1] = 0x85 #50Hz
+                    i2c.write(self.chipAddress, buf, False)
+                    
+                    for blockReg in range(0xFA, 0xFE, 1):
+                        buf[0] = blockReg
+                        buf[1] = 0x00
+                        i2c.write(self.chipAddress, buf, False)
+
+                    buf[0] = self.MODE_1_REG
+                    buf[1] = 0x01
+                    i2c.write(self.chipAddress, buf, False)
+                    self.initialised = True
+            </pre>
+        </div>
+        <br>
+        <p>This bit over here, these are <b>functions</b> that can be used for common commands to the motors. It's a bit complicated, but you can think of it as a set of instructions that you would use very often, so you write a function so you won't have to type up the whole thing over and over again!</p> 
+        <div style ="max-height:300px;overflow-y:scroll">
+          <pre class="prettyprint">
+            def motorOn(self, motor, direction, speed):
+              if self.initialised is False:
+                  self.__init(self)
+              buf = bytearray(2)
+              motorReg = self.MOT_REG_BASE + (2 * (motor - 1) * self.REG_OFFSET)
+              HighByte = False
+              OutputVal = speed * 40
+
+              if direction == "forward":
+                  if OutputVal > 0xFF:
+                      HighByte = True
+                      HighOutputVal = int(OutputVal/256)
+                  buf[0] = motorReg
+                  buf[1] = int(OutputVal)
+                  i2c.write(self.chipAddress, buf, False)
+                  buf[0] = motorReg + 1
+                  if HighByte:
+                      buf[1] = HighOutputVal
+                  else:
+                      buf[1] = 0x00
+                  i2c.write(self.chipAddress, buf, False)
+
+                  for offset in range(4, 6, 1):
+                      buf[0] = motorReg + offset
+                      buf[1] = 0x00
+                      i2c.write(self.chipAddress, buf, False)
+
+              elif direction == "reverse":
+                  if OutputVal > 0xFF:
+                      HighByte = True
+                      HighOutputVal = int(OutputVal/256)
+                  buf[0] = motorReg + 4
+                  buf[1] = int(OutputVal)
+                  i2c.write(self.chipAddress, buf, False)
+                  buf[0] = motorReg + 5
+                  if HighByte:
+                      buf[1] = HighOutputVal
+                  else:
+                      buf[1] = 0x00
+                  i2c.write(self.chipAddress, buf, False)
+
+                  for offset2 in range(0, 2, 1):
+                      buf[0] = motorReg + offset2
+                      buf[1] = 0x00
+                      i2c.write(self.chipAddress, buf, False)
+
+            def stepperMotorTurnAngle(self, stepper, angle):
+                angleToSteps = 0
+
+                if self.initialised is False:
+                    self.__init(self)
+
+                if angle < 0:
+                    direction = "reverse"
+                else:
+                    direction = "forward"
+
+                angleToSteps = int(
+                    ((abs(angle) - 1) * (self.stepperSteps - 1)) / (360 - 1) + 1)
+
+                self._turnStepperMotor(self, stepper, direction, angleToSteps)
+
+            def stepperMotorTurnSteps(self, stepper, direction, stepperSteps):
+                if self.initialised is False:
+                    self.__init(self)
+
+                self._turnStepperMotor(self, stepper, direction, stepperSteps)
+
+            def _turnStepperMotor(self, stepper, direction, steps):
+                stepCounter = 0
+
+                while stepCounter < steps:
+                    if self.stepStage == 1 or self.stepStage == 3:
+                        if stepper == 0:
+                            currentMotor = 1
+                        else:
+                            currentMotor = 3
+                    else:
+                        if stepper == 0:
+                            currentMotor = 2
+                        else:
+                            currentMotor = 4
+
+                    if self.stepStage == 1 or self.stepStage == 4:
+                        currentDirection = "forward"
+                    else:
+                        currentDirection = "reverse"
+
+                    self.motorOn(self, currentMotor, currentDirection, 100)
+                    sleep(50)
+
+                    if direction == "forward":
+                        if self.stepStage == 4:
+                            self.stepStage = 1
+                        else:
+                            self.stepStage += 1
+                    elif direction == "reverse":
+                        if self.stepStage == 1:
+                            self.stepStage = 4
+                        else:
+                            self.stepStage -= 1
+
+                    stepCounter += 1
+          </pre>
+        </div>
+        <br>
+        <p>This first bit of code you've been given just sets the motor to zero, which is what we used to zero the arm. Can you recognise what I'm doing? Can you figure out what variables there are? What will happen if I change them?</p>
+        <div style ="height:300px;overflow-y:scroll">
+          <pre class="prettyprint">
+            # Detect if the microbit logo has been touched! This will reset it to zero!
+            if pin_logo.is_touched():
+                # Play a tune
+                music.pitch(200, duration=150, wait=True)
+                # Display a message
+                display.scroll("Reset 0", delay=120, wait=False, loop=False)
+                # Rotate the motor
+                theBoard.stepperMotorTurnAngle(
+                    theBoard, currentRotationMotor, angle=-currentAngle)
+                # Update current angle - go to zero
+                currentAngle = 0
+          </pre>
+        </div>
+        <br>
       </div>
     </div>
   </div>
 
+  <div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSixD">
+        Let's write some code!
+      </a>
+    </div>
+    <div id="collapseSixD" class="collapse" data-parent="#accordion">
+      <div class="card-body">
+        <p>Now that you have a feel for how the code works, let's try writing some of our own! I've given you a headstart on the A button and B button. If you're not sure what to do, don't worry, we'll go through it together!</p>
+        <div style ="height:300px;overflow-y:scroll">
+          <pre class="prettyprint">
+            # Do something if button A is pressed. What do you do if you want button A to increase the angle?
+            if button_a.is_pressed():
+                #insert code here
+                
+        
+            # Do something if button B is pressed. What do you do if you want button B to decrease the angle?
+            if button_b.is_pressed():
+                #insert code here
+          </pre>
+        </div>
+        <br>
+        <p>If you're stuck, you can get the complete script here: <a href="./activity_code/stepper_motor_code.py" download="stepper_motor_code.py" target="_blank"> link</a></p>
+        <p>You can also have a play around with the code! Have a think about some of the questions below and see if you can figure them out.</p>
+        <ul>
+        <li>How can you get the motor to move further when you push the A or B button?</li>
+        <li>How do you get the microbit to display a different picture when it starts up?</li>
+        <li>What types of robots do you think this motor would be good for? What sort of actions?</li>
+        </ul>
+        <br>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSevenD">
+        Let's move the motor!
+      </a>
+    </div>
+    <div id="collapseSevenD" class="collapse" data-parent="#accordion">
+      <div class="card-body">
+        <p style="text-align:center"><span style="color:Red"><b>!!! Make sure your hands are far away from the motor arm! !!!</b></span> </p>
+        <p>Try pressing the buttons.</p>
+        <p>If you did it the same way as the zero code, button A will increase the angle, and button B will decrease the angle. You can see the angle scrolling across the LEDs, before the arm moves.</p>
+        <br>
+        <p>Turn off the battery pack. Move the arm a bit, you should be able to move the arm. <b>Keep your hands away</b>, and then turn on the battery pack again. What happens?</p>
+        <br>
+      </div>
+    </div>
+  </div>
+
+  
 
 </div>
 

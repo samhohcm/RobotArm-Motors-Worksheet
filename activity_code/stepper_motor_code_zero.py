@@ -155,78 +155,46 @@ class KitronikRoboticsBoard:
 
 
 # ------------------------------------------#
-# Helper functions                          #
-# ------------------------------------------#
-
-def displayCurrentMotorNumber(currentRotationMotor):
-
-    number1 = Image("00900:"
-                    "09900:"
-                    "00900:"
-                    "00900:"
-                    "09990")
-
-    number2 = Image("09990:"
-                    "09090:"
-                    "00900:"
-                    "09000:"
-                    "09990")
-
-    if(currentRotationMotor == 0):
-        display.show(number1)
-    else:
-        display.show(number2)
-
-
-# ------------------------------------------#
 # Our main program                          #
 # ------------------------------------------#
 # Our variables
 currentRotationMotor = 0
+currentAngle = 0
+stepAngle = 15
 set_volume(100)
 
 # Display an image on start-up so that we know the program loaded correctly
 display.show(Image.SNAKE)
 sleep(2000)
-# Show which motor is being controlled
-displayCurrentMotorNumber(currentRotationMotor)
 
 # Create an infinite loop
 while True:
     # Create a class instance
     theBoard = KitronikRoboticsBoard
 
-    # Detect if the microbit logo has been touched!
+    # Detect if the microbit logo has been touched! This will reset it to zero!
     if pin_logo.is_touched():
-        music.pitch(200, duration=150, wait=True)
-        # Select the motor we want to turn
-        currentRotationMotor ^= 1
-        display.scroll("Motor %d" % (
-            2 if currentRotationMotor else 1), delay=120, wait=False, loop=False)
-        sleep(6000)
-        # Show which motor is being controlled
-        displayCurrentMotorNumber(currentRotationMotor)
-
-    # Detect if the button a has been pressed!
-    elif button_a.is_pressed():
         # Play a tune
         music.pitch(200, duration=150, wait=True)
         # Display a message
-        display.scroll("- Rot", delay=120, wait=False, loop=False)
+        display.scroll("Reset 0", delay=120, wait=False, loop=False)
         # Rotate the motor
         theBoard.stepperMotorTurnAngle(
-            theBoard, currentRotationMotor, angle=-15)
-        # Show which motor is being controlled
-        displayCurrentMotorNumber(currentRotationMotor)
+            theBoard, currentRotationMotor, angle=-currentAngle)
+        # Update current angle - go to zero
+        currentAngle = 0
 
-    # Detect if the button b has been pressed!
-    elif button_b.is_pressed():
-        # Play a tune
-        music.pitch(200, duration=150, wait=True)
-        # Display a message
-        display.scroll("+ Rot", delay=120, wait=False, loop=False)
-        # Rotate the motor
-        theBoard.stepperMotorTurnAngle(
-            theBoard, currentRotationMotor, angle=15)
-        # Show which motor is being controlled
-        displayCurrentMotorNumber(currentRotationMotor)
+
+
+    #else:
+
+        ## Do something if button A is pressed. What do you do if you want button A to increase the angle?
+        #if button_a.is_pressed():
+            #insert code here
+            
+            
+    
+        ## Do something if button B is pressed. What do you do if you want button B to decrease the angle?
+        #if button_b.is_pressed():
+            #insert code here
+        
