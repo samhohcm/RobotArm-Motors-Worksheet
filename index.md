@@ -76,14 +76,13 @@ Think about things that move, what makes them move?
 
 **Motors** are an easy way to get moving! They can be quite affordable and electrical motors can be powered by batteries, which are a convenient power source. In fact, I've just packed some for you in the box!
 
-Have a look at the box, and pull out the bags labelled "Servomotor" and "Stepper Motor".
+Have a look at the box, and pull out the bags labelled "Motors Workshop" and "Stepper Motor". There's a blue coloured servomotor in the Motors Workshop bag, and a stepper motor in the Stepper Motor bag!
 
 They look like this:
 
 <br>
 <!--Insert photo-->
-![MapExample](images/Map.png)
-*Cartoons Copyright of [Irasutoya](https://www.irasutoya.com)*
+<p style="text-align: center;"><img src="images/Explanation/Both_motors.jpg" alt="Both motors"></p>
 <br>
 
 These are two different types of motors, and we're going to learn all about them today.
@@ -208,7 +207,7 @@ First, we need to assemble our set up. Expand the headings below (click on them)
         - 1 microbit <br>
         - 1 Kitronik robotics board <br>
         - 2 Stepper motors <br>
-        - 1 Servomotor <br>
+        - 1 Bag labelled 'Motors Workshop' <br>
         - 1 Bag labelled 'Assembly parts' <br>
         - 2 3D printed robot arm links (labelled 1 and 2) <br>
         - 1 base board (white in color in 4 pieces) <br>
@@ -218,27 +217,31 @@ First, we need to assemble our set up. Expand the headings below (click on them)
         - 2 jumper leads (4 wires each) <br>
         - 1 usb cable <br><br>
 
-        
-        <img src="./images/assembly1/img3_compressed_annotated.jpg" class="img-fluid" alt="assemblyImage" loading="lazy"/>
 
-        <br>
+      <br>  
+      <img src="./images/AssemblyServo/Updated_box_contents.png" class="img-fluid" alt="Box Contents" loading="lazy">
 
-        <img src="./images/assembly1/img1_compressed.jpg" class="img-fluid" alt="assemblyImage" loading="lazy"/>
+      <br>
+
+      <img src="./images/AssemblyServo/img1_compressed.jpg" class="img-fluid" alt="Box" loading="lazy">
+      <br>
       <br>
       For this activity, you only need: <br>
-        - the motors that we took out earlier <br>
+        - the 'Motors Workshop' bag <br>
+        - the 'Stepper Motor' bag <br>
+        - the bag labelled 'Assembly Parts' <br>
         - the part of the base board with the green attachment on it <br>
         - the 4 AA battery holder and Kitronik Robotics Board <br>
         - the microbit <br>
         - the USB cable <br>
         - the screwdriver <br>
-        - the 3D printed part in the bag labelled 'Motors Workshop' <br>
+        - 1 jumper lead <br>
         - and Robot Arm 2. 
 
       <br>
-      <br>
+  
 
-      Insert Image
+      <img_src="images/AssemblyServo/Motors_Workshop_parts.png" class="img-fluid" alt="Motors Workshop Parts" loading="lazy">
       
       <p>Carefully keep the other pieces back in the box for the next workshop.</p>
 
@@ -255,13 +258,14 @@ First, we need to assemble our set up. Expand the headings below (click on them)
     </div>
     <div id="collapseTwo" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        Slot the servomotor into the robot arm base on the base board as shown in the photo. It is a snap joint, so all you need to do is put one end of the motor attachment tab into one slot on the motor base, and then gently press in the other end of the motor attachment into the other slot on the motor base until it 'snaps' in.
+        <p>Slot the servomotor into the robot arm base on the base board as shown in the photo. It is a snap joint, so all you need to do is put one end of the motor attachment tab into one slot on the motor base, and then gently press in the other end of the motor attachment into the other slot on the motor base until it 'snaps' in.</p>
 
-        Make sure that the shaft of the servomotor is in the middle of the two ends, and is facing up towards the ceiling.
+        <img_src="images/AssemblyServo/Slot_in_servo.png" class="img-fluid" alt="Slot In Servo" loading="lazy">
 
-        <a href="./images/assembly1/img4_compressed_annotated.jpg">
-        <img src="./images/assembly1/img4_compressed_annotated.jpg" class="img-fluid" alt="assemblyImage">
-        </a>
+        <p>Make sure that the shaft of the servomotor is in the middle of the two ends, and is facing up towards the ceiling.</p>
+
+        <img_src="images/AssemblyServo/Centred_servo.jpg" class="img-fluid" alt="Servo Shaft in centre" loading="lazy">
+        <br>
 
       </div>
     </div>
@@ -306,9 +310,9 @@ First, we need to assemble our set up. Expand the headings below (click on them)
       <div class="card-body">
         Take the microbit and install it into the Robotics Board. You will need to push down on it fimly to install it into the connector. Make sure it is the right way around. The 'GND' marked on the microbit should be on the same side as the 'GND' on the robotics board. 
         <br>
-        <img src="images/assembly1/img21_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <img src="images/AssemblyServo/img21_compressed.jpg" class="img-fluid" alt="Aligning Microbit and Robotics Board">
         <br>
-        <img src="images/assembly1/img22_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <img src="images/AssemblyServo/img22_compressed.jpg" class="img-fluid" alt="Microbit in Robotics Board">
 
       </div>
     </div>
@@ -324,9 +328,10 @@ First, we need to assemble our set up. Expand the headings below (click on them)
       <div class="card-body">
         <p>Let's take a look at the screwdriver. Take the caps off both ends, you should find different sizes of screwdriver tip. If you give each end a pull you will see that you have four possible sizes of tip. Make sure to select the correct size in this activity. You'll know you've got the right size if it fits snugly into the screw!</p>
 
-        <img src="images/assembly1/img10_compressed.jpg" class="img-fluid" alt="assemblyImage" loading="lazy">
+        <img src="images/AssemblyServo/img10_compressed.jpg" class="img-fluid" alt="assemblyImage" loading="lazy">
         <br>
-        <img src="images/assembly1/img9_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <img src="images/AssemblyServo/img9_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <br>
 
       </div>
     </div>
@@ -342,18 +347,18 @@ First, we need to assemble our set up. Expand the headings below (click on them)
       <div class="card-body">
         <p>Take the robot arm labelled number '2', and have a look at the attachment on its end. Use your screwdriver to unscrew the screws and take off the attachment. Be careful not to lose the screws!</p>
 
-        Insert image
+        <img src="images/AssemblyServo/Unscrew_old_attmt.jpg" class="img-fluid" alt="Unscrew Stepper Motor Attachment">
 
         <p>Take the bag labelled 'Motors Workshop' and take out the shaft attachment inside. It should look like the picture below. Put the old attachment into the bag.</p>
-        <img src="images/assembly1/>
+        
+        <img src="images/AssemblyServo/Switch_attachment_1.png" class="img-fluid" alt="Switch attachment">
 
         <p>Attach the new attachment from the 'Motors Workshop' bag to Robot Arm 2 using the same screws. Remember, righty tighty, lefty loosey!</p>
 
+        <img src="images/AssemblyServo/Switch_attachment_2.png" class="img-fluid" alt="Switch attachment 2">
+
         <p>Have a closer look at the attachment on the robot arm. Then take a look at the shaft on the motor. Why do you think the attachment has been designed that way? Can you think of other shapes you can use for a shaft that looks like this?</p>
-
-
-
-        <img src="images/assembly1/img7_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <br>
 
       </div>
     </div>
@@ -371,11 +376,15 @@ First, we need to assemble our set up. Expand the headings below (click on them)
 
         <p>Take the robot arm and push it onto the shaft of the servomotor firmly, as shown in the photo. Try and move it, gently. It should be able to move, up to a certain point. Don't force it, or you might break the gears!</p>
 
+        <img src="images/AssemblyServo/Put_on_arm.jpg" class="img-fluid" alt="Switch attachment">
+
         <p>Push the arm so that it points straight ahead.</p>
+
+        <img src="images/AssemblyServo/Servo_arm_forward.jpg" class="img-fluid" alt="assemblyImage">
 
         <p>Once you're done with that, we're ready to start programming!</p>
 
-        <img src="images/assembly1/img8_compressed_annotated.jpg" class="img-fluid" alt="assemblyImage">
+        
 
       </div>
     </div>
@@ -427,9 +436,9 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
       <div class="card-body">
         Connect the micro-usb cable between your computer and the microbit. It plugs into the top of the microbit and into the usb port on your computer. When it's connected a red light should come on the microbit, and a yellow light will start flashing.
         <br><br>
-        <img src="images/assembly1/img27_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <img src="images/AssemblyServo/img27_compressed.jpg" class="img-fluid" alt="assemblyImage">
         <br> <br>
-        <img src="images/assembly1/img28_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <img src="images/AssemblyServo/img28_compressed.jpg" class="img-fluid" alt="assemblyImage">
 
       </div>
     </div>
@@ -441,7 +450,6 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
         Check your microbit is working! - write some code
       </a>
     </div> 
-    <!--!!!!!!!!!!!!change the link-->
     <div id="collapseTwoB" class="collapse" data-parent="#accordion">
       <div class="card-body">
         In your browser open a new tab and navigate to the online python editor for microbit: <a href="https://python.microbit.org/" target="_blank">Link here</a>
@@ -501,7 +509,7 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
 
         <br> <br>
 
-        <img src="images/assembly2/IMG_20210329_164546_compressed_annotated.jpg" class="img-fluid" alt="assemblyImage">
+        <img src="images/AssemblyServo/IMG_20210329_164546_compressed_annotated.jpg" class="img-fluid" alt="assemblyImage">
 
       </div>
     </div>
@@ -569,7 +577,7 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
 
         <p>Were you able to tell whether the motor moved? It might have made a sound, but it is hard to tell how far the motor moved. This is where the motor arm comes in handy. Push the motor arm back on so it points to the right. So now we know that both the motor and the arm is pointing to zero degrees.</p>
 
-        <p><img src="images/assembly1/img8_compressed_annotated.jpg" class="img-fluid" alt="assemblyImage"></p>
+        <p><img src="images/AssemblyServo/Servo_arm_zero.jpg" class="img-fluid" alt="assemblyImage"></p>
 
         <p>Turn off the battery pack. Move the arm a bit, you should be able to move the arm. <b>Keep your hands away</b>, and then turn on the battery pack again. What happens?</p>
 
@@ -779,7 +787,7 @@ Now that we've looked at a servomotor, what it looks like, how you connect it an
 Electromagnet coils are placed around the permanent magnet in the middle, as shown in the figure below. By activating each coil in sequence, the the permanent magnet in the middle will rotate.
 
 <br>
-<p style="text-align: center;"><img src="images/Explanation/stepper_motor_animation.gif" alt="Stepper Motor Working Principle" width="0.7"></p>
+<p style="text-align: center;"><img src="images/Explanation/stepper_motor_animation.gif" alt="Stepper Motor Working Principle"></p>
 
 *Image copyright Sam Hoh*
 
@@ -792,7 +800,7 @@ This is in comparison to the servomotor, which knows what position it is at even
 Let's take the stepper motor out of its bag and have a look at it.
 
 <br>
-<p style="text-align:center;"><img src="images/Explanation/Working-Principle02.webp"></p>
+<p style="text-align:center;"><img src="images/Explanation/Stepper_motor_parts.png"></p>
 
 You can see the body of the motor, where the coils and magnet are. The shaft of the motor sticks out from the 3D printed attachment, and the attachment is covering the gearbox. This is so that dirt won't get in, which can mess with how it moves! There are four wires coming out from the body of the motor. These connect to the electromagnet coils.
 
@@ -834,8 +842,11 @@ Now that we know a bit about our stepper motor, let's try and make it move!
       <div class="card-body">
       <p>Turn off the battery before you disassemble the robot.</p>
       <p>Take off the robot arm from the motor. Unplug the servomotor from the robotics board, and gently pry it out of the motor base. You can then put it back into its plastic bag.</p>
-      <br> <br>
-      <img src="images/assembly1/img31_compressed.jpg" class="img-fluid" alt="assemblyImage">
+      <br>
+      <p style="text-align: center;"><img src="images/AssemblyStepper/Disassembly_1.png" class="img-fluid" alt="assemblyImage">
+      
+      <br>
+    
 
 
       </div>
@@ -850,9 +861,9 @@ Now that we know a bit about our stepper motor, let's try and make it move!
     </div>
     <div id="collapseTwoC" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        <p>Take out the bag labelled "Assembly Parts". Take out the green bearing holder, a bearing, and two screws and two nuts.</p> 
+        <p>Take out the bag labelled "Assembly Parts". Take out the green bearing holder, a bearing, and two screws and two nuts. Here is a photo to help you identify what's in the bag!</p> 
         <br>
-        <img src="images/assembly1/img8_compressed_annotated.jpg" class="img-fluid" alt="assemblyImage">
+        <img src="images/AssemblyStepper/img4_compressed_annotated.jpg" class="img-fluid" alt="assemblyImage">
         <br>
       </div>
     </div>
@@ -866,9 +877,9 @@ Now that we know a bit about our stepper motor, let's try and make it move!
     </div>
     <div id="collapseThreeC" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        Take the motor. We're going to attach it to the green bearing holder. Take an M3 nut and place it in one of the hexagonal shaped holes in the bearing holder. 
+        <p>Take the motor. We're going to attach it to the green bearing holder. Take an M3 nut and place it in one of the hexagonal shaped holes in the bearing holder.</p> 
 
-        <img src="images/assembly1/img8_compressed_annotated.jpg" class="img-fluid" alt="assemblyImage">
+        <img src="images/AssemblyStepper/img8_compressed_annotated.jpg" class="img-fluid" alt="assemblyImage">
 
       </div>
     </div>
@@ -884,7 +895,7 @@ Now that we know a bit about our stepper motor, let's try and make it move!
       <div class="card-body">
         Next take an M3 screw. Line the holes up between the green bearing holder and the motor. Insert the screw into the same hole that your nut is resting in, then use the right sized screwdriver attachment to tighten the screw. You may need to hold the nut in place with your finger. You need to turn it clockwise to tighten it! A good way to remember this is the phrase "righty tighty, lefty loosy".
 
-        <img src="images/assembly1/img14_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <img src="images/AssemblyStepper/img14_compressed.jpg" class="img-fluid" alt="assemblyImage">
 
       </div>
     </div>
@@ -899,7 +910,7 @@ Now that we know a bit about our stepper motor, let's try and make it move!
     <div id="collapseFiveC" class="collapse" data-parent="#accordion">
       <div class="card-body">
         <p>Repeat this for the second hole between the green bearing holder and the motor. Take another nut, insert it into the hexagonal shaped hole, and then use a screw to tighten the two parts together.</p>
-        <img src="images/assembly1/img15_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <img src="images/AssemblyStepper/img15_compressed.jpg" class="img-fluid" alt="assemblyImage">
       </div>
     </div>
   </div>
@@ -915,9 +926,9 @@ Now that we know a bit about our stepper motor, let's try and make it move!
       <div class="card-body">
         Clip the motor into the robot arm base. Make sure the wires of the motor are pointing towards you. You will have to gently bend the side of the base so that it snaps in! Well done! You have finished the installation of our base motor! :)
 
-        <img src="images/assembly1/img17_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <img src="images/AssemblyStepper/img17_compressed.jpg" class="img-fluid" alt="assemblyImage">
         <br>
-        <img src="images/assembly1/img19_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <img src="images/AssemblyStepper/img19_compressed.jpg" class="img-fluid" alt="assemblyImage">
 
       </div>
     </div>
@@ -933,7 +944,7 @@ Now that we know a bit about our stepper motor, let's try and make it move!
       <div class="card-body">
         Take one set of the jumper wires. Take the small screwdriver and gently screw these into the motor connector. Make sure that the wires aren't crossed over! They don't need to be screwed hard, just gently so that if you give them a little tug they can't pull out. Remember righty tighty, lefty loosy!
 
-        <img src="images/assembly1/img20_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <img src="images/AssemblyStepper/img20_compressed.jpg" class="img-fluid" alt="assemblyImage">
 
       </div>
     </div>
@@ -949,11 +960,11 @@ Now that we know a bit about our stepper motor, let's try and make it move!
       <div class="card-body">
         <p>The wires connect into the Robotics board in the same order they came from the motor. Attach them gently with the big screwdriver attachment.</p>
         <br>
-        <img src="images/assembly1/img23_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <img src="images/AssemblyStepper/img23_compressed.jpg" class="img-fluid" alt="assemblyImage">
         <br>
         <p>The motor connector ports should line up with the Robotics board ports as shown in the figure. Make sure there aren't any crossovers in the wires! That means the same colour wire in port 1 on the motor connector on the left should be the same colour wire on port a on the Robotics board on the right.</p>
         <br>
-        <img src="images/assembly1/img23a.jpg" class="img-fluid" alt="assemblyImage">
+        <img src="images/AssemblyStepper/img23a.jpg" class="img-fluid" alt="assemblyImage">
         <br>
       </div>
     </div>
@@ -969,11 +980,11 @@ Now that we know a bit about our stepper motor, let's try and make it move!
       <div class="card-body">
         <p>Unscrew the screws on the attachment on the robot arm. Keep the screws safe! Then put the attachment back in the plastic bag labelled <b>'Motors Workshop'</b>, and take out the old attachment It should look like this:</p>
         <br>
-        <img src="images/assembly1/img23_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <img src="images/AssemblyStepper/Disassembly_parts_go_where.png" class="img-fluid" alt="assemblyImage"></p>
         <br>
         <p>Line up the holes of the motor shaft attachment to the holes on the robot arm so that the flat side of the 'D' hole shape faces the other end of the arm, and use the screws to attach it. Remember, righty tightey, lefty loosey!</p>
         <br>
-        <img src="images/assembly1/img23a.jpg" class="img-fluid" alt="assemblyImage">
+        <img src="images/AssemblyStepper/Reattach_stepper_motor_attmt.png" class="img-fluid" alt="assemblyImage">
         <br>
       </div>
     </div>
@@ -987,10 +998,10 @@ Now that we know a bit about our stepper motor, let's try and make it move!
     </div>
     <div id="collapseTenC" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        <p>Take the robot arm #1 and place it so that the small 'D' shape in the green part of the robot arm lines up with the motor shaft. You should be able to push the two together gently. Now give the robot arm a gentle turn to check it rotates. <br>
-      <img src="images/assembly1/img30_compressed.jpg" class="img-fluid" alt="assemblyImage">
+        <p>Take the robot arm #2 and place it so that the small 'D' shape in the green part of the robot arm lines up with the motor shaft. You should be able to push the two together gently. Now give the robot arm a gentle turn to check it rotates.</p> <br>
+      <img src="images/AssemblyStepper/img30_compressed.jpg" class="img-fluid" alt="assemblyImage">
       <br> <br>
-      <img src="images/assembly1/img31_compressed.jpg" class="img-fluid" alt="assemblyImage">
+      <img src="images/AssemblyStepper/img31_compressed.jpg" class="img-fluid" alt="assemblyImage">
         <br>
         <p>Now you're ready to code!</p>
       </div>
@@ -1094,7 +1105,7 @@ Now that we know a bit about our stepper motor, let's try and make it move!
 
         <p>Press the microbit symbol on the board, and the LED should show the text 'Reset 0'.</p>
 
-        <p><img src="images/assembly1/img8_compressed_annotated.jpg" class="img-fluid" alt="assemblyImage"></p>
+        <p><img src="images/AssemblyStepper/img31_compressed.jpg" class="img-fluid" alt="assemblyImage"></p>
 
       </div>
     </div>
@@ -1114,7 +1125,7 @@ Now that we know a bit about our stepper motor, let's try and make it move!
         <p>If you push too hard, you might <b>break the motor shaft attachment so be careful</b>! If the motor shaft attachment is strong enough, the motor might just 'slip'. That means it will skip a step.</p>
         <p>Try turning off the battery pack. Move the arm, and then turn the battery pack on again. What do you observe? How is it different from a servomotor?</p>
         <br>
-        <p>You should notice that when you turn the battery pack on, it won't go back to what you set as 'zero degrees' in the previous step. This is because the stepper motor doesn't have a sensor to tell it where zero degrees is! So even though it's very good at being accurate and holding its position, if the power turns off, without a sensor it won't know where it is or needs to go. The servomotor is better for moving fast, and if you want it to be better at positioning, you will need to pay more.</p>
+        <p>You should notice that when you turn the battery pack on, it won't go back to what you set as 'zero degrees' in the previous step. This is because the stepper motor doesn't have a sensor to tell it where zero degrees is! So even though it's very good at being accurate and holding its position, if the power turns off, without a sensor it won't know where it is. The servomotor is better for moving fast, and if you want it to be better at positioning, you will need to pay more.</p>
         <br> <br>
 
       </div>
