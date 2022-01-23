@@ -241,7 +241,7 @@ First, we need to assemble our set up. Expand the headings below (click on them)
       <br>
   
 
-      <img_src="images/AssemblyServo/Motors_Workshop_parts.png" class="img-fluid" alt="Motors Workshop Parts" loading="lazy">
+      <img src="./images/AssemblyServo/Motors_Workshop_parts.png" class="img-fluid" alt="Motors Workshop Parts" loading="lazy">
       
       <p>Carefully keep the other pieces back in the box for the next workshop.</p>
 
@@ -260,11 +260,11 @@ First, we need to assemble our set up. Expand the headings below (click on them)
       <div class="card-body">
         <p>Slot the servomotor into the robot arm base on the base board as shown in the photo. It is a snap joint, so all you need to do is put one end of the motor attachment tab into one slot on the motor base, and then gently press in the other end of the motor attachment into the other slot on the motor base until it 'snaps' in.</p>
 
-        <img_src="images/AssemblyServo/Slot_in_servo.png" class="img-fluid" alt="Slot In Servo" loading="lazy">
+        <img src="images/AssemblyServo/Slot_in_servo.png" class="img-fluid" alt="Slot In Servo" loading="lazy">
 
         <p>Make sure that the shaft of the servomotor is in the middle of the two ends, and is facing up towards the ceiling.</p>
 
-        <img_src="images/AssemblyServo/Centred_servo.jpg" class="img-fluid" alt="Servo Shaft in centre" loading="lazy">
+        <img src="images/AssemblyServo/Centred_servo.jpg" class="img-fluid" alt="Servo Shaft in centre" loading="lazy">
         <br>
 
       </div>
@@ -843,7 +843,7 @@ Now that we know a bit about our stepper motor, let's try and make it move!
       <p>Turn off the battery before you disassemble the robot.</p>
       <p>Take off the robot arm from the motor. Unplug the servomotor from the robotics board, and gently pry it out of the motor base. You can then put it back into its plastic bag.</p>
       <br>
-      <p style="text-align: center;"><img src="images/AssemblyStepper/Disassembly_1.png" class="img-fluid" alt="assemblyImage">
+      <p style="text-align: center;"><img src="images/AssemblyStepper/Disassembly_1.png" class="img-fluid" alt="assemblyImage"></p>
       
       <br>
     
@@ -998,10 +998,10 @@ Now that we know a bit about our stepper motor, let's try and make it move!
     </div>
     <div id="collapseTenC" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        <p>Take the robot arm #2 and place it so that the small 'D' shape in the green part of the robot arm lines up with the motor shaft. You should be able to push the two together gently. Now give the robot arm a gentle turn to check it rotates.</p> <br>
+        <p>Take the robot arm and place it so that the small 'D' shape in the green part of the robot arm lines up with the motor shaft. You should be able to push the two together gently. Now give the robot arm a gentle turn to check it rotates.</p> <br>
       <img src="images/AssemblyStepper/img30_compressed.jpg" class="img-fluid" alt="assemblyImage">
       <br> <br>
-      <img src="images/AssemblyStepper/img31_compressed.jpg" class="img-fluid" alt="assemblyImage">
+      <img src="images/AssemblyStepper/Stepper_zero.jpg" class="img-fluid" alt="assemblyImage">
         <br>
         <p>Now you're ready to code!</p>
       </div>
@@ -1105,7 +1105,7 @@ Now that we know a bit about our stepper motor, let's try and make it move!
 
         <p>Press the microbit symbol on the board, and the LED should show the text 'Reset 0'.</p>
 
-        <p><img src="images/AssemblyStepper/img31_compressed.jpg" class="img-fluid" alt="assemblyImage"></p>
+        <p><img src="images/AssemblyStepper/Stepper_zero.jpg" class="img-fluid" alt="assemblyImage"></p>
 
       </div>
     </div>
