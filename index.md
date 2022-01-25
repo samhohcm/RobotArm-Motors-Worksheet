@@ -242,7 +242,7 @@ First, we need to assemble our set up. Expand the headings below (click on them)
   
 
       <img src="./images/AssemblyServo/Motors_Workshop_parts.png" class="img-fluid" alt="Motors Workshop Parts" loading="lazy">
-      
+      <br>
       <p>Carefully keep the other pieces back in the box for the next workshop.</p>
 
 
@@ -573,7 +573,7 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
     <div id="collapseSevenB" class="collapse" data-parent="#accordion">
       <div class="card-body">
        
-        <p>Take off the motor arm from the motor. Turn on the battery pack.</p>
+        <p><b>Take off the motor arm from the motor.</b> Turn on the battery pack.</p>
 
         <p>Were you able to tell whether the motor moved? It might have made a sound, but it is hard to tell how far the motor moved. This is where the motor arm comes in handy. Push the motor arm back on so it points to the right. So now we know that both the motor and the arm is pointing to zero degrees.</p>
 
@@ -726,7 +726,7 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
     <div id="collapseTenB" class="collapse" data-parent="#accordion">
       <div class="card-body">
         <p>Now that you have a feel for how the code works, let's try writing some of our own! I've given you a headstart on the A button and B button. If you're not sure what to do, don't worry, we'll go through it together!</p>
-        <div style ="height:300px;overflow-y:scroll">
+        <div style ="max-height:300px;overflow-y:scroll">
           <pre class="prettyprint">
             # Do something if button A is pressed. What do you do if you want button A to increase the angle?
             if button_a.is_pressed():
@@ -807,14 +807,15 @@ You can see the body of the motor, where the coils and magnet are. The shaft of 
 Now that we know a bit about our stepper motor, let's try and make it move!
 
 
-
+<br>
+<br>
 
 
 <!--Comment: End of markdown-->
 
 <!--Comment: Back to html bootstrap -->
 
-<div id="Activity 3" class="container p-3 my-3 bg-primary text-primary">
+<div id="Activity3" class="container p-3 my-3 bg-primary text-primary">
 <h2>Activity #3</h2>
 </div>
 
@@ -978,9 +979,9 @@ Now that we know a bit about our stepper motor, let's try and make it move!
     </div>
     <div id="collapseNineC" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        <p>Unscrew the screws on the attachment on the robot arm. Keep the screws safe! Then put the attachment back in the plastic bag labelled <b>'Motors Workshop'</b>, and take out the old attachment It should look like this:</p>
+        <p>Unscrew the screws on the attachment on the robot arm. Keep the screws safe! Then put the attachment back in the plastic bag labelled <b>'Motors Workshop'</b>, and take out the old attachment. It should look like this:</p>
         <br>
-        <img src="images/AssemblyStepper/Disassembly_parts_go_where.png" class="img-fluid" alt="assemblyImage"></p>
+        <img src="images/AssemblyStepper/Disassembly_parts_go_where.png" class="img-fluid" alt="assemblyImage">
         <br>
         <p>Line up the holes of the motor shaft attachment to the holes on the robot arm so that the flat side of the 'D' hole shape faces the other end of the arm, and use the screws to attach it. Remember, righty tightey, lefty loosey!</p>
         <br>
@@ -1002,7 +1003,7 @@ Now that we know a bit about our stepper motor, let's try and make it move!
       <img src="images/AssemblyStepper/img30_compressed.jpg" class="img-fluid" alt="assemblyImage">
       <br> <br>
       <img src="images/AssemblyStepper/Stepper_zero.jpg" class="img-fluid" alt="assemblyImage">
-        <br>
+        <br> <br>
         <p>Now you're ready to code!</p>
       </div>
     </div>
@@ -1019,7 +1020,7 @@ Now that we know a bit about our stepper motor, let's try and make it move!
 
 <!--Comment: Back to html bootstrap -->
 
-<div id="Activity 4" class="container p-3 my-3 bg-primary text-primary">
+<div id="Activity4" class="container p-3 my-3 bg-primary text-primary">
 <h2>Activity #4</h2>
 </div>
 
@@ -1099,7 +1100,7 @@ Now that we know a bit about our stepper motor, let's try and make it move!
     <div id="collapseThreeD" class="collapse" data-parent="#accordion">
       <div class="card-body">
        
-        <p>This motor works a little bit differently from the servomotor. First, make sure the battery pack is turned <b>off</b></p>
+        <p>This motor works a little bit differently from the servomotor. First, make sure the battery pack is turned <b>off</b>.</p>
 
         <p>Push the motor arm gently so it points to the right. So now we know that the arm is pointing to zero degrees.</p>
 
