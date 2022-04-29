@@ -30,9 +30,10 @@ This session is designed to be fun! The idea is that we can follow it together o
   <li class="list-group-item"><a href="#resourcesPanel">Resources</a></li>
   <li class="list-group-item"><a href="#Explanation">How a Motor works</a></li>
   <li class="list-group-item"><a href="#Activity1">Assembling the servomotor</a></li>
-  <li class="list-group-item"><a href="#Activity2">Programming the servomotor</a></li>
-  <li class="list-group-item"><a href="#Activity3">Assembling the stepper motor</a></li>
-  <li class="list-group-item"><a href="#Activity4">Programming the stepper motor</a></li>
+  <li class="list-group-item"><a href="#Activity2">Programming on the MicroBit</a></li>
+  <li class="list-group-item"><a href="#Activity3">Programming the servomotor</a></li>
+  <li class="list-group-item"><a href="#Activity4">Assembling the stepper motor</a></li>
+  <li class="list-group-item"><a href="#Activity5">Programming the stepper motor</a></li>
 </ul>
 </div>
 
@@ -408,8 +409,7 @@ First, we need to assemble our set up. Expand the headings below (click on them)
 <h2>Activity #2</h2>
 </div>
 
-
-### Programming the Servomotor
+### Programming on the Microbit
 
 <br>
 
@@ -417,7 +417,7 @@ First, we need to assemble our set up. Expand the headings below (click on them)
 
 <!--Comment: Back to markdown -->
 
-Now we've got our servomotor set up, we can start figuring out how to move it!
+Now we've got our servomotor set up, let's learn a bit about how to use the microbit!
 
 <!--Comment: End of markdown-->
 
@@ -518,10 +518,135 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
   <div class="card">
     <div class="card-header">
       <a class="collapsed card-link" data-toggle="collapse" href="#collapseFiveB">
-        Load our motor code
+        Understanding what the code is doing
       </a>
     </div>
     <div id="collapseFiveB" class="collapse" data-parent="#accordion">
+      <div class="card-body">
+        <p>Now let's go through the code, and see if we can make the microbit do something new!</p>
+
+        <p>Did you notice what was showing on the LED screen? Have a look at the code and see if you can find which lines they appear on.</p>
+
+        <br> <br>
+
+        <div style ="height:300px;overflow-y:scroll">
+          <pre class="prettyprint">
+            # Our test microbit program 
+            # tip: some of this code might already be in your online python editor when you load it!
+
+            # Import this library so we can talk to the microbit
+            from microbit import *
+
+            # Loop for ever (infinite loop)
+            while True:
+                display.scroll('Hello, awesome person!') # What did you see on the screen?
+                display.show(Image.HEART)
+                sleep(2000)
+          </pre>
+        </div>
+        
+        <p>"display.scroll" is a <b>function</b> that lets you display a scrolling line of text, and "display.show" is a function that lets you show a small picture! How do you think you can change what shows on the screen?</p>
+
+        <p>Let's give it a go. Change the text ('Hello, awesome person!') to whatever you want. You can look up the kind of pictures you can display in "display.show" at this <a href="https://microbit-micropython.readthedocs.io/en/v1.0.1/image.html" target="_blank">website</a> under the header '<b>Attributes</b>'.</p>
+        
+
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSixB">
+        Thinking about variables
+      </a>
+    </div>
+    <div id="collapseSixB" class="collapse" data-parent="#accordion">
+      <div class="card-body">
+        <p><b>Variables</b> are one way to reduce the amount of code we write!</p>
+
+        <p>It's like a box with a label on it, like 'say_this'. You can put a value in this box, and you can then use 'say_this' in the script, and whenever it sees it it will then go look for this box called 'say_this' and take the value inside it.</p>
+
+        <p>In the script, you <i>assign</i> a variable and then use it like this:</p>
+
+        <div style ="height:300px;overflow-y:scroll">
+          <pre class="prettyprint">
+            say_this = 'Hello, awesome person!'
+
+            display.scroll(say_this)
+          </pre>
+        </div>
+        
+        <p>You must assign a variable before you can use it. There are rules about the names you can give variables; usually it can't start with a number and it mustn't have any spaces. Try it!</p>
+        <p>Make a new variable with another sentence in it, and display it after the image.</p>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSevenB">
+        Let's try a function!
+      </a>
+    </div>
+    <div id="collapseSevenB" class="collapse" data-parent="#accordion">
+      <div class="card-body">
+        <p><b>Functions</b> are another way to reduce the amount of code we write!</p>
+
+        <p>It's like a set of instructions with a label on the top, like 'do_this'. You can then use 'do_this' in the script, and whenever it sees it it will then go look for this set of instructions called 'do_this' and do what it says. You can also give the function variables, so that it can use the variable to do things!</p>
+
+        <p>In the script, you <i>define</i> a function and then use it like this:</p>
+
+        <div style ="height:300px;overflow-y:scroll">
+          <pre class="prettyprint">
+            def do_this(something_to_say):   # defining the function
+              display.scroll(something_to_say)
+              display.show(Image.HEART)
+
+            do_this(say_this) # calling the function!
+          </pre>
+        </div>
+        
+        <p>When do you think this would be useful? What other functions would you make?</p>
+
+        <p>Try and make two different functions that will show different images after telling you what an awesome person you are!</p>
+
+      </div>
+    </div>
+  </div>
+  
+
+</div>
+
+<br><br>
+
+<div id="Activity3" class="container p-3 my-3 bg-primary text-primary">
+<h2>Activity #3</h2>
+</div>
+
+### Programming the Servomotor
+
+<br>
+
+<!--Comment: End of html bootstrap -->
+
+<!--Comment: Back to markdown -->
+
+Now we've got the hang of programming on our microbit, we can start figuring out how to move the servomotor!
+
+<!--Comment: End of markdown-->
+
+<!--Comment: Back to html bootstrap -->
+
+<div id="accordion">
+
+  <div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseOneC">
+        Load our motor code
+      </a>
+    </div>
+    <div id="collapseOneC" class="collapse" data-parent="#accordion">
       <div class="card-body">
         Next we will load our code to make our motor move!<br><br>
 
@@ -544,11 +669,11 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSixB">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwoC">
         Download the motor code to your microbit
       </a>
     </div>
-    <div id="collapseSixB" class="collapse" data-parent="#accordion">
+    <div id="collapseTwoC" class="collapse" data-parent="#accordion">
       <div class="card-body">
 
         <p> Make sure your battery is turned <b>off</b>!!</p>
@@ -566,11 +691,11 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSevenB">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseThreeC">
         Zero the arm
       </a>
     </div>
-    <div id="collapseSevenB" class="collapse" data-parent="#accordion">
+    <div id="collapseThreeC" class="collapse" data-parent="#accordion">
       <div class="card-body">
        
         <p><b>Take off the motor arm from the motor.</b> Turn on the battery pack.</p>
@@ -588,11 +713,11 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseEightB">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFourC">
         Try and move the robot arm (gently)
       </a>
     </div>
-    <div id="collapseEightB" class="collapse" data-parent="#accordion">
+    <div id="collapseFourC" class="collapse" data-parent="#accordion">
       <div class="card-body">
         <p>When the robot arm is stationary, try and turn the robot arm (gently) with your hand. You should find that if you do that, it will not want to move, and will keep trying to go back to where it should be! You will hear it complaining a bit. This is a feature of servomotors. As we mentioned earlier, they use a sensor to try and go to a position according to the signal that you give it.</p> 
         <p>If you push too hard, things might break so be careful!</p>
@@ -604,11 +729,11 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseNineB">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFiveC">
         Understanding the code
       </a>
     </div>
-    <div id="collapseNineB" class="collapse" data-parent="#accordion">
+    <div id="collapseFiveC" class="collapse" data-parent="#accordion">
       <div class="card-body">
         <p>Let's have a look at the code.</p>
         <p>All this stuff at the beginning, that's code for setting up the robotics board so our microbit can communicate with it and then use it to send signals to the motors.</p>
@@ -719,11 +844,11 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTenB">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSixC">
         Let's write some code!
       </a>
     </div>
-    <div id="collapseTenB" class="collapse" data-parent="#accordion">
+    <div id="collapseSixC" class="collapse" data-parent="#accordion">
       <div class="card-body">
         <p>Now that you have a feel for how the code works, let's try writing some of our own! I've given you a headstart on the A button and B button. If you're not sure what to do, don't worry, we'll go through it together!</p>
         <div style ="max-height:300px;overflow-y:scroll">
@@ -753,11 +878,11 @@ Now we've got our servomotor set up, we can start figuring out how to move it!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseElevenB">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSevenC">
         Let's move the motor!
       </a>
     </div>
-    <div id="collapseElevenB" class="collapse" data-parent="#accordion">
+    <div id="collapseSevenC" class="collapse" data-parent="#accordion">
       <div class="card-body">
         <p style="text-align:center"><span style="color:Red"><b>!!! Make sure your hands are far away from the motor arm! !!!</b></span> </p>
         <p>Try pressing the buttons.</p>
@@ -815,8 +940,8 @@ Now that we know a bit about our stepper motor, let's try and make it move!
 
 <!--Comment: Back to html bootstrap -->
 
-<div id="Activity3" class="container p-3 my-3 bg-primary text-primary">
-<h2>Activity #3</h2>
+<div id="Activity4" class="container p-3 my-3 bg-primary text-primary">
+<h2>Activity #4</h2>
 </div>
 
 <br>
@@ -835,11 +960,11 @@ Now that we know a bit about our stepper motor, let's try and make it move!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseOneC">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseOneD">
         Taking off the servomotor
       </a>
     </div>
-    <div id="collapseOneC" class="collapse" data-parent="#accordion">
+    <div id="collapseOneD" class="collapse" data-parent="#accordion">
       <div class="card-body">
       <p>Turn off the battery before you disassemble the robot.</p>
       <p>Take off the robot arm from the motor. Unplug the servomotor from the robotics board, and gently pry it out of the motor base. You can then put it back into its plastic bag.</p>
@@ -856,11 +981,11 @@ Now that we know a bit about our stepper motor, let's try and make it move!
 
  <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwoC">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwoD">
         Take out the parts needed
       </a>
     </div>
-    <div id="collapseTwoC" class="collapse" data-parent="#accordion">
+    <div id="collapseTwoD" class="collapse" data-parent="#accordion">
       <div class="card-body">
         <p>Take out the bag labelled "Assembly Parts". Take out the green bearing holder, a bearing, and two screws and two nuts. Here is a photo to help you identify what's in the bag!</p> 
         <br>
@@ -872,11 +997,11 @@ Now that we know a bit about our stepper motor, let's try and make it move!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseThreeC">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseThreeD">
         Begin to attach the stepper motor!
       </a>
     </div>
-    <div id="collapseThreeC" class="collapse" data-parent="#accordion">
+    <div id="collapseThreeD" class="collapse" data-parent="#accordion">
       <div class="card-body">
         <p>Take the motor. We're going to attach it to the green bearing holder. Take an M3 nut and place it in one of the hexagonal shaped holes in the bearing holder.</p> 
 
@@ -888,11 +1013,11 @@ Now that we know a bit about our stepper motor, let's try and make it move!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFourC">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFourD">
         Continue to attach the first motor!
       </a>
     </div>
-    <div id="collapseFourC" class="collapse" data-parent="#accordion">
+    <div id="collapseFourD" class="collapse" data-parent="#accordion">
       <div class="card-body">
         Next take an M3 screw. Line the holes up between the green bearing holder and the motor. Insert the screw into the same hole that your nut is resting in, then use the right sized screwdriver attachment to tighten the screw. You may need to hold the nut in place with your finger. You need to turn it clockwise to tighten it! A good way to remember this is the phrase "righty tighty, lefty loosy".
 
@@ -904,11 +1029,11 @@ Now that we know a bit about our stepper motor, let's try and make it move!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFiveC">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFiveD">
         Finish attaching the first motor
       </a>
     </div>
-    <div id="collapseFiveC" class="collapse" data-parent="#accordion">
+    <div id="collapseFiveD" class="collapse" data-parent="#accordion">
       <div class="card-body">
         <p>Repeat this for the second hole between the green bearing holder and the motor. Take another nut, insert it into the hexagonal shaped hole, and then use a screw to tighten the two parts together.</p>
         <img src="images/AssemblyStepper/img15_compressed.jpg" class="img-fluid" alt="assemblyImage">
@@ -919,11 +1044,11 @@ Now that we know a bit about our stepper motor, let's try and make it move!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSixC">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSixD">
         Finish the robot arm base
       </a>
     </div>
-    <div id="collapseSixC" class="collapse" data-parent="#accordion">
+    <div id="collapseSixD" class="collapse" data-parent="#accordion">
       <div class="card-body">
         Clip the motor into the robot arm base. Make sure the wires of the motor are pointing towards you. You will have to gently bend the side of the base so that it snaps in! Well done! You have finished the installation of our base motor! :)
 
@@ -937,11 +1062,11 @@ Now that we know a bit about our stepper motor, let's try and make it move!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSevenC">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSevenD">
         Attach wires to the robot arm base motor
       </a>
     </div>
-    <div id="collapseSevenC" class="collapse" data-parent="#accordion">
+    <div id="collapseSevenD" class="collapse" data-parent="#accordion">
       <div class="card-body">
         Take one set of the jumper wires. Take the small screwdriver and gently screw these into the motor connector. Make sure that the wires aren't crossed over! They don't need to be screwed hard, just gently so that if you give them a little tug they can't pull out. Remember righty tighty, lefty loosy!
 
@@ -953,11 +1078,11 @@ Now that we know a bit about our stepper motor, let's try and make it move!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseEightC">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseEightD">
         Connect the wires from the motor to the Robotics Board.
       </a>
     </div>
-    <div id="collapseEightC" class="collapse" data-parent="#accordion">
+    <div id="collapseEightD" class="collapse" data-parent="#accordion">
       <div class="card-body">
         <p>The wires connect into the Robotics board in the same order they came from the motor. Attach them gently with the big screwdriver attachment.</p>
         <br>
@@ -973,11 +1098,11 @@ Now that we know a bit about our stepper motor, let's try and make it move!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseNineC">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseNineD">
         Change the motor shaft attachment on the arm.
       </a>
     </div>
-    <div id="collapseNineC" class="collapse" data-parent="#accordion">
+    <div id="collapseNineD" class="collapse" data-parent="#accordion">
       <div class="card-body">
         <p>Unscrew the screws on the attachment on the robot arm. Keep the screws safe! Then put the attachment back in the plastic bag labelled <b>'Motors Workshop'</b>, and take out the old attachment. It should look like this:</p>
         <br>
@@ -993,11 +1118,11 @@ Now that we know a bit about our stepper motor, let's try and make it move!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTenC">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTenD">
         Put the motor arm on!
       </a>
     </div>
-    <div id="collapseTenC" class="collapse" data-parent="#accordion">
+    <div id="collapseTenD" class="collapse" data-parent="#accordion">
       <div class="card-body">
         <p>Take the robot arm and place it so that the small 'D' shape in the green part of the robot arm lines up with the motor shaft. You should be able to push the two together gently. Now give the robot arm a gentle turn to check it rotates.</p> <br>
       <img src="images/AssemblyStepper/img30_compressed.jpg" class="img-fluid" alt="assemblyImage">
@@ -1020,8 +1145,8 @@ Now that we know a bit about our stepper motor, let's try and make it move!
 
 <!--Comment: Back to html bootstrap -->
 
-<div id="Activity4" class="container p-3 my-3 bg-primary text-primary">
-<h2>Activity #4</h2>
+<div id="Activity5" class="container p-3 my-3 bg-primary text-primary">
+<h2>Activity #5</h2>
 </div>
 
 
@@ -1044,11 +1169,11 @@ Now that we know a bit about our stepper motor, let's try and make it move!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseOneD">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseOneE">
         Load our motor code
       </a>
     </div>
-    <div id="collapseOneD" class="collapse" data-parent="#accordion">
+    <div id="collapseOneE" class="collapse" data-parent="#accordion">
       <div class="card-body">
         <p>Next we will load our code to make our motor move!</p>
 
@@ -1071,11 +1196,11 @@ Now that we know a bit about our stepper motor, let's try and make it move!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwoD">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwoE">
         Download the motor code to your microbit
       </a>
     </div>
-    <div id="collapseTwoD" class="collapse" data-parent="#accordion">
+    <div id="collapseTwoE" class="collapse" data-parent="#accordion">
       <div class="card-body">
 
         <p> Make sure your battery is turned <b>off</b>!!</p>
@@ -1093,11 +1218,11 @@ Now that we know a bit about our stepper motor, let's try and make it move!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseThreeD">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseThreeE">
         Zero the arm
       </a>
     </div>
-    <div id="collapseThreeD" class="collapse" data-parent="#accordion">
+    <div id="collapseThreeE" class="collapse" data-parent="#accordion">
       <div class="card-body">
        
         <p>This motor works a little bit differently from the servomotor. First, make sure the battery pack is turned <b>off</b>.</p>
@@ -1115,11 +1240,11 @@ Now that we know a bit about our stepper motor, let's try and make it move!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFourD">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFourE">
         Try and move the robot arm (gently)
       </a>
     </div>
-    <div id="collapseFourD" class="collapse" data-parent="#accordion">
+    <div id="collapseFourE" class="collapse" data-parent="#accordion">
       <div class="card-body">
         <p>Turn on the battery pack.</p>
         <p>When the robot arm is stationary, try and turn the robot arm (gently) with your hand. You should find that if you do that, it will not want to move! Compared to the servomotor, it doesn't make any noise or complain. This is a feature of a stepper motor, it's very good at keeping its position.</p> 
@@ -1135,11 +1260,11 @@ Now that we know a bit about our stepper motor, let's try and make it move!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFiveD">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFiveE">
         Understanding the code
       </a>
     </div>
-    <div id="collapseFiveD" class="collapse" data-parent="#accordion">
+    <div id="collapseFiveE" class="collapse" data-parent="#accordion">
       <div class="card-body">
         <p>Let's have a look at the code.</p>
         <p>All this stuff at the beginning, that's code for setting up the robotics board so our microbit can communicate with it and then use it to send signals to the motors.</p>
@@ -1327,11 +1452,11 @@ Now that we know a bit about our stepper motor, let's try and make it move!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSixD">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSixE">
         Let's write some code!
       </a>
     </div>
-    <div id="collapseSixD" class="collapse" data-parent="#accordion">
+    <div id="collapseSixE" class="collapse" data-parent="#accordion">
       <div class="card-body">
         <p>Now that you have a feel for how the code works, let's try writing some of our own! I've given you a headstart on the A button and B button. If you're not sure what to do, don't worry, we'll go through it together!</p>
         <div style ="height:300px;overflow-y:scroll">
@@ -1361,11 +1486,11 @@ Now that we know a bit about our stepper motor, let's try and make it move!
 
   <div class="card">
     <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSevenD">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSevenE">
         Let's move the motor!
       </a>
     </div>
-    <div id="collapseSevenD" class="collapse" data-parent="#accordion">
+    <div id="collapseSevenE" class="collapse" data-parent="#accordion">
       <div class="card-body">
         <p style="text-align:center"><span style="color:Red"><b>!!! Make sure your hands are far away from the motor arm! !!!</b></span> </p>
         <p>Try pressing the buttons.</p>
