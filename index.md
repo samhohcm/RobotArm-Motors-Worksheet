@@ -789,7 +789,7 @@ Now we've got the hang of programming on our microbit, we can start figuring out
             </pre>
         </div>
         <br>
-        <p>This bit over here, these are <b>functions</b> that can be used for common commands to the motors. It's a bit complicated, but you can think of it as a set of instructions that you would use very often, so you write a function so you won't have to type up the whole thing over and over again!</p> 
+        <p>This bit over here, these are <b>functions</b> that can be used for common commands to the motors that we've already written for you.</p> 
         <div style ="height:300px;overflow-y:scroll">
           <pre class="prettyprint">
             def servoWrite(self, servo, degrees):
@@ -864,6 +864,7 @@ Now we've got the hang of programming on our microbit, we can start figuring out
           </pre>
         </div>
         <br>
+        <p>Did you see that we used 'if' in the code? These are called <b>conditionals</b>, and we can ask our code to check if something is true before it does it.</p>
         <p>If you're stuck, you can get the complete script here: <a href="./activity_code/servomotor_code.py" download="servomotor_code.py" target="_blank"> link</a></p>
         <p>You can also have a play around with the code! Have a think about some of the questions below and see if you can figure them out.</p>
         <ul>
@@ -889,6 +890,7 @@ Now we've got the hang of programming on our microbit, we can start figuring out
         <p>If you did it the same way as the zero code, button A will increase the angle, and button B will decrease the angle. You can see the angle scrolling across the LEDs, before the arm moves.</p>
         <br>
         <p>Turn off the battery pack. Move the arm a bit, you should be able to move the arm. <b>Keep your hands away</b>, and then turn on the battery pack again. What happens?</p>
+        <p>Try going all the way up to 180 degrees. Is it exactly 180 degrees? If it isn't, why do you think it happens?</p>
         <br>
       </div>
     </div>

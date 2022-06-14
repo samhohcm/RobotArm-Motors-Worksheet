@@ -22,7 +22,7 @@ class KitronikRoboticsBoard:
     MOT_REG_BASE = 0x28
     REG_OFFSET = 4
     #SERVO_MULTIPLIER = 226
-    SERVO_MULTIPLIER = 190 # depends on supply voltage?
+    SERVO_MULTIPLIER = 190
     SERVO_ZERO_OFFSET = 0X66
     ANGLE_ZERO_OFFSET = 0
 
@@ -74,6 +74,27 @@ class KitronikRoboticsBoard:
             buf[1] = 0x00
         i2c.write(self.chipAddress, buf, False)
 
+def loudness_to_level(sound_value):
+    # give 10 levels of loudness
+    return round(sound_value*(10)/256)
+
+def how_hard_did_i_blow():
+    # Play some sound 
+    music.pitch(200, duration=150, wait=True)
+    sleep(100)
+    music.pitch(200, duration=150, wait=True)
+    sleep(100)
+    music.pitch(200, duration=150, wait=True)
+
+    # Image display!
+    display.show(Image.MUSIC_QUAVER)
+    sleep(2000)
+
+    # Recording
+    loudness = loudness_to_level(microphone.sound_level())
+
+    return loudness
+
 
 
 # ------------------------------------------#
@@ -95,6 +116,9 @@ sleep(2000)
 
 # Create a class instance
 theBoard = KitronikRoboticsBoard
+
+# Initiate the microphone
+target_angle = loudness_to_angle(microphone.sound_level())
       
 # Create an infinite loop
 while True:
@@ -117,39 +141,21 @@ while True:
 
     else:
 
-        # Do something if button A is pressed
+        # Record sound
         if button_a.is_pressed():
 
-            music.pitch(200, duration=150, wait=True)
-
-            # make sure we don't go above the motor limit!
-            if motor_angle < 180:
-                motor_angle = motor_angle + step_angle # Increase the motor_angle by step_angle
+            # Measure how hard you blow
+            loudness = how_hard_did_i_blow
+            motor_angle = 18*loudness
 
             # show the motor angle
-            display.scroll("%d" %
-                (motor_angle), delay=100, wait=True, loop=False)
+            display.scroll(loudness, delay=100, wait=True, loop=False)
             sleep(100)
 
             # Tell the board to move the servomotor to motor_angle
             theBoard.servoWrite(theBoard, motor_pin, motor_angle)
     
 
-        if button_b.is_pressed():
-
-            music.pitch(200, duration=150, wait=True)
-
-            # make sure we don't go above the motor limit!
-            if motor_angle > 0:
-                motor_angle = motor_angle - step_angle # Decrease the motor_angle by step_angle
-
-            # show the motor angle
-            display.scroll("%d" %
-                (motor_angle), delay=100, wait=True, loop=False)
-            sleep(100)
-
-            # Tell the board to move the servomotor to motor_angle
-            theBoard.servoWrite(theBoard, motor_pin, motor_angle)
 
     
 
