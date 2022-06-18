@@ -1554,7 +1554,7 @@ Now that you know how to code a motor, let's try making a device that will measu
         <p>We're going to use a lot of the same code to make our measurement device.</p>
         <p>Here there are two functions I've already written for you to use in this activity.</p>
         
-        <div style ="max-height:300px">
+        <div style ="max-height:300px;overflow-y:scroll">
           <pre class="prettyprint">
             def loudness_to_level(sound_value):
               # give 10 levels of loudness
