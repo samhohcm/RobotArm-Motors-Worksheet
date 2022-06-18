@@ -203,40 +203,38 @@ while True:
     if pin_logo.is_touched():
 
         # Play a tune
-        music.pitch(200, duration=150, wait=True)
+        
 
         # Display a message
-        display.scroll("0", delay=120, wait=False, loop=False)
+        
 
-        # Rotate the motor
-        theBoard.stepperMotorTurnAngle(
-            theBoard, currentRotationMotor, angle=currentAngle)
+        # Rotate the motor - how much?
+        
 
         # Update current angle - go to zero
-        currentAngle = 0
+        
 
 
 
     # Detect if the button a has been pressed!
     elif button_a.is_pressed():
+        
         # Get angle from microphone measurement
         
-        loudness = how_hard_did_i_blow()
-        targetAngle = 18*loudness
 
         # Find the difference so you know how many steps to take
-        stepAngle = targetAngle - currentAngle
+
 
         # Reset currentAngle
-        currentAngle = targetAngle
-
-        # Display a message
-        display.scroll(loudness, delay=120, wait=False, loop=False)
-        # Rotate the motor
-        theBoard.stepperMotorTurnAngle(
-            theBoard, currentRotationMotor, angle=-stepAngle)
         
 
-    # Detect if the button b has been pressed!
+        # Display a message
+        
+
+        # Rotate the motor
+        
+        
+
+
     
         

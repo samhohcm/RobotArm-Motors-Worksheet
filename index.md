@@ -34,6 +34,7 @@ This session is designed to be fun! The idea is that we can follow it together o
   <li class="list-group-item"><a href="#Activity3">Programming the servomotor</a></li>
   <li class="list-group-item"><a href="#Activity4">Assembling the stepper motor</a></li>
   <li class="list-group-item"><a href="#Activity5">Programming the stepper motor</a></li>
+  <li class="list-group-item"><a href="#Activity6">How hard did I blow?</a></li>
 </ul>
 </div>
 
@@ -1179,7 +1180,7 @@ Now that we know a bit about our stepper motor, let's try and make it move!
       <div class="card-body">
         <p>Next we will load our code to make our motor move!</p>
 
-        <p>You will need to download new code for the stepper motor. You can download the code we will use from this <a href="./activity_code/stepper_motor_code_zero.py.py" download="stepper_motor_code_zero.py" target="_blank"> link</a>.</p>
+        <p>You will need to download new code for the stepper motor. You can download the code we will use from this <a href="./activity_code/stepper_motor_code_zero.py" download="stepper_motor_code_zero.py" target="_blank"> link</a>.</p>
         
         <br><br>
 
@@ -1516,6 +1517,227 @@ Now that we know a bit about our stepper motor, let's try and make it move!
 
 <!--Comment: Back to html bootstrap -->
 
+<div id="Activity6" class="container p-3 my-3 bg-primary text-primary">
+<h2>Activity #6</h2>
+</div>
+
+
+<!--Comment: End of html bootstrap -->
+
+<!--Comment: Back to markdown -->
+
+<br>
+
+### How hard did I blow?: A wind speed measuring device!
+<br>
+
+Now that you know how to code a motor, let's try making a device that will measure how hard you blow on the microbit, and use the motor to display your 'blow strength level'!
+
+<br>
+
+<!--Comment: End of markdown-->
+
+<!--Comment: Back to html bootstrap -->
+
+<div id="accordion">
+
+
+  
+  <div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseOneF">
+        New Functions
+      </a>
+    </div>
+    <div id="collapseOneF" class="collapse" data-parent="#accordion">
+      <div class="card-body">
+        <p>We're going to use a lot of the same code to make our measurement device.</p>
+        <p>Here there are two functions I've already written for you to use in this activity.</p>
+        
+        <div style ="max-height:300px">
+          <pre class="prettyprint">
+            def loudness_to_level(sound_value):
+              # give 10 levels of loudness
+              return round(sound_value*(10)/256)
+
+            def how_hard_did_i_blow():
+                # Play some sound 
+                music.pitch(200, duration=150, wait=True)
+                sleep(100)
+                music.pitch(200, duration=150, wait=True)
+                sleep(100)
+                music.pitch(200, duration=150, wait=True)
+
+                # Image display!
+                display.show(Image.MUSIC_QUAVER)
+                sleep(1500)
+
+                # Recording
+                loudness = loudness_to_level(microphone.sound_level())
+
+                # Image display to show it has been acquired!
+                display.show(Image.YES)
+                sleep(500)
+
+                return loudness
+          </pre>
+        </div>
+
+        <p>Download the code with the new functions here: <a href="./activity_code/stepper_motor_loudness_activity_code.py" download="stepper_motor_loudness_activity_code.py" target="_blank"> link</a>.</p>
+        
+        <br><br>
+
+        This link will download a python file to your computer. 
+
+        <br><br>
+        
+        Next, in your python editor click on 'Load' and then select the python file you just downloaded (it's called: stepper_motor_loudness_activity_code.py). The code will load and you will see it on your screen.
+
+        <br> <br>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwoF">
+        Edit our code
+      </a>
+    </div>
+    <div id="collapseTwoF" class="collapse" data-parent="#accordion">
+      <div class="card-body">
+
+        <p>I've added some comments to help you out! Try and look at the previous code and see if you can fill in the blanks.</p>
+
+        <div style ="max-height:300px;overflow-y:scroll">
+          <pre class="prettyprint">
+            # Detect if the microbit logo has been touched! This will reset it to zero!
+            if pin_logo.is_touched():
+
+                # Play a tune
+                
+
+                # Display a message
+                
+
+                # Rotate the motor - how much?
+                
+
+                # Update current angle - go to zero
+                
+
+
+
+            # Detect if the button a has been pressed!
+            elif button_a.is_pressed():
+                
+                # Get angle from microphone measurement
+                
+
+                # Find the difference so you know how many steps to take
+
+
+                # Reset currentAngle
+                
+
+                # Display a message
+                
+
+                # Rotate the motor
+          </pre>
+        </div>
+
+        <br>
+        <p>If you can't figure it out, you can find the finished code here: <a href="./activity_code/stepper_motor_loudness_code.py" download="stepper_motor_loudness_code.py" target="_blank"> link</a>. But give it a shot first, I believe in you!</p>
+        <br> <br>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseThreeF">
+        Download our code onto the microbit!
+      </a>
+    </div>
+    <div id="collapseThreeF" class="collapse" data-parent="#accordion">
+      <div class="card-body">
+
+        <p> Make sure your battery is turned <b>off</b>!!</p>
+
+        <p>Download the code and transfer it to your microbit by clicking on 'Connect', selecting your microbit device, and then clicking 'Flash'. If you've got any problems with this you can follow this guide to resolve them: <a href="https://python-editor-2-1-2.microbit.org/help.html?snippets=true" target="_blank">Link here</a></p>
+
+        <br> <br>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFourF">
+        Set up the dial
+      </a>
+    </div>
+    <div id="collapseFourF" class="collapse" data-parent="#accordion">
+      <div class="card-body">
+       
+        <p>Take out the dial from the box and place it on top of the base, right up against the motor holder.</p>
+
+        <p><img src="images/LoudnessDial/PutDial.jpg" class="img-fluid" alt="assemblyImage"></p>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseFiveF">
+        Zero the arm
+      </a>
+    </div>
+    <div id="collapseFiveF" class="collapse" data-parent="#accordion">
+      <div class="card-body">
+       
+        <p>Make sure the battery pack is turned <b>off</b>.</p>
+
+        <p>Push the motor arm gently so it points to the <b>left</b> so it's over the number 0.</p>
+
+        <p>Press the reset button on the microbit.</p>
+
+        <p><img src="images/LoudnessDial/ZeroArm.jpg" class="img-fluid" alt="assemblyImage"></p>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseSixF">
+        Give it a blow!
+      </a>
+    </div>
+    <div id="collapseSixF" class="collapse" data-parent="#accordion">
+      <div class="card-body">
+        <p>Turn on the battery pack.</p>
+        <p>Press button A. It should beep 3 times and show a little musical note. When you see the musical note, blow at the little red light on the microbit until the image changes to a check mark! The arm should then move to level of how hard you blew on the microphone.</p>
+        <p><img src="images/LoudnessDial/Musicnote.jpg" class="img-fluid" alt="assemblyImage"></p>
+        <br>
+        <p>Good job!</p>
+        <br> <br>
+
+      </div>
+    </div>
+  </div> 
+
+</div>
+
+<br><br>
 
 
 <br>
