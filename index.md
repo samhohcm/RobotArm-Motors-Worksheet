@@ -217,6 +217,7 @@ First, we need to assemble our set up. Expand the headings below (click on them)
         - 1 whiteboard marker <br>
         - 1 screwdriver (looks like a pen) <br>
         - 2 jumper leads (4 wires each) <br>
+        - 1 dial <br>
         - 1 usb cable <br><br>
 
 
@@ -238,6 +239,7 @@ First, we need to assemble our set up. Expand the headings below (click on them)
         - the USB cable <br>
         - the screwdriver <br>
         - 1 jumper lead <br>
+        - the dial <br>
         - and Robot Arm 2. 
 
       <br>
