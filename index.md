@@ -537,8 +537,8 @@ Now we've got our servomotor set up, let's learn a bit about how to use the micr
 
         <br> <br>
 
-        <div style ="max-height:300px;overflow-y:scroll">
-          <pre class="prettyprint linenums">
+        <div style ="max-height:300px">
+          <pre class="prettyprint">
             # Our test microbit program 
             # tip: some of this code might already be in your online python editor when you load it!
 
