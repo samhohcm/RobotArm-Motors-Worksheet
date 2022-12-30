@@ -537,8 +537,8 @@ Now we've got our servomotor set up, let's learn a bit about how to use the micr
 
         <br> <br>
 
-        <div style ="height:300px;overflow-y:scroll">
-          <pre class="prettyprint">
+        <div style ="max-height:300px;overflow-y:scroll">
+          <pre class="prettyprint linenums">
             # Our test microbit program 
             # tip: some of this code might already be in your online python editor when you load it!
 
@@ -554,20 +554,6 @@ Now we've got our servomotor set up, let's learn a bit about how to use the micr
         </div>
 
         <br>
-
-        ```python
-          # Our test microbit program 
-          # tip: some of this code might already be in your online python editor when you load it!
-
-          # Import this library so we can talk to the microbit
-          from microbit import *
-
-          # Loop for ever (infinite loop)
-          while True:
-              display.scroll('Hello, awesome person!') # What did you see on the screen?
-              display.show(Image.HEART)
-              sleep(2000)
-        ```
         
         <p>"display.scroll" is a <b>function</b> that lets you display a scrolling line of text, and "display.show" is a function that lets you show a small picture! How do you think you can change what shows on the screen?</p>
 
