@@ -496,8 +496,10 @@ Now we've got our servomotor set up, let's learn a bit about how to use the micr
         <li>Can you change the image to another type? (Tip: look at this and see what <b>Images</b> there are! <a href="https://microbit-micropython.readthedocs.io/en/v1.0.1/tutorials/images.html" target="_blank">link</a>) </li>
         </ul>
         <br><br>
+
+        <p>If you can't figure it out, don't worry, we talk about it more later!</p>
         
-        If it doesn't work check your code and connections, something is wrong there. And please remember you can always ask for help!
+        <p>If it doesn't work check your code and connections, something is wrong there. And please remember you can always ask for help!</p>
 
         <br> <br>
 
@@ -537,21 +539,20 @@ Now we've got our servomotor set up, let's learn a bit about how to use the micr
 
         <br> <br>
 
-        <div style ="max-height:300px">
-          <pre class="prettyprint">
-            # Our test microbit program 
-            # tip: some of this code might already be in your online python editor when you load it!
+        <pre class="prettyprint" style="max-height:300px;overflow:auto">
+          # Our test microbit program 
+          # tip: some of this code might already be in your online python editor when you load it!
 
-            # Import this library so we can talk to the microbit
-            from microbit import *
+          # Import this library so we can talk to the microbit
+          from microbit import *
 
-            # Loop for ever (infinite loop)
-            while True:
-                display.scroll('Hello, awesome person!') # What did you see on the screen?
-                display.show(Image.HEART)
-                sleep(2000)
-          </pre>
-        </div>
+          # Loop for ever (infinite loop)
+          while True:
+              display.scroll('Hello, awesome person!') # What did you see on the screen?
+              display.show(Image.HEART)
+              sleep(2000)
+        </pre>
+
 
         <br>
         
@@ -574,13 +575,14 @@ Now we've got our servomotor set up, let's learn a bit about how to use the micr
       <div class="card-body">
         <p><b>Variables</b> are one way to reduce the amount of code we write!</p>
 
-        <p>It's like a box with a label on it, like 'say_this'. You can put a value in this box, and you can then use 'say_this' in the script, and whenever it sees it it will then go look for this box called 'say_this' and take the value inside it.</p>
+        <p>It's like a box with a label on it, like 'say_this'. You can put a value in this box and it will stay in this box until you give the box a different value. You can then use 'say_this' in the script, and whenever it sees it it will then go look for this box called 'say_this' and take the value inside it.</p>
 
         <p>In the script, you <i>assign</i> a variable and then use it like this:</p>
 
-        <div style ="max-height:300px;overflow-y:scroll">
-          <pre class="prettyprint">
-            say_this = 'Hello, awesome person!'
+        <div style ="max-height:300px">
+          <pre class="prettyprint" style="overflow-y:scroll">
+            # The variable is assigned the value 'Hello, awesome person!'
+            say_this = 'Hello, awesome person!' 
 
             display.scroll(say_this)
           </pre>
