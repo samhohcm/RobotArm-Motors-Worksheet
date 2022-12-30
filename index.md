@@ -462,6 +462,7 @@ Now we've got our servomotor set up, let's learn a bit about how to use the micr
 
         <br>
         You can transfer this code into your python either by typing it in, or by copying and pasting. Please be careful to make sure you enter it exactly the same! Where you put spaces, tabs, brackets, full stops and other punctuation is really important in python because these characters tell the computer how to understand your code!
+        An easy way to check this is by comparing the number of lines in the example above with the number of lines in your online python editor.
 
       </div>
     </div>
@@ -476,7 +477,11 @@ Now we've got our servomotor set up, let's learn a bit about how to use the micr
     </div>
     <div id="collapseThreeB" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        Download the code and transfer it to your microbit by clicking on 'Connect', selecting your microbit device, and then clicking 'Flash'.
+        Download the code and transfer it to your microbit by clicking on 'Send to micro:bit' at the bottom, and following the instructions given on the screen.
+        <br>
+        <img src="images/python_editor.png" class="img-fluid" alt="Python Editor">
+
+
         <br><br>
         If you've got any problems with this you can follow this guide to resolve them: <a href="https://python-editor-2-1-2.microbit.org/help.html?snippets=true" target="_blank">Link here</a>
         
@@ -484,8 +489,8 @@ Now we've got our servomotor set up, let's learn a bit about how to use the micr
 
         You should see your microbit display light up and the code run! Observe what happens on the microbit display. <br><br>
         <ul>
-        <li>Can you change the text to your name? </li>
-        <li>Can you change the image to another type? (Tip: look at this <a href="https://microbit-micropython.readthedocs.io/en/v1.0.1/tutorials/images.html" target="_blank">link</a>) </li>
+        <li>Can you change the text to your name? (Tip: "awesome person"?)</li>
+        <li>Can you change the image to another type? (Tip: look at this and see what <b>Images</b> there are! <a href="https://microbit-micropython.readthedocs.io/en/v1.0.1/tutorials/images.html" target="_blank">link</a>) </li>
         </ul>
         <br><br>
         
@@ -544,6 +549,22 @@ Now we've got our servomotor set up, let's learn a bit about how to use the micr
                 sleep(2000)
           </pre>
         </div>
+
+        <br>
+
+        ```python=
+          # Our test microbit program 
+          # tip: some of this code might already be in your online python editor when you load it!
+
+          # Import this library so we can talk to the microbit
+          from microbit import *
+
+          # Loop for ever (infinite loop)
+          while True:
+              display.scroll('Hello, awesome person!') # What did you see on the screen?
+              display.show(Image.HEART)
+              sleep(2000)
+        ```
         
         <p>"display.scroll" is a <b>function</b> that lets you display a scrolling line of text, and "display.show" is a function that lets you show a small picture! How do you think you can change what shows on the screen?</p>
 
