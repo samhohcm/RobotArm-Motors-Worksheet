@@ -552,7 +552,7 @@ Now we've got our servomotor set up, let's learn a bit about how to use the micr
 
         <br>
 
-        ```python=
+        ```python
           # Our test microbit program 
           # tip: some of this code might already be in your online python editor when you load it!
 
@@ -589,7 +589,7 @@ Now we've got our servomotor set up, let's learn a bit about how to use the micr
 
         <p>In the script, you <i>assign</i> a variable and then use it like this:</p>
 
-        <div style ="height:300px;overflow-y:scroll">
+        <div style ="max-height:300px;overflow-y:scroll">
           <pre class="prettyprint">
             say_this = 'Hello, awesome person!'
 
