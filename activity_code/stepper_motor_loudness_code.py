@@ -166,10 +166,14 @@ def how_hard_did_i_blow():
 
     # Image display!
     display.show(Image.MUSIC_QUAVER)
-    sleep(2000)
+    sleep(1500)
 
     # Recording
     loudness = loudness_to_level(microphone.sound_level())
+
+    # Image display to show it has been acquired!
+    display.show(Image.YES)
+    sleep(500)
 
     return loudness
 
