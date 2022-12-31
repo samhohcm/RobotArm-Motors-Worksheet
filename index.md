@@ -482,7 +482,7 @@ Now we've got our servomotor set up, let's learn a bit about how to use the micr
       <div class="card-body">
         Download the code and transfer it to your microbit by clicking on 'Send to micro:bit' at the bottom, and following the instructions given on the screen.
         <br>
-        <img src="images/python_editor.png" class="img-fluid" alt="Python Editor">
+        <img src="images/Coding/python_editor.png" class="img-fluid" alt="Python Editor">
 
 
         <br><br>
@@ -537,7 +537,7 @@ Now we've got our servomotor set up, let's learn a bit about how to use the micr
 
         <p>Did you notice what was showing on the LED screen? Have a look at the code and see if you can find which lines they appear on.</p>
 
-        <br> <br>
+        <br>
 
         <pre class="prettyprint" style="max-height:300px;overflow:auto">
           # Our test microbit program 
@@ -577,19 +577,23 @@ Now we've got our servomotor set up, let's learn a bit about how to use the micr
 
         <p>It's like a box with a label on it, like 'say_this'. You can put a value in this box and it will stay in this box until you give the box a different value. You can then use 'say_this' in the script, and whenever it sees it it will then go look for this box called 'say_this' and take the value inside it.</p>
 
-        <p>In the script, you <i>assign</i> a variable and then use it like this:</p>
+        <p>You can <i>assign</i> a variable and then use it like this:</p>
+        <br>
 
-        <div style ="max-height:300px">
-          <pre class="prettyprint" style="overflow-y:scroll">
-            # The variable is assigned the value 'Hello, awesome person!'
-            say_this = 'Hello, awesome person!' 
+        <pre class="prettyprint" style="max-height:300px;overflow:auto">
+          # The variable is assigned the value 'Hello, awesome person!'
+          say_this = 'Hello, awesome person!' 
 
-            display.scroll(say_this)
-          </pre>
-        </div>
-        
-        <p>You must assign a variable before you can use it. There are rules about the names you can give variables; usually it can't start with a number and it mustn't have any spaces. Try it!</p>
-        <p>Make a new variable with another sentence in it, and display it after the image.</p>
+          display.scroll(say_this)
+        </pre>
+
+        <br>
+        <p>You must assign a variable before you can use it. There are rules about the names you can give variables; usually it can't start with a number and it mustn't have any spaces.</p>
+
+        <p><b>Give it a go!</b></p>
+        <ul>
+        <li>Make a new variable with another sentence in it, and display it after the image. Use the code above for reference!</li>
+        </ul>
 
       </div>
     </div>
@@ -609,26 +613,34 @@ Now we've got our servomotor set up, let's learn a bit about how to use the micr
 
         <p>In the script, you <i>define</i> a function and then use it like this:</p>
 
-        <div style ="height:300px;overflow-y:scroll">
-          <pre class="prettyprint">
-            def do_this(something_to_say):   # defining the function
-              display.scroll(something_to_say)
+        <pre class="prettyprint" style ="height:300px;overflow:auto">
+          def do_this():   # defining the function
+              #After defining the function, all the lines that are indented (the same alignment on the left) will be counted
+              #as part of the function! This is called the body of the function.
+              
               display.show(Image.HEART)
+              
+              #End of body of function
 
-            do_this(say_this) # calling the function!
-          </pre>
-        </div>
         
+          do_this() # calling the function!
+        </pre>
+        
+        <p>Similar to variables, you have to define the functions before you can use them!</p>
         <p>When do you think this would be useful? What other functions would you make?</p>
 
-        <p>Try and make two different functions that will show different images after telling you what an awesome person you are!</p>
+        <p><b>Give it a go!</b></p>
+        <ul>
+        <li>Try and make two different functions that will show two different images after telling you what an awesome person you are! Use the code given above as a reference.
+        Hint: You can name one function <b>Show_Image_Smile</b> and the other function <b>Show_Image_Fabulous</b>. Then look up what images you need to use from the link given in the previous steps!</li>
+        </ul>
 
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  
+      
 
-</div>
+    </div>
 
 <br><br>
 
@@ -660,19 +672,17 @@ Now we've got the hang of programming on our microbit, we can start figuring out
     </div>
     <div id="collapseOneC" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        Next we will load our code to make our motor move!<br><br>
+        <p>Next we will load our code to make our motor move!</p>
 
-        You can download the code we will use from this <a href="./activity_code/servomotor_code_zero.py" download="servomotor_code_zero.py" target="_blank"> link</a>.
+        <p>You can download the code we will use from this <a href="./activity_code/servomotor_code_zero.py" download="servomotor_code_zero.py" target="_blank"> link</a>.</p>
+
+        <p>This link will download a python file to your computer. </p>
         
-        <br><br>
+        <p>Next, in your python editor click on 'Open' and then select the python file you just downloaded (it's called: servomotor_code_zero.py). The code will load and you will see it on your screen. There should be 128 lines, if you scroll all the way to the bottom.</p>
 
-        This link will download a python file to your computer. 
-
-        <br><br>
-        
-        Next, in your python editor click on 'Load' and then select the python file you just downloaded (it's called: servomotor_code_zero.py). The code will load and you will see it on your screen.
-
-        <br> <br>
+        <br> 
+        <img src="images/Coding/python_editor_load.png" class="img-fluid" alt="python_editor_load">
+        <br>
 
       </div>
     </div>
@@ -690,7 +700,10 @@ Now we've got the hang of programming on our microbit, we can start figuring out
 
         <p> Make sure your battery is turned <b>off</b>!!</p>
 
-        <p>Download the code and transfer it to your microbit by clicking on 'Connect', selecting your microbit device, and then clicking 'Flash'. If you've got any problems with this you can follow this guide to resolve them: <a href="https://python-editor-2-1-2.microbit.org/help.html?snippets=true" target="_blank">Link here</a></p>
+        <p>Download the code and transfer it to your microbit by clicking on 'Send to micro:bit' at the bottom, and following the instructions given on the screen.</p>
+        <br>
+        <img src="images/Coding/python_editor.png" class="img-fluid" alt="Python Editor"> 
+        <p>If you've got any problems with this you can follow this guide to resolve them: <a href="https://python-editor-2-1-2.microbit.org/help.html?snippets=true" target="_blank">Link here</a></p>
 
         <p>You should see the microbit start up with a picture of a ghost! That's how you know you've got the right code. </p>
 
@@ -710,7 +723,9 @@ Now we've got the hang of programming on our microbit, we can start figuring out
     <div id="collapseThreeC" class="collapse" data-parent="#accordion">
       <div class="card-body">
        
-        <p><b>Take off the motor arm from the motor.</b> Turn on the battery pack.</p>
+        <p><b>Take off the motor arm from the motor.</b> Turn on the battery pack, and press the microbit logo on the microbit board.</p>
+
+        <p><img src="images/Coding/microbit_logo.png" class="img-fluid" alt="microbit_logo_to_press"></p>
 
         <p>Were you able to tell whether the motor moved? It might have made a sound, but it is hard to tell how far the motor moved. This is where the motor arm comes in handy. Push the motor arm back on so it points to the right. So now we know that both the motor and the arm is pointing to zero degrees.</p>
 
@@ -731,7 +746,7 @@ Now we've got the hang of programming on our microbit, we can start figuring out
     </div>
     <div id="collapseFourC" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        <p>When the robot arm is stationary, try and turn the robot arm (gently) with your hand. You should find that if you do that, it will not want to move, and will keep trying to go back to where it should be! You will hear it complaining a bit. This is a feature of servomotors. As we mentioned earlier, they use a sensor to try and go to a position according to the signal that you give it.</p> 
+        <p>When the robot arm is stationary and the battery pack is turned on, try and turn the robot arm (gently) with your hand. You should find that if you do that, it will not want to move, and will keep trying to go back to where it should be! You will hear it complaining a bit. This is a feature of servomotors. As we mentioned earlier, they use a sensor to try and go to a position according to the signal that you give it.</p> 
         <p>If you push too hard, things might break so be careful!</p>
         <br> <br>
 
@@ -747,97 +762,93 @@ Now we've got the hang of programming on our microbit, we can start figuring out
     </div>
     <div id="collapseFiveC" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        <p>Let's have a look at the code.</p>
-        <p>All this stuff at the beginning, that's code for setting up the robotics board so our microbit can communicate with it and then use it to send signals to the motors.</p>
-        <div style ="height:300px;overflow-y:scroll">
-          <pre class="prettyprint">
-            # ------------------------------------------#
-            # Imports                                   #
-            # ------------------------------------------#
+        <p>Let's have a look at the code. Don't worry if it doesn't make sense to you, it's pretty complicated! You might be able to recognise some of the things we just learned about variables and functions.</p>
+        <p>All this stuff at the beginning from line 1 to 52 is code for setting up the robotics board. It helps the microbit communicate with it and then use it to send signals to the motors.</p>
+        <pre class="prettyprint" style ="max-height:300px;overflow:auto">
+          # ------------------------------------------#
+          # Imports                                   #
+          # ------------------------------------------#
 
-            from microbit import *
-            import math
-            import music
+          from microbit import *
+          import math
+          import music
 
-            # ------------------------------------------#
-            # Create a class for the robotics board     #
-            # ------------------------------------------#
+          # ------------------------------------------#
+          # Create a class for the robotics board     #
+          # ------------------------------------------#
 
-            class KitronikRoboticsBoard:
-                PRESCALE_REG = 0xFE
-                MODE_1_REG = 0x00
-                SRV_REG_BASE = 0x08
-                MOT_REG_BASE = 0x28
-                REG_OFFSET = 4
-                #SERVO_MULTIPLIER = 226
-                SERVO_MULTIPLIER = 190
-                SERVO_ZERO_OFFSET = 0X66
-                ANGLE_ZERO_OFFSET = 0
+          class KitronikRoboticsBoard:
+              PRESCALE_REG = 0xFE
+              MODE_1_REG = 0x00
+              SRV_REG_BASE = 0x08
+              MOT_REG_BASE = 0x28
+              REG_OFFSET = 4
+              #SERVO_MULTIPLIER = 226
+              SERVO_MULTIPLIER = 190
+              SERVO_ZERO_OFFSET = 0X66
+              ANGLE_ZERO_OFFSET = 0
 
-                chipAddress = 0x6C
-                initialised = False
-                stepInit = False
-                stepStage = 0
-                stepper1Steps = 200
-                stepper2Steps = 200
+              chipAddress = 0x6C
+              initialised = False
+              stepInit = False
+              stepStage = 0
+              stepper1Steps = 200
+              stepper2Steps = 200
 
-                def __init(self):
-                        
-                    buf = bytearray(2)
+              def __init(self):
+                      
+                  buf = bytearray(2)
 
-                    buf[0] = self.PRESCALE_REG
-                    buf[1] = 0x85 #50Hz
-                    i2c.write(self.chipAddress, buf, False)
-                    
-                    for blockReg in range(0xFA, 0xFE, 1):
-                        buf[0] = blockReg
-                        buf[1] = 0x00
-                        i2c.write(self.chipAddress, buf, False)
+                  buf[0] = self.PRESCALE_REG
+                  buf[1] = 0x85 #50Hz
+                  i2c.write(self.chipAddress, buf, False)
+                  
+                  for blockReg in range(0xFA, 0xFE, 1):
+                      buf[0] = blockReg
+                      buf[1] = 0x00
+                      i2c.write(self.chipAddress, buf, False)
 
-                    buf[0] = self.MODE_1_REG
-                    buf[1] = 0x01
-                    i2c.write(self.chipAddress, buf, False)
-                    self.initialised = True
-            </pre>
-        </div>
-        <br>
-        <p>This bit over here, these are <b>functions</b> that can be used for common commands to the motors that we've already written for you.</p> 
-        <div style ="height:300px;overflow-y:scroll">
-          <pre class="prettyprint">
-            def servoWrite(self, servo, degrees):
-              if self.initialised is False:
-                  self.__init(self)
-              buf = bytearray(2)
-              calcServo = self.SRV_REG_BASE + ((servo - 1) * self.REG_OFFSET) #find the servo number
-              # = 8 + ((servo number - 1) * 4)
-              HighByte = False
-              degrees+=self.ANGLE_ZERO_OFFSET
-              PWMVal = ((degrees * 100 * self.SERVO_MULTIPLIER) / 10000) + self.SERVO_ZERO_OFFSET
-              # (degree input * 100 * 266)/( 10000 + 102)
-
-              if (PWMVal > 0xFF): #if PWMval more than 255
-                  HighByte = True
-              buf[0] = calcServo
-              buf[1] = int(PWMVal)
-              i2c.write(self.chipAddress, buf, False)
-              buf[0] = calcServo + 1
-              if (HighByte):
+                  buf[0] = self.MODE_1_REG
                   buf[1] = 0x01
-              else:
-                  buf[1] = 0x00
-              i2c.write(self.chipAddress, buf, False)
+                  i2c.write(self.chipAddress, buf, False)
+                  self.initialised = True
           </pre>
-        </div>
         <br>
-        <p>This first bit of code you've been given just sets the motor to zero, which is what we used to zero the arm. Can you recognise what I'm doing? Can you figure out what variables there are? What will happen if I change them?</p>
-        <div style ="height:300px;overflow-y:scroll">
+        <p>This bit over here from line 54 to 75 are <b>functions</b> that can be used for common commands to the motors that we've already written for you.</p> 
+        <pre class="prettyprint" style ="max-height:300px;overflow:auto">
+          def servoWrite(self, servo, degrees):
+            if self.initialised is False:
+                self.__init(self)
+            buf = bytearray(2)
+            calcServo = self.SRV_REG_BASE + ((servo - 1) * self.REG_OFFSET) #find the servo number
+            # = 8 + ((servo number - 1) * 4)
+            HighByte = False
+            degrees+=self.ANGLE_ZERO_OFFSET
+            PWMVal = ((degrees * 100 * self.SERVO_MULTIPLIER) / 10000) + self.SERVO_ZERO_OFFSET
+            # (degree input * 100 * 266)/( 10000 + 102)
+
+            if (PWMVal > 0xFF): #if PWMval more than 255
+                HighByte = True
+            buf[0] = calcServo
+            buf[1] = int(PWMVal)
+            i2c.write(self.chipAddress, buf, False)
+            buf[0] = calcServo + 1
+            if (HighByte):
+                buf[1] = 0x01
+            else:
+                buf[1] = 0x00
+            i2c.write(self.chipAddress, buf, False)
+        </pre>
+        <br>
+        <p>This first bit of code you've been given from line 103 to 116 just sets the motor to zero, which is what we used to zero the arm. Can you recognise what it does? Can you figure out what variables there are? What will happen if you change them?</p>
+        <div style ="max-height:300px;overflow:auto">
           <pre class="prettyprint">
             # This will reset it to zero!
             if pin_logo.is_touched():
 
                 music.pitch(200, duration=150, wait=True)
 
-                # Set motor angle to zero
+                # Set motor angle variable to zero
                 motor_angle = 0
 
                 # show the motor angle
@@ -849,6 +860,8 @@ Now we've got the hang of programming on our microbit, we can start figuring out
                 theBoard.servoWrite(theBoard, motor_pin, motor_angle)
           </pre>
         </div>
+        <br>
+        <p>Did you see that we used 'if' in the code? These are called <b>conditionals</b>. We use conditionals to ask our code to check if something is true before it does it. So if it detects that the microbit logo has been touched (pin_logo.is_touched()), it will run the code from line 105 to 116.</p>
         <br>
       </div>
     </div>
@@ -862,27 +875,83 @@ Now we've got the hang of programming on our microbit, we can start figuring out
     </div>
     <div id="collapseSixC" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        <p>Now that you have a feel for how the code works, let's try writing some of our own! I've given you a headstart on the A button and B button. If you're not sure what to do, don't worry, we'll go through it together!</p>
-        <div style ="max-height:300px;overflow-y:scroll">
-          <pre class="prettyprint">
-            # Do something if button A is pressed. What do you do if you want button A to increase the angle?
-            if button_a.is_pressed():
-                #insert code here
-                
-        
-            # Do something if button B is pressed. What do you do if you want button B to decrease the angle?
-            if button_b.is_pressed():
-                #insert code here
-          </pre>
-        </div>
+        <p>Now that you have a feel for how the code works, let's try writing some of our own! I've given you a headstart on the A button and B button with the conditionals. If you're not sure what to do, don't worry, I'll give you some hints!</p>
         <br>
-        <p>Did you see that we used 'if' in the code? These are called <b>conditionals</b>, and we can ask our code to check if something is true before it does it.</p>
-        <p>If you're stuck, you can get the complete script here: <a href="./activity_code/servomotor_code.py" download="servomotor_code.py" target="_blank"> link</a></p>
+        <p>First you'll need to remove the '#' symbol in front of line 118, 122, and 129. The '#' symbol at the front of a line makes that line a comment, and that line will be ignored.</p>
+        <p><img src="images/Coding/Remove_comments_servo.png" class="img-fluid" alt="Where to remove comments"></p>
+        <p>Once you've done that, your code should look like the following:</p>
+        <br>
+        <pre class="prettyprint" style="max-height:300px;overflow:auto">
+          # Do something if button A is pressed. What do you do if you want button A to increase the angle by 10 degrees every time
+          # you press a button?
+          #if button_a.is_pressed():
+              #insert code here
+              
+              
+      
+          # Do something if button B is pressed. What do you do if you want button B to decrease the angle by 10 degrees every time
+          # you press a button?
+          #if button_b.is_pressed():
+              #insert code here
+        </pre>
+        <br>
+        
+        <p>Give it a bit of a think! If you're confident with Python and microbits, try coding it on your own. If you're not sure, click on the Hint below to get some hints on how to do it.</p>
+        <br>
+        <div class="container">
+          <button type="button" class="btn btn-info" data-toggle="collapse" data-target="Servo-Hint">Hint</button>
+          <div id="Servo-Hint" class="collapse">
+            
+            <ul>
+            <li>An easy way to start is copy the code from line 104 to 116, and put it at the '#insert code here'. Then you can have a look at the code and see what you can change.
+            <li>How can you change the variable 'motor_angle' so that it increases or decreases every time you press the button?</li>
+            <li>You can change the value of a variable by calling itself and doing a bit of math.</li>
+            <li>Our motor can only go from 0 degrees to 180 degrees! How can you keep the motor angle from exceeding these values? (Hint hint: You can use a conditional ;))</li>
+            <li>Example of conditional to check if motor angle is less than 0 
+              <pre class="prettyprint" style="max-height:300px;overflow:auto">
+                if motor_angle < 0:
+                    #do something
+              </pre>
+              </li>
+            </ul>
+          
+          </div>
+        </div>
+
+        <div class="container">
+          <button type="button" class="btn btn-info" data-toggle="collapse" data-target="Servo-Answer">Example Answer</button>
+          <div id="Servo-Answer" class="collapse">
+            
+            <p>This is just one way you can do it!</p>
+            <br>
+            <pre class="prettyprint" style="max-height:300px;overflow:auto">
+              if button_a.is_pressed():
+
+                  music.pitch(200, duration=150, wait=True)
+
+                  # make sure we don't go above the motor limit!
+                  if motor_angle < 180:
+                      motor_angle = motor_angle + step_angle # Increase the motor_angle by step_angle
+
+                  # show the motor angle
+                  display.scroll("%d" %
+                      (motor_angle), delay=100, wait=True, loop=False)
+                  sleep(100)
+
+                  # Tell the board to move the servomotor to motor_angle
+                  theBoard.servoWrite(theBoard, motor_pin, motor_angle)
+            </pre>
+            <br>
+          
+          </div>
+        </div>
+
+        <p>If you're really stuck, you can get the complete script here: <a href="./activity_code/servomotor_code.py" download="servomotor_code.py" target="_blank"> link</a></p>
         <p>You can also have a play around with the code! Have a think about some of the questions below and see if you can figure them out.</p>
         <ul>
         <li>How can you get the motor to move further when you push the A or B button?</li>
         <li>How do you get the microbit to display a different picture when it starts up?</li>
-        <li>What types of robots do you think this motor would be good for? What sort of actions?</li>
+        <li>What types of robots do you think this motor would be good for? What sort of movements?</li>
         </ul>
         <br>
       </div>
@@ -902,7 +971,7 @@ Now we've got the hang of programming on our microbit, we can start figuring out
         <p>If you did it the same way as the zero code, button A will increase the angle, and button B will decrease the angle. You can see the angle scrolling across the LEDs, before the arm moves.</p>
         <br>
         <p>Turn off the battery pack. Move the arm a bit, you should be able to move the arm. <b>Keep your hands away</b>, and then turn on the battery pack again. What happens?</p>
-        <p>Try going all the way up to 180 degrees. Is it exactly 180 degrees? If it isn't, why do you think it happens?</p>
+        <p>Try going all the way up to 180 degrees. Is it exactly 180 degrees from where it started? If it isn't, why do you think it happens?</p>
         <br>
       </div>
     </div>

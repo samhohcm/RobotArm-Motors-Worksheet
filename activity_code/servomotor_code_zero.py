@@ -117,13 +117,15 @@ while True:
 
     #else:
 
-        ## Do something if button A is pressed. What do you do if you want button A to increase the angle?
+        # Do something if button A is pressed. What do you do if you want button A to increase the angle by 10 degrees every time
+        # you press a button?
         #if button_a.is_pressed():
             #insert code here
             
             
     
-        ## Do something if button B is pressed. What do you do if you want button B to decrease the angle?
+        # Do something if button B is pressed. What do you do if you want button B to decrease the angle by 10 degrees every time
+        # you press a button?
         #if button_b.is_pressed():
             #insert code here
 
