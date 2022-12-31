@@ -1846,9 +1846,9 @@ Now that you know how to code a motor, let's try making a device that will measu
     <div id="collapseFourF" class="collapse" data-parent="#accordion">
       <div class="card-body">
        
-        <p>Take out the dial from the box and place it on top of the base, right up against the motor holder like the image below.</p>
+        <p>Take out the dial from the box and place it on top of the base, right up against the motor holder.</p>
 
-        <p><img src="images/LoudnessDial/PutDial.jpg" class="img-fluid" alt="assemblyImage"></p>
+        <p><img src="images/LoudnessDial/PutDial.png" class="img-fluid" alt="assemblyImage"></p>
 
       </div>
     </div>
