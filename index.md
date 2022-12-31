@@ -924,6 +924,7 @@ Now we've got the hang of programming on our microbit, we can start figuring out
             </ul>
           </div>
         </div>
+        <br>
 
         <p>
           <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Servo-Ans" aria-expanded="false" aria-controls="Servo-Ans">
@@ -1587,7 +1588,7 @@ Now that we know a bit about our stepper motor, let's try and make it move!
           <div class="card card-body">
             
             <ul>
-            <li>An easy way to start is copy the code from line 177 to 187, and put it at the '#insert code here'. Then you can have a look at the code and see what you can change.
+            <li>An easy way to start is copy the code from line 177 to 187, and put it at the '#insert code here'. Then you can have a look at the code and see what you can change.</li>
             <li>If you want to display the new angle of the motor, you will need to add the 'stepAngle' to the 'currentAngle' before you display it. Note that if you don't keep track of the 'currentAngle', you will lose your position!</li>
             <li>Since the function tells the stepper motor to turn a certain amount, you can tell the stepper motor to turn the amount given in the variable 'stepAngle' at line 163 by using the following function.
             <pre class="prettyprint" style ="max-height:300px;overflow:auto">
