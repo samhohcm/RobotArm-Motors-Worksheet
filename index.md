@@ -882,17 +882,19 @@ Now we've got the hang of programming on our microbit, we can start figuring out
         <p>Once you've done that, your code should look like the following:</p>
         <br>
         <pre class="prettyprint" style="max-height:300px;overflow:auto">
-          # Do something if button A is pressed. What do you do if you want button A to increase the angle by 10 degrees every time
-          # you press a button?
-          #if button_a.is_pressed():
-              #insert code here
-              
-              
-      
-          # Do something if button B is pressed. What do you do if you want button B to decrease the angle by 10 degrees every time
-          # you press a button?
-          #if button_b.is_pressed():
-              #insert code here
+          else:
+          
+              # Do something if button A is pressed. What do you do if you want button A to increase the angle by 10 degrees every time
+              # you press a button?
+              if button_a.is_pressed():
+                  #insert code here
+                  
+                  
+          
+              # Do something if button B is pressed. What do you do if you want button B to decrease the angle by 10 degrees every time
+              # you press a button?
+              if button_b.is_pressed():
+                  #insert code here
         </pre>
         <br>
         
@@ -908,10 +910,10 @@ Now we've got the hang of programming on our microbit, we can start figuring out
             <li>You can change the value of a variable by calling itself and doing a bit of math.</li>
             <li>Our motor can only go from 0 degrees to 180 degrees! How can you keep the motor angle from exceeding these values? (Hint hint: You can use a conditional ;))</li>
             <li>Example of conditional to check if motor angle is less than 0 
-              <pre class="prettyprint" style="max-height:300px;overflow:auto">
+              <! -- <pre class="prettyprint" style="max-height:300px;overflow:auto">
                 if motor_angle < 0:
                     #do something
-              </pre>
+              </pre> -->
               </li>
             </ul>
           
