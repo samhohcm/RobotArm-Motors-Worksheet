@@ -910,12 +910,17 @@ Now we've got the hang of programming on our microbit, we can start figuring out
           <div class="card card-body">
             
             <ul>
-            <li>An easy way to start is copy the code from line 104 to 116, and put it at the '#insert code here'. Then you can have a look at the code and see what you can change.
-            <li>Do you understand what the code is doing? First it sets a value of 'motor_angle', then it uses the function servoWrite to tell the servomotor to go to 'motor_angle'.
+            <li>An easy way to start is copy the code from line 104 to 116, and put it at the '#insert code here'. Then you can have a look at the code and see what you can change.</li>
+            <li>Do you understand what the code is doing? First it sets a value of 'motor_angle', then it uses the function servoWrite to tell the servomotor to go to 'motor_angle'.</li>
             <li>How can you change the variable 'motor_angle' so that it increases or decreases every time you press the button?</li>
             <li>You can change the value of a variable by calling itself and doing a bit of math.</li>
             <li>Our motor can only go from 0 degrees to 180 degrees! How can you keep the motor angle from exceeding these values? (Hint hint: You can use a conditional ;))</li>
-            <li>Example of conditional to check if motor angle is less than 0: </li>
+            <li>Example of conditional to check if motor angle is less than 0
+              <pre class="prettyprint" style="max-height:300px;overflow:auto">
+                if motor_angle < 0:
+                    #do something
+              </pre>
+              </li>
             </ul>
           </div>
         </div>
