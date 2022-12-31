@@ -900,9 +900,14 @@ Now we've got the hang of programming on our microbit, we can start figuring out
         
         <p>Give it a bit of a think! If you're confident with Python and microbits, try coding it on your own. If you're not sure, click on the Hint below to get some hints on how to do it.</p>
         <br>
-        <div class="container">
-          <button type="button" class="btn btn-info" data-toggle="collapse" data-target="Servo-Hint">Hint</button>
-          <div id="Servo-Hint" class="collapse">
+
+        <p>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Servo-Hint" aria-expanded="false" aria-controls="Servo-Hint">
+            Hint
+          </button>
+        </p>
+        <div class="collapse" id="Servo-Hint">
+          <div class="card card-body">
             
             <ul>
             <li>An easy way to start is copy the code from line 104 to 116, and put it at the '#insert code here'. Then you can have a look at the code and see what you can change.
