@@ -915,12 +915,8 @@ Now we've got the hang of programming on our microbit, we can start figuring out
             <li>How can you change the variable 'motor_angle' so that it increases or decreases every time you press the button?</li>
             <li>You can change the value of a variable by calling itself and doing a bit of math.</li>
             <li>Our motor can only go from 0 degrees to 180 degrees! How can you keep the motor angle from exceeding these values? (Hint hint: You can use a conditional ;))</li>
-            <li>Example of conditional to check if motor angle is less than 0</li>
+            <li>Example of conditional to check if motor angle is less than 0: </li>
             </ul>
-              <pre class="prettyprint" style="max-height:300px;overflow:auto">
-                if motor_angle < 0:
-                    #do something
-              </pre>
           </div>
         </div>
 
