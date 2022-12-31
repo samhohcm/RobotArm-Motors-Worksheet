@@ -176,13 +176,15 @@ while True:
     if pin_logo.is_touched():
         # Play a tune
         music.pitch(200, duration=150, wait=True)
-        # Display a message
-        display.scroll("Reset 0", delay=120, wait=False, loop=False)
-        # Rotate the motor
-        theBoard.stepperMotorTurnAngle(
-            theBoard, currentRotationMotor, angle=-currentAngle)
+        # Set the angle the motor needs to move
+        targetAngle = currentAngle
         # Update current angle - go to zero
         currentAngle = 0
+        # Display a message
+        display.scroll(currentAngle, delay=120, wait=False, loop=False)
+        # Rotate the motor
+        theBoard.stepperMotorTurnAngle(
+            theBoard, currentRotationMotor, angle=-targetAngle)
 
 
 

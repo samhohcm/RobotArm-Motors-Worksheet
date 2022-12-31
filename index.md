@@ -898,7 +898,7 @@ Now we've got the hang of programming on our microbit, we can start figuring out
         </pre>
         <br>
         
-        <p>Give it a bit of a think! If you're confident with Python and microbits, try coding it on your own. If you're not sure, click on the Hint below to get some hints on how to do it.</p>
+        <p>Give it a bit of a think! If you're confident with Python and microbits, try coding it on your own. If you're not sure, click on the Hint below to get some hints on how to do it. You can also see some example answer code.</p>
         <br>
 
         <p>
@@ -911,23 +911,28 @@ Now we've got the hang of programming on our microbit, we can start figuring out
             
             <ul>
             <li>An easy way to start is copy the code from line 104 to 116, and put it at the '#insert code here'. Then you can have a look at the code and see what you can change.
+            <li>Do you understand what the code is doing? First it sets a value of 'motor_angle', then it uses the function servoWrite to tell the servomotor to go to 'motor_angle'.
             <li>How can you change the variable 'motor_angle' so that it increases or decreases every time you press the button?</li>
             <li>You can change the value of a variable by calling itself and doing a bit of math.</li>
             <li>Our motor can only go from 0 degrees to 180 degrees! How can you keep the motor angle from exceeding these values? (Hint hint: You can use a conditional ;))</li>
             <li>Example of conditional to check if motor angle is less than 0 
-              <! -- <pre class="prettyprint" style="max-height:300px;overflow:auto">
+              <pre class="prettyprint" style="max-height:300px;overflow:auto">
                 if motor_angle < 0:
                     #do something
-              </pre> -->
+              </pre>
               </li>
             </ul>
           
           </div>
         </div>
 
-        <div class="container">
-          <button type="button" class="btn btn-info" data-toggle="collapse" data-target="Servo-Answer">Example Answer</button>
-          <div id="Servo-Answer" class="collapse">
+        <p>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Servo-Ans" aria-expanded="false" aria-controls="Servo-Ans">
+            Hint
+          </button>
+        </p>
+        <div class="collapse" id="Servo-Ans">
+          <div class="card card-body">
             
             <p>This is just one way you can do it!</p>
             <br>
@@ -1275,9 +1280,11 @@ Now that we know a bit about our stepper motor, let's try and make it move!
 
         <br><br>
         
-        Next, in your python editor click on 'Load' and then select the python file you just downloaded (it's called: stepper_motor_code_zero.py). The code will load and you will see it on your screen.
+        Next, in your python editor click on 'Open' and then select the python file you just downloaded (it's called: stepper_motor_code_zero.py). The code will load and you will see it on your screen. There should be 199 lines, if you scroll all the way to the bottom.</p>
 
-        <br> <br>
+        <br> 
+        <img src="images/Coding/python_editor_load_stepper.png" class="img-fluid" alt="python_editor_load_stepper">
+        <br>
 
       </div>
     </div>
@@ -1295,7 +1302,9 @@ Now that we know a bit about our stepper motor, let's try and make it move!
 
         <p> Make sure your battery is turned <b>off</b>!!</p>
 
-        <p>Download the code and transfer it to your microbit by clicking on 'Connect', selecting your microbit device, and then clicking 'Flash'. If you've got any problems with this you can follow this guide to resolve them: <a href="https://python-editor-2-1-2.microbit.org/help.html?snippets=true" target="_blank">Link here</a></p>
+        <p>Download the code and transfer it to your microbit by clicking on 'Send to micro:bit' at the bottom, and following the instructions given on the screen.</p>
+        <p><img src="images/Coding/python_editor.png" class="img-fluid" alt="Python Editor">  </p>
+        <p>If you've got any problems with this you can follow this guide to resolve them: <a href="https://python-editor-2-1-2.microbit.org/help.html?snippets=true" target="_blank">Link here</a></p>
 
         <p>You should see the microbit start up with a picture of a snake! That's how you know you've got the right code. </p>
 
@@ -1357,184 +1366,183 @@ Now that we know a bit about our stepper motor, let's try and make it move!
     <div id="collapseFiveE" class="collapse" data-parent="#accordion">
       <div class="card-body">
         <p>Let's have a look at the code.</p>
-        <p>All this stuff at the beginning, that's code for setting up the robotics board so our microbit can communicate with it and then use it to send signals to the motors.</p>
-        <div style ="max-height:300px;overflow-y:scroll">
-          <pre class="prettyprint">
-            # ------------------------------------------#
-            # Imports                                   #
-            # ------------------------------------------#
+        <p>As before, all this stuff at the beginning from line 1 to 50 is code for setting up the robotics board so our microbit can communicate with it and then use it to send signals to the motors.</p>
+        <pre class="prettyprint" style ="max-height:300px;overflow:auto">
+          # ------------------------------------------#
+          # Imports                                   #
+          # ------------------------------------------#
 
-            from microbit import *
-            import math
-            import music
+          from microbit import *
+          import math
+          import music
 
-            # ------------------------------------------#
-            # Create a class for the robotics board     #
-            # ------------------------------------------#
+          # ------------------------------------------#
+          # Create a class for the robotics board     #
+          # ------------------------------------------#
 
-            class KitronikRoboticsBoard:
-                PRESCALE_REG = 0xFE
-                MODE_1_REG = 0x00
-                SRV_REG_BASE = 0x08
-                MOT_REG_BASE = 0x28
-                REG_OFFSET = 4
-                #SERVO_MULTIPLIER = 226
-                SERVO_MULTIPLIER = 190
-                SERVO_ZERO_OFFSET = 0X66
-                ANGLE_ZERO_OFFSET = 0
+          class KitronikRoboticsBoard:
+              PRESCALE_REG = 0xFE
+              MODE_1_REG = 0x00
+              SRV_REG_BASE = 0x08
+              MOT_REG_BASE = 0x28
+              REG_OFFSET = 4
+              #SERVO_MULTIPLIER = 226
+              SERVO_MULTIPLIER = 190
+              SERVO_ZERO_OFFSET = 0X66
+              ANGLE_ZERO_OFFSET = 0
 
-                chipAddress = 0x6C
-                initialised = False
-                stepInit = False
-                stepStage = 0
-                stepper1Steps = 200
-                stepper2Steps = 200
+              chipAddress = 0x6C
+              initialised = False
+              stepInit = False
+              stepStage = 0
+              stepper1Steps = 200
+              stepper2Steps = 200
 
-                def __init(self):
-                        
-                    buf = bytearray(2)
+              def __init(self):
+                      
+                  buf = bytearray(2)
 
-                    buf[0] = self.PRESCALE_REG
-                    buf[1] = 0x85 #50Hz
-                    i2c.write(self.chipAddress, buf, False)
-                    
-                    for blockReg in range(0xFA, 0xFE, 1):
-                        buf[0] = blockReg
-                        buf[1] = 0x00
-                        i2c.write(self.chipAddress, buf, False)
+                  buf[0] = self.PRESCALE_REG
+                  buf[1] = 0x85 #50Hz
+                  i2c.write(self.chipAddress, buf, False)
+                  
+                  for blockReg in range(0xFA, 0xFE, 1):
+                      buf[0] = blockReg
+                      buf[1] = 0x00
+                      i2c.write(self.chipAddress, buf, False)
 
-                    buf[0] = self.MODE_1_REG
-                    buf[1] = 0x01
-                    i2c.write(self.chipAddress, buf, False)
-                    self.initialised = True
-            </pre>
-        </div>
+                  buf[0] = self.MODE_1_REG
+                  buf[1] = 0x01
+                  i2c.write(self.chipAddress, buf, False)
+                  self.initialised = True
+          </pre>
         <br>
-        <p>This bit over here, these are <b>functions</b> that can be used for common commands to the motors. It's a bit complicated, but you can think of it as a set of instructions that you would use very often, so you write a function so you won't have to type up the whole thing over and over again!</p> 
-        <div style ="max-height:300px;overflow-y:scroll">
-          <pre class="prettyprint">
-            def motorOn(self, motor, direction, speed):
+        <p>The lines 52 until 154 are <b>functions</b> that can be used for common commands to the motors. This is a good example of how we would use functions!</p> 
+        <pre class="prettyprint" style ="max-height:300px;overflow:auto">
+          def motorOn(self, motor, direction, speed):
+            if self.initialised is False:
+                self.__init(self)
+            buf = bytearray(2)
+            motorReg = self.MOT_REG_BASE + (2 * (motor - 1) * self.REG_OFFSET)
+            HighByte = False
+            OutputVal = speed * 40
+
+            if direction == "forward":
+                if OutputVal > 0xFF:
+                    HighByte = True
+                    HighOutputVal = int(OutputVal/256)
+                buf[0] = motorReg
+                buf[1] = int(OutputVal)
+                i2c.write(self.chipAddress, buf, False)
+                buf[0] = motorReg + 1
+                if HighByte:
+                    buf[1] = HighOutputVal
+                else:
+                    buf[1] = 0x00
+                i2c.write(self.chipAddress, buf, False)
+
+                for offset in range(4, 6, 1):
+                    buf[0] = motorReg + offset
+                    buf[1] = 0x00
+                    i2c.write(self.chipAddress, buf, False)
+
+            elif direction == "reverse":
+                if OutputVal > 0xFF:
+                    HighByte = True
+                    HighOutputVal = int(OutputVal/256)
+                buf[0] = motorReg + 4
+                buf[1] = int(OutputVal)
+                i2c.write(self.chipAddress, buf, False)
+                buf[0] = motorReg + 5
+                if HighByte:
+                    buf[1] = HighOutputVal
+                else:
+                    buf[1] = 0x00
+                i2c.write(self.chipAddress, buf, False)
+
+                for offset2 in range(0, 2, 1):
+                    buf[0] = motorReg + offset2
+                    buf[1] = 0x00
+                    i2c.write(self.chipAddress, buf, False)
+
+          def stepperMotorTurnAngle(self, stepper, angle):
+              angleToSteps = 0
+
               if self.initialised is False:
                   self.__init(self)
-              buf = bytearray(2)
-              motorReg = self.MOT_REG_BASE + (2 * (motor - 1) * self.REG_OFFSET)
-              HighByte = False
-              OutputVal = speed * 40
 
-              if direction == "forward":
-                  if OutputVal > 0xFF:
-                      HighByte = True
-                      HighOutputVal = int(OutputVal/256)
-                  buf[0] = motorReg
-                  buf[1] = int(OutputVal)
-                  i2c.write(self.chipAddress, buf, False)
-                  buf[0] = motorReg + 1
-                  if HighByte:
-                      buf[1] = HighOutputVal
+              if angle < 0:
+                  direction = "reverse"
+              else:
+                  direction = "forward"
+
+              angleToSteps = int(
+                  ((abs(angle) - 1) * (self.stepperSteps - 1)) / (360 - 1) + 1)
+
+              self._turnStepperMotor(self, stepper, direction, angleToSteps)
+
+          def stepperMotorTurnSteps(self, stepper, direction, stepperSteps):
+              if self.initialised is False:
+                  self.__init(self)
+
+              self._turnStepperMotor(self, stepper, direction, stepperSteps)
+
+          def _turnStepperMotor(self, stepper, direction, steps):
+              stepCounter = 0
+
+              while stepCounter < steps:
+                  if self.stepStage == 1 or self.stepStage == 3:
+                      if stepper == 0:
+                          currentMotor = 1
+                      else:
+                          currentMotor = 3
                   else:
-                      buf[1] = 0x00
-                  i2c.write(self.chipAddress, buf, False)
+                      if stepper == 0:
+                          currentMotor = 2
+                      else:
+                          currentMotor = 4
 
-                  for offset in range(4, 6, 1):
-                      buf[0] = motorReg + offset
-                      buf[1] = 0x00
-                      i2c.write(self.chipAddress, buf, False)
-
-              elif direction == "reverse":
-                  if OutputVal > 0xFF:
-                      HighByte = True
-                      HighOutputVal = int(OutputVal/256)
-                  buf[0] = motorReg + 4
-                  buf[1] = int(OutputVal)
-                  i2c.write(self.chipAddress, buf, False)
-                  buf[0] = motorReg + 5
-                  if HighByte:
-                      buf[1] = HighOutputVal
+                  if self.stepStage == 1 or self.stepStage == 4:
+                      currentDirection = "forward"
                   else:
-                      buf[1] = 0x00
-                  i2c.write(self.chipAddress, buf, False)
+                      currentDirection = "reverse"
 
-                  for offset2 in range(0, 2, 1):
-                      buf[0] = motorReg + offset2
-                      buf[1] = 0x00
-                      i2c.write(self.chipAddress, buf, False)
+                  self.motorOn(self, currentMotor, currentDirection, 100)
+                  sleep(50)
 
-            def stepperMotorTurnAngle(self, stepper, angle):
-                angleToSteps = 0
+                  if direction == "forward":
+                      if self.stepStage == 4:
+                          self.stepStage = 1
+                      else:
+                          self.stepStage += 1
+                  elif direction == "reverse":
+                      if self.stepStage == 1:
+                          self.stepStage = 4
+                      else:
+                          self.stepStage -= 1
 
-                if self.initialised is False:
-                    self.__init(self)
-
-                if angle < 0:
-                    direction = "reverse"
-                else:
-                    direction = "forward"
-
-                angleToSteps = int(
-                    ((abs(angle) - 1) * (self.stepperSteps - 1)) / (360 - 1) + 1)
-
-                self._turnStepperMotor(self, stepper, direction, angleToSteps)
-
-            def stepperMotorTurnSteps(self, stepper, direction, stepperSteps):
-                if self.initialised is False:
-                    self.__init(self)
-
-                self._turnStepperMotor(self, stepper, direction, stepperSteps)
-
-            def _turnStepperMotor(self, stepper, direction, steps):
-                stepCounter = 0
-
-                while stepCounter < steps:
-                    if self.stepStage == 1 or self.stepStage == 3:
-                        if stepper == 0:
-                            currentMotor = 1
-                        else:
-                            currentMotor = 3
-                    else:
-                        if stepper == 0:
-                            currentMotor = 2
-                        else:
-                            currentMotor = 4
-
-                    if self.stepStage == 1 or self.stepStage == 4:
-                        currentDirection = "forward"
-                    else:
-                        currentDirection = "reverse"
-
-                    self.motorOn(self, currentMotor, currentDirection, 100)
-                    sleep(50)
-
-                    if direction == "forward":
-                        if self.stepStage == 4:
-                            self.stepStage = 1
-                        else:
-                            self.stepStage += 1
-                    elif direction == "reverse":
-                        if self.stepStage == 1:
-                            self.stepStage = 4
-                        else:
-                            self.stepStage -= 1
-
-                    stepCounter += 1
-          </pre>
-        </div>
+                  stepCounter += 1
+        </pre>
         <br>
-        <p>This first bit of code you've been given just sets the motor to zero, which is what we used to zero the arm. Can you recognise what I'm doing? Can you figure out what variables there are? What will happen if I change them?</p>
-        <div style ="height:300px;overflow-y:scroll">
-          <pre class="prettyprint">
-            # Detect if the microbit logo has been touched! This will reset it to zero!
-            if pin_logo.is_touched():
-                # Play a tune
-                music.pitch(200, duration=150, wait=True)
-                # Display a message
-                display.scroll("Reset 0", delay=120, wait=False, loop=False)
-                # Rotate the motor
-                theBoard.stepperMotorTurnAngle(
-                    theBoard, currentRotationMotor, angle=-currentAngle)
-                # Update current angle - go to zero
-                currentAngle = 0
-          </pre>
-        </div>
+        <p>This first bit of code from line 175 to 185 just sets the motor to zero, which is what we used to zero the arm. Can you recognise what I'm doing? Can you figure out what variables there are? What will happen if I change them?</p>
+        <pre class="prettyprint" style ="max-height:300px;overflow:auto">
+          # Detect if the microbit logo has been touched! This will reset it to zero!
+          if pin_logo.is_touched():
+              # Play a tune
+              music.pitch(200, duration=150, wait=True)
+              # Set the angle the motor needs to move
+              targetAngle = currentAngle
+              # Update current angle - go to zero
+              currentAngle = 0
+              # Display a message
+              display.scroll(currentAngle, delay=120, wait=False, loop=False)
+              # Rotate the motor
+              theBoard.stepperMotorTurnAngle(
+                  theBoard, currentRotationMotor, angle=-targetAngle)
+        </pre>
+        <p>Earlier when I explained the stepper motor, I said it doesn't know what angle it's at. So we have to keep track of it ourselves using the variable 'currentAngle'. We have to use a new variable to hold the value of 'currentAngle', otherwise once we set it to zero, we won't know how much to turn to go back to zero position! So first, we set the variable 'targetAngle' to hold the value of 'currentAngle', before I set 'currentAngle' to zero. Then 'targetAngle' is the angle the motor should turn. Look at lines 186 and 187. It tells the stepper motor to turn angle by a value 'angle=-targetAngle'. </p>
+        <p>This picture should help explain the position we're referring to whenever we're updating 'currentAngle'.</p>
+        <p><img src="images/Coding/Angles_Position.png" class="img-fluid" alt="angleposition"></p>
         <br>
       </div>
     </div>
@@ -1548,25 +1556,92 @@ Now that we know a bit about our stepper motor, let's try and make it move!
     </div>
     <div id="collapseSixE" class="collapse" data-parent="#accordion">
       <div class="card-body">
-        <p>Now that you have a feel for how the code works, let's try writing some of our own! I've given you a headstart on the A button and B button. If you're not sure what to do, don't worry, we'll go through it together!</p>
-        <div style ="height:300px;overflow-y:scroll">
-          <pre class="prettyprint">
-            # Do something if button A is pressed. What do you do if you want button A to increase the angle?
-            if button_a.is_pressed():
-                #insert code here
-                
-        
-            # Do something if button B is pressed. What do you do if you want button B to decrease the angle?
-            if button_b.is_pressed():
-                #insert code here
-          </pre>
-        </div>
+        <p>Now that you have a feel for how the code works, let's try writing some of our own! I've given you a headstart on the A button and B button with the conditionals. This is going to be pretty similar to the previous code. If you're not sure what to do, don't worry, we'll go through it together!</p>
         <br>
+        <p>First you'll need to remove the '#' symbol in front of line 118, 122, and 129. The '#' symbol at the front of a line makes that line a comment, and that line will be ignored.</p>
+        <p><img src="images/Coding/Remove_comments_stepper.png" class="img-fluid" alt="Where to remove comments-stepper"></p>
+        <p>Once you've done that, your code should look like the following:</p>
+        <br>
+        <pre class="prettyprint" style ="max-height:300px;overflow:auto">
+          #else:
+
+              # Do something if button A is pressed. What do you do if you want button A to increase the angle by 10 degrees every time
+              # you press a button?
+              #if button_a.is_pressed():
+                  #insert code here
+                  
+                  
+          
+              # Do something if button B is pressed. What do you do if you want button B to decrease the angle by 10 degrees every time
+              # you press a button?
+              #if button_b.is_pressed():
+                  #insert code here
+        </pre>
+        <br>
+        <p>Give it a bit of a think! If you're confident with Python and microbits, try coding it on your own. If you're not sure, click on the Hint below to get some hints on how to do it. You can also see some example answer code.</p>
+        <br>
+        <p>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Stepper-Hint" aria-expanded="false" aria-controls="Stepper-Hint">
+            Hint
+          </button>
+        </p>
+        <div class="collapse" id="Stepper-Hint">
+          <div class="card card-body">
+            
+            <ul>
+            <li>An easy way to start is copy the code from line 177 to 187, and put it at the '#insert code here'. Then you can have a look at the code and see what you can change.
+            <li>If you want to display the new angle of the motor, you will need to add the 'stepAngle' to the 'currentAngle' before you display it. Note that if you don't keep track of the 'currentAngle', you will lose your position!</li>
+            <li>Since the function tells the stepper motor to turn a certain amount, you can tell the stepper motor to turn the amount given in the variable 'stepAngle' at line 163 by using the following function.
+            <pre class="prettyprint" style ="max-height:300px;overflow:auto">
+              theBoard.stepperMotorTurnAngle(theBoard, currentRotationMotor, angle=stepAngle)
+            </pre></li>
+            <li>Our stepper motor can go all the way around! But in this exercise, you might not want the display value to go below 0 degrees or above 360 degrees. 360 degrees is already one full circle! Look at the image in the previous step to see how we might use the angle on the display to tell us what position the arm is at. How can you keep the motor angle from exceeding these values while still figuring out its position? (Hint hint: You can use a conditional ;))</li>
+            <li>You can use a conditional to make sure if it goes into a negative value, it starts again from 360 degrees.
+              <pre class="prettyprint" style="max-height:300px;overflow:auto">
+                # keep it from going into a negative number
+                if currentAngle < 0: 
+                    currentAngle = 360 + currentAngle
+              </pre>
+            </li>
+            </ul>
+          
+          </div>
+        </div>
+
+        <p>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Servo-Ans" aria-expanded="false" aria-controls="Servo-Ans">
+            Hint
+          </button>
+        </p>
+        <div class="collapse" id="Servo-Ans">
+          <div class="card card-body">
+            
+            <p>This is just one way you can do it!</p>
+            <br>
+            <pre class="prettyprint" style="max-height:300px;overflow:auto">
+              if button_a.is_pressed():
+                  # Play a tune
+                  music.pitch(200, duration=150, wait=True)
+                  # Update current angle
+                  currentAngle = currentAngle - stepAngle
+                  # Make sure it doesn't turn into a negative number!
+                  if currentAngle < 0:
+                      currentAngle = 360 + currentAngle
+                  # Display a message
+                  display.scroll(currentAngle, delay=120, wait=False, loop=False)
+                  # Rotate the motor
+                  theBoard.stepperMotorTurnAngle(
+                      theBoard, currentRotationMotor, angle=-stepAngle)
+            </pre>
+            <br>
+          
+          </div>
+        </div>
+
         <p>If you're stuck, you can get the complete script here: <a href="./activity_code/stepper_motor_code.py" download="stepper_motor_code.py" target="_blank"> link</a></p>
         <p>You can also have a play around with the code! Have a think about some of the questions below and see if you can figure them out.</p>
         <ul>
         <li>How can you get the motor to move further when you push the A or B button?</li>
-        <li>How do you get the microbit to display a different picture when it starts up?</li>
         <li>What types of robots do you think this motor would be good for? What sort of actions?</li>
         </ul>
         <br>
@@ -1639,48 +1714,47 @@ Now that you know how to code a motor, let's try making a device that will measu
     <div id="collapseOneF" class="collapse" data-parent="#accordion">
       <div class="card-body">
         <p>We're going to use a lot of the same code to make our measurement device.</p>
-        <p>Here there are two functions I've already written for you to use in this activity.</p>
+
+         <p>Download the code with the new functions here: <a href="./activity_code/stepper_motor_loudness_activity_code.py" download="stepper_motor_loudness_activity_code.py" target="_blank"> link</a>.</p>
+
+        <p>This link will download a python file to your computer. </p>
         
-        <div style ="max-height:300px;overflow-y:scroll">
-          <pre class="prettyprint">
-            def loudness_to_level(sound_value):
-              # give 10 levels of loudness
-              return round(sound_value*(10)/256)
+        <p>Next, in your python editor click on 'Open' and then select the python file you just downloaded (it's called: stepper_motor_loudness_activity_code.py). The code will load and you will see it on your screen.</p>
 
-            def how_hard_did_i_blow():
-                # Play some sound 
-                music.pitch(200, duration=150, wait=True)
-                sleep(100)
-                music.pitch(200, duration=150, wait=True)
-                sleep(100)
-                music.pitch(200, duration=150, wait=True)
-
-                # Image display!
-                display.show(Image.MUSIC_QUAVER)
-                sleep(1500)
-
-                # Recording
-                loudness = loudness_to_level(microphone.sound_level())
-
-                # Image display to show it has been acquired!
-                display.show(Image.YES)
-                sleep(500)
-
-                return loudness
-          </pre>
-        </div>
-
-        <p>Download the code with the new functions here: <a href="./activity_code/stepper_motor_loudness_activity_code.py" download="stepper_motor_loudness_activity_code.py" target="_blank"> link</a>.</p>
+        <p>Here there are two functions I've already written for you to use in this activity, and they are on lines 155 to 178. Can you understand what they do?</p>
         
-        <br><br>
+        <pre class="prettyprint" style ="max-height:300px;overflow:auto">
+          def loudness_to_level(sound_value):
+            # give 10 levels of loudness
+            return round(sound_value*(10)/256)
 
-        This link will download a python file to your computer. 
+          def how_hard_did_i_blow():
+              # Play some sound 
+              music.pitch(200, duration=150, wait=True)
+              sleep(100)
+              music.pitch(200, duration=150, wait=True)
+              sleep(100)
+              music.pitch(200, duration=150, wait=True)
 
-        <br><br>
-        
-        Next, in your python editor click on 'Load' and then select the python file you just downloaded (it's called: stepper_motor_loudness_activity_code.py). The code will load and you will see it on your screen.
+              # Image display!
+              display.show(Image.MUSIC_QUAVER)
+              sleep(1500)
 
-        <br> <br>
+              # Recording
+              loudness = loudness_to_level(microphone.sound_level())
+
+              # Image display to show it has been acquired!
+              display.show(Image.YES)
+              sleep(500)
+
+              return loudness
+        </pre>
+
+        <br>
+        <p>'how_hard_did_i_blow()' plays three beeps, then shows a music note image on the microbit display. Once the music note is displayed, you need to blow for at least 2 seconds in the direction of the microbit logo. Once it's done recording, it will show a tick symbol.</p>
+        <p>'loudness_to_level()' takes the microphone sound level which will be read as a value of 0 to 256, and will scale it to a value of 0 to 10 so that the motor can show it on your fancy dial!</p>
+
+        <br>
 
       </div>
     </div>
@@ -1696,45 +1770,45 @@ Now that you know how to code a motor, let's try making a device that will measu
     <div id="collapseTwoF" class="collapse" data-parent="#accordion">
       <div class="card-body">
 
-        <p>I've added some comments to help you out! Try and look at the previous code and see if you can fill in the blanks.</p>
+         
 
-        <div style ="max-height:300px;overflow-y:scroll">
-          <pre class="prettyprint">
-            # Detect if the microbit logo has been touched! This will reset it to zero!
-            if pin_logo.is_touched():
+        <p>I've added some comments to help you out at lines 203 to 234. Try and look at the previous stepper motor code and see if you can fill in the blanks.</p>
 
-                # Play a tune
-                
+        <pre class="prettyprint" style ="max-height:300px;overflow:auto">
+          # Detect if the microbit logo has been touched! This will reset it to zero!
+          if pin_logo.is_touched():
 
-                # Display a message
-                
+              # Play a tune
+              
 
-                # Rotate the motor - how much?
-                
+              # Display a message
+              
 
-                # Update current angle - go to zero
-                
+              # Rotate the motor - how much?
+              
 
-
-
-            # Detect if the button a has been pressed!
-            elif button_a.is_pressed():
-                
-                # Get angle from microphone measurement
-                
-
-                # Find the difference so you know how many steps to take
+              # Update current angle - go to zero
+              
 
 
-                # Reset currentAngle
-                
 
-                # Display a message
-                
+          # Detect if the button a has been pressed!
+          elif button_a.is_pressed():
+              
+              # Get angle from microphone measurement
+              
 
-                # Rotate the motor
-          </pre>
-        </div>
+              # Find the difference so you know how many steps to take
+
+
+              # Reset currentAngle
+              
+
+              # Display a message
+              
+
+              # Rotate the motor
+        </pre>
 
         <br>
         <p>If you can't figure it out, you can find the finished code here: <a href="./activity_code/stepper_motor_loudness_code.py" download="stepper_motor_loudness_code.py" target="_blank"> link</a>. But give it a shot first, I believe in you!</p>
@@ -1756,7 +1830,7 @@ Now that you know how to code a motor, let's try making a device that will measu
 
         <p> Make sure your battery is turned <b>off</b>!!</p>
 
-        <p>Download the code and transfer it to your microbit by clicking on 'Connect', selecting your microbit device, and then clicking 'Flash'. If you've got any problems with this you can follow this guide to resolve them: <a href="https://python-editor-2-1-2.microbit.org/help.html?snippets=true" target="_blank">Link here</a></p>
+        <p>Download the code and transfer it to your microbit by clicking on 'Send to microbit' and following the instructions. If you've got any problems with this you can follow this guide to resolve them: <a href="https://python-editor-2-1-2.microbit.org/help.html?snippets=true" target="_blank">Link here</a></p>
 
         <br> <br>
 
@@ -1773,7 +1847,7 @@ Now that you know how to code a motor, let's try making a device that will measu
     <div id="collapseFourF" class="collapse" data-parent="#accordion">
       <div class="card-body">
        
-        <p>Take out the dial from the box and place it on top of the base, right up against the motor holder.</p>
+        <p>Take out the dial from the box and place it on top of the base, right up against the motor holder like the image below.</p>
 
         <p><img src="images/LoudnessDial/PutDial.jpg" class="img-fluid" alt="assemblyImage"></p>
 
