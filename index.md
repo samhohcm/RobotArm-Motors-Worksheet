@@ -921,8 +921,6 @@ Now we've got the hang of programming on our microbit, we can start figuring out
                 if motor_angle < 0:
                     #do something
               </pre>
-
-          
           </div>
         </div>
 
@@ -954,7 +952,6 @@ Now we've got the hang of programming on our microbit, we can start figuring out
                   theBoard.servoWrite(theBoard, motor_pin, motor_angle)
             </pre>
             <br>
-          
           </div>
         </div>
 
