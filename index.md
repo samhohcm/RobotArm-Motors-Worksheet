@@ -928,7 +928,7 @@ Now we've got the hang of programming on our microbit, we can start figuring out
 
         <p>
           <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Servo-Ans" aria-expanded="false" aria-controls="Servo-Ans">
-            Hint
+            Example Answer
           </button>
         </p>
         <div class="collapse" id="Servo-Ans">
@@ -1609,11 +1609,11 @@ Now that we know a bit about our stepper motor, let's try and make it move!
         </div>
 
         <p>
-          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Servo-Ans" aria-expanded="false" aria-controls="Servo-Ans">
-            Hint
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Stepper-Ans" aria-expanded="false" aria-controls="Servo-Ans">
+            Example Answer
           </button>
         </p>
-        <div class="collapse" id="Servo-Ans">
+        <div class="collapse" id="Stepper-Ans">
           <div class="card card-body">
             
             <p>This is just one way you can do it!</p>
